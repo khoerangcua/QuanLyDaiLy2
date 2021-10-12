@@ -537,7 +537,7 @@ namespace Interface_UI
             // 
             // flowLayoutPanel1
             // 
-            this.flowLayoutPanel1.BackColor = System.Drawing.Color.LightBlue;
+            this.flowLayoutPanel1.BackColor = System.Drawing.Color.Teal;
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(238, 47);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
