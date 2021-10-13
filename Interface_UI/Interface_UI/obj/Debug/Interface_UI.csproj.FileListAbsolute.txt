@@ -10,3 +10,16 @@ C:\Users\Admin\source\repos\Interface_UI\Interface_UI\obj\Debug\Interface_UI.csp
 C:\Users\Admin\source\repos\Interface_UI\Interface_UI\obj\Debug\Interface_UI.exe
 C:\Users\Admin\source\repos\Interface_UI\Interface_UI\obj\Debug\Interface_UI.pdb
 C:\Users\Admin\source\repos\Interface_UI\Interface_UI\obj\Debug\Interface_UI.Form2.resources
+D:\Quản lý đại lý\QuanLyDaiLy2\Interface_UI\Interface_UI\obj\Debug\Interface_UI.csproj.AssemblyReference.cache
+D:\Quản lý đại lý\QuanLyDaiLy2\Interface_UI\Interface_UI\obj\Debug\Interface_UI.Form1.resources
+D:\Quản lý đại lý\QuanLyDaiLy2\Interface_UI\Interface_UI\obj\Debug\Interface_UI.Properties.Resources.resources
+D:\Quản lý đại lý\QuanLyDaiLy2\Interface_UI\Interface_UI\obj\Debug\Interface_UI.csproj.GenerateResource.cache
+D:\Quản lý đại lý\QuanLyDaiLy2\Interface_UI\Interface_UI\obj\Debug\Interface_UI.csproj.CoreCompileInputs.cache
+D:\Quản lý đại lý\QuanLyDaiLy2\Interface_UI\Interface_UI\obj\Debug\Interface_UI.exe
+D:\Quản lý đại lý\QuanLyDaiLy2\Interface_UI\Interface_UI\obj\Debug\Interface_UI.pdb
+D:\Quản lý đại lý\QuanLyDaiLy2\Interface_UI\Interface_UI\bin\Debug\Interface_UI.exe.config
+D:\Quản lý đại lý\QuanLyDaiLy2\Interface_UI\Interface_UI\bin\Debug\Interface_UI.exe
+D:\Quản lý đại lý\QuanLyDaiLy2\Interface_UI\Interface_UI\bin\Debug\Interface_UI.pdb
+D:\Quản lý đại lý\QuanLyDaiLy2\Interface_UI\Interface_UI\bin\Debug\FontAwesome.Sharp.dll
+D:\Quản lý đại lý\QuanLyDaiLy2\Interface_UI\Interface_UI\obj\Debug\Interface_UI.FormHoso.resources
+D:\Quản lý đại lý\QuanLyDaiLy2\Interface_UI\Interface_UI\obj\Debug\Interface_UI.FormPhieuxuathang.resources

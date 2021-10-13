@@ -81,10 +81,7 @@ namespace Interface_UI
             showSubmenu(panelSubmenu);
         }
 
-        private void File_Click(object sender, EventArgs e)
-        {
-            hideSubmenu();
-        }
+       
 
         private void PanelHomepage_Paint(object sender, PaintEventArgs e)
         {
@@ -133,6 +130,7 @@ namespace Interface_UI
         private void Phieuxuathang_Click_1(object sender, EventArgs e)
         {
             hideSubmenu();
+            
         }
 
         private void Report_Click(object sender, EventArgs e)
@@ -143,6 +141,7 @@ namespace Interface_UI
         private void File_Click_3(object sender, EventArgs e)
         {
             hideSubmenu();
+            
         }
 
         private void Loggin_Click(object sender, EventArgs e)
@@ -195,8 +194,14 @@ namespace Interface_UI
             if(this.Menubar.Width>200)
             {
                 Menubar.Width = 100;
-                .Visible = false;
+                
             }    
+        }
+        
+
+        private void Regulate_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }

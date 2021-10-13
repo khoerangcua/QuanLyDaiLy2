@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Interface_UI
 {
-    public partial class Form2 : Form
+    public partial class FormPhieuxuathang : Form
     {
-        public Form2()
+        public FormPhieuxuathang()
         {
             InitializeComponent();
         }
