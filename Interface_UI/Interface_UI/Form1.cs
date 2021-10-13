@@ -18,6 +18,20 @@ namespace Interface_UI
             InitializeComponent();
             customizeDesing();
         }
+        private void LabelEffect_Click(object sender,EventArgs e)
+        {
+            var lbl = sender as Label;
+            if(lbl.Location.X ==34)
+            {
+                lbl.Font = new Font("Times New Roman", 10);
+                lbl.Cursor = Cursors.Arrow;
+                lbl.Location = new Point(lbl.Location.X - 3, lbl.Location.Y - 29);
+                foreach(Control txt in .Controls)
+                {
+
+                }    
+            }    
+        }
         private void customizeDesing()
         {
             panelSubmenu.Visible = false;
