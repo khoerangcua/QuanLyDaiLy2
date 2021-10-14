@@ -20,17 +20,7 @@ namespace Interface_UI
         }
         private void LabelEffect_Click(object sender,EventArgs e)
         {
-            var lbl = sender as Label;
-            if(lbl.Location.X ==34)
-            {
-                lbl.Font = new Font("Times New Roman", 10);
-                lbl.Cursor = Cursors.Arrow;
-                lbl.Location = new Point(lbl.Location.X - 3, lbl.Location.Y - 29);
-                foreach(Control txt in .Controls)
-                {
-
-                }    
-            }    
+              
         }
         private void customizeDesing()
         {
@@ -112,24 +102,14 @@ namespace Interface_UI
             Application.Exit();
         }
       
-        private void Maximizar_Click(object sender, EventArgs e)
-        {
-            WindowState = FormWindowState.Maximized;
-            Maximizar.Visible = false;
-            Restaurar.Visible = true;
-        }
+       
 
         private void Minimizar_Click_1(object sender, EventArgs e)
         {
             WindowState = FormWindowState.Minimized;
         }
 
-        private void Restaurar_Click(object sender, EventArgs e)
-        {
-            WindowState = FormWindowState.Normal;
-            Restaurar.Visible = false;
-            Maximizar.Visible = true;
-        }
+        
 
         private void Phieuxuathang_Click(object sender, EventArgs e)
         {
@@ -200,17 +180,10 @@ namespace Interface_UI
 
         private void MenuSlidebar_Click(object sender, EventArgs e)
         {
-            CollapseMenu();
+            
         }
 
-        private void CollapseMenu()
-        {
-            if(this.Menubar.Width>200)
-            {
-                Menubar.Width = 100;
-                
-            }    
-        }
+       
         
 
         private void Regulate_Click(object sender, EventArgs e)
