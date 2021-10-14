@@ -51,5 +51,15 @@ namespace Interface_UI
         {
 
         }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void IbDiachi_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
