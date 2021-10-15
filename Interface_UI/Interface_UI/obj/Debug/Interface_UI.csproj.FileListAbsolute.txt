@@ -24,3 +24,4 @@ D:\Quản lý đại lý\QuanLyDaiLy2\Interface_UI\Interface_UI\bin\Debug\FontAw
 D:\Quản lý đại lý\QuanLyDaiLy2\Interface_UI\Interface_UI\obj\Debug\Interface_UI.FormHoso.resources
 D:\Quản lý đại lý\QuanLyDaiLy2\Interface_UI\Interface_UI\obj\Debug\Interface_UI.FormPhieuxuathang.resources
 D:\Quản lý đại lý\QuanLyDaiLy2\Interface_UI\Interface_UI\obj\Debug\Interface_UI.FormLogin.resources
+D:\Quản lý đại lý\QuanLyDaiLy2\Interface_UI\Interface_UI\obj\Debug\Interface_UI.FormChangepass.resources

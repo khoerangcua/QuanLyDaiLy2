@@ -333,9 +333,9 @@ namespace Interface_UI
             this.File.IconSize = 30;
             this.File.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.File.Location = new System.Drawing.Point(0, 0);
-            this.File.Margin = new System.Windows.Forms.Padding(10, 3, 10, 3);
+            this.File.Margin = new System.Windows.Forms.Padding(12, 3, 8, 3);
             this.File.Name = "File";
-            this.File.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
+            this.File.Padding = new System.Windows.Forms.Padding(42, 0, 0, 0);
             this.File.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.File.Size = new System.Drawing.Size(238, 41);
             this.File.TabIndex = 11;

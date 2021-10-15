@@ -61,6 +61,7 @@ namespace Interface_UI
             this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.panel8 = new System.Windows.Forms.Panel();
             this.textBox6 = new System.Windows.Forms.TextBox();
+            this.iconButton5 = new FontAwesome.Sharp.IconButton();
             this.iconButton3 = new FontAwesome.Sharp.IconButton();
             this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.iconButton2 = new FontAwesome.Sharp.IconButton();
@@ -91,7 +92,7 @@ namespace Interface_UI
             this.TieudeHoso.AutoSize = true;
             this.TieudeHoso.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TieudeHoso.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.TieudeHoso.Location = new System.Drawing.Point(46, 13);
+            this.TieudeHoso.Location = new System.Drawing.Point(43, 13);
             this.TieudeHoso.Name = "TieudeHoso";
             this.TieudeHoso.Size = new System.Drawing.Size(85, 17);
             this.TieudeHoso.TabIndex = 2;
@@ -103,14 +104,14 @@ namespace Interface_UI
             this.panel2.Controls.Add(this.TitleHoso);
             this.panel2.Location = new System.Drawing.Point(0, 41);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(671, 49);
+            this.panel2.Size = new System.Drawing.Size(671, 60);
             this.panel2.TabIndex = 1;
             // 
             // TitleHoso
             // 
             this.TitleHoso.AutoSize = true;
             this.TitleHoso.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TitleHoso.Location = new System.Drawing.Point(260, 11);
+            this.TitleHoso.Location = new System.Drawing.Point(258, 16);
             this.TitleHoso.Name = "TitleHoso";
             this.TitleHoso.Size = new System.Drawing.Size(150, 29);
             this.TitleHoso.TabIndex = 0;
@@ -135,9 +136,10 @@ namespace Interface_UI
             this.textBox7.BackColor = System.Drawing.SystemColors.InactiveBorder;
             this.textBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox7.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.textBox7.Location = new System.Drawing.Point(199, 21);
+            this.textBox7.Location = new System.Drawing.Point(199, 13);
+            this.textBox7.Multiline = true;
             this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(401, 20);
+            this.textBox7.Size = new System.Drawing.Size(401, 30);
             this.textBox7.TabIndex = 1;
             this.textBox7.Text = "Nhập thông tin";
             // 
@@ -173,7 +175,7 @@ namespace Interface_UI
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.GridColor = System.Drawing.SystemColors.AppWorkspace;
-            this.dataGridView1.Location = new System.Drawing.Point(6, 16);
+            this.dataGridView1.Location = new System.Drawing.Point(5, 16);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(635, 194);
             this.dataGridView1.TabIndex = 0;
@@ -216,7 +218,7 @@ namespace Interface_UI
             this.groupBox1.Controls.Add(this.IbMadaily);
             this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.groupBox1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.groupBox1.Location = new System.Drawing.Point(14, 100);
+            this.groupBox1.Location = new System.Drawing.Point(14, 107);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(517, 176);
             this.groupBox1.TabIndex = 3;
@@ -236,6 +238,7 @@ namespace Interface_UI
             // 
             this.textBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(233)))), ((int)(((byte)(232)))));
             this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox3.Location = new System.Drawing.Point(94, 133);
             this.textBox3.Multiline = true;
             this.textBox3.Name = "textBox3";
@@ -254,6 +257,7 @@ namespace Interface_UI
             // 
             this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(233)))), ((int)(((byte)(232)))));
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox1.Location = new System.Drawing.Point(94, 20);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
@@ -272,6 +276,7 @@ namespace Interface_UI
             // 
             this.textBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(233)))), ((int)(((byte)(232)))));
             this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox2.Location = new System.Drawing.Point(94, 57);
             this.textBox2.Multiline = true;
             this.textBox2.Name = "textBox2";
@@ -285,9 +290,9 @@ namespace Interface_UI
             this.label4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label4.Location = new System.Drawing.Point(13, 58);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(66, 19);
+            this.label4.Size = new System.Drawing.Size(68, 19);
             this.label4.TabIndex = 5;
-            this.label4.Text = "Mã đại lý";
+            this.label4.Text = "Tên đại lý";
             // 
             // label3
             // 
@@ -305,7 +310,7 @@ namespace Interface_UI
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label2.Location = new System.Drawing.Point(292, 100);
+            this.label2.Location = new System.Drawing.Point(292, 102);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(42, 19);
             this.label2.TabIndex = 13;
@@ -334,6 +339,7 @@ namespace Interface_UI
             // 
             this.textBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(233)))), ((int)(((byte)(232)))));
             this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox4.Location = new System.Drawing.Point(371, 18);
             this.textBox4.Multiline = true;
             this.textBox4.Name = "textBox4";
@@ -344,13 +350,14 @@ namespace Interface_UI
             // 
             this.comboBox1.Cursor = System.Windows.Forms.Cursors.Default;
             this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
             "Loại 1",
             "Loại 2"});
             this.comboBox1.Location = new System.Drawing.Point(94, 101);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(128, 21);
+            this.comboBox1.Size = new System.Drawing.Size(128, 26);
             this.comboBox1.TabIndex = 12;
             // 
             // IbDienthoai
@@ -369,7 +376,7 @@ namespace Interface_UI
             this.IbLoaidaily.AutoSize = true;
             this.IbLoaidaily.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.IbLoaidaily.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.IbLoaidaily.Location = new System.Drawing.Point(13, 100);
+            this.IbLoaidaily.Location = new System.Drawing.Point(13, 102);
             this.IbLoaidaily.Name = "IbLoaidaily";
             this.IbLoaidaily.Size = new System.Drawing.Size(72, 19);
             this.IbLoaidaily.TabIndex = 11;
@@ -399,6 +406,7 @@ namespace Interface_UI
             // 
             this.textBox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(233)))), ((int)(((byte)(232)))));
             this.textBox5.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox5.Location = new System.Drawing.Point(370, 56);
             this.textBox5.Multiline = true;
             this.textBox5.Name = "textBox5";
@@ -409,13 +417,14 @@ namespace Interface_UI
             // 
             this.comboBox3.Cursor = System.Windows.Forms.Cursors.Default;
             this.comboBox3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox3.FormattingEnabled = true;
             this.comboBox3.Items.AddRange(new object[] {
             "Loại 1",
             "Loại 2"});
             this.comboBox3.Location = new System.Drawing.Point(370, 102);
             this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(130, 21);
+            this.comboBox3.Size = new System.Drawing.Size(130, 26);
             this.comboBox3.TabIndex = 22;
             // 
             // panel8
@@ -430,25 +439,44 @@ namespace Interface_UI
             // 
             this.textBox6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(233)))), ((int)(((byte)(232)))));
             this.textBox6.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox6.Location = new System.Drawing.Point(370, 135);
             this.textBox6.Multiline = true;
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(122, 20);
             this.textBox6.TabIndex = 10;
             // 
+            // iconButton5
+            // 
+            this.iconButton5.BackColor = System.Drawing.Color.MediumTurquoise;
+            this.iconButton5.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.iconButton5.IconChar = FontAwesome.Sharp.IconChar.FileDownload;
+            this.iconButton5.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(20)))));
+            this.iconButton5.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton5.IconSize = 32;
+            this.iconButton5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconButton5.Location = new System.Drawing.Point(545, 247);
+            this.iconButton5.Name = "iconButton5";
+            this.iconButton5.Padding = new System.Windows.Forms.Padding(3, 1, 0, 0);
+            this.iconButton5.Size = new System.Drawing.Size(112, 36);
+            this.iconButton5.TabIndex = 5;
+            this.iconButton5.Text = "Lưu";
+            this.iconButton5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.iconButton5.UseVisualStyleBackColor = false;
+            // 
             // iconButton3
             // 
             this.iconButton3.BackColor = System.Drawing.Color.MediumTurquoise;
             this.iconButton3.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.iconButton3.IconChar = FontAwesome.Sharp.IconChar.FileExcel;
-            this.iconButton3.IconColor = System.Drawing.Color.Red;
+            this.iconButton3.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(16)))), ((int)(((byte)(48)))));
             this.iconButton3.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton3.IconSize = 37;
+            this.iconButton3.IconSize = 32;
             this.iconButton3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton3.Location = new System.Drawing.Point(546, 231);
+            this.iconButton3.Location = new System.Drawing.Point(545, 201);
             this.iconButton3.Name = "iconButton3";
-            this.iconButton3.Padding = new System.Windows.Forms.Padding(0, 3, 0, 0);
-            this.iconButton3.Size = new System.Drawing.Size(112, 45);
+            this.iconButton3.Padding = new System.Windows.Forms.Padding(3, 1, 0, 0);
+            this.iconButton3.Size = new System.Drawing.Size(112, 36);
             this.iconButton3.TabIndex = 3;
             this.iconButton3.Text = "Xoá";
             this.iconButton3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -461,11 +489,11 @@ namespace Interface_UI
             this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.PlusCircle;
             this.iconButton1.IconColor = System.Drawing.Color.Green;
             this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton1.IconSize = 37;
-            this.iconButton1.Location = new System.Drawing.Point(546, 104);
+            this.iconButton1.IconSize = 32;
+            this.iconButton1.Location = new System.Drawing.Point(545, 111);
             this.iconButton1.Name = "iconButton1";
-            this.iconButton1.Padding = new System.Windows.Forms.Padding(0, 3, 25, 0);
-            this.iconButton1.Size = new System.Drawing.Size(112, 45);
+            this.iconButton1.Padding = new System.Windows.Forms.Padding(0, 1, 25, 0);
+            this.iconButton1.Size = new System.Drawing.Size(112, 36);
             this.iconButton1.TabIndex = 1;
             this.iconButton1.Text = "Thêm";
             this.iconButton1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -479,11 +507,11 @@ namespace Interface_UI
             this.iconButton2.IconChar = FontAwesome.Sharp.IconChar.FileUpload;
             this.iconButton2.IconColor = System.Drawing.Color.MediumBlue;
             this.iconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton2.IconSize = 37;
-            this.iconButton2.Location = new System.Drawing.Point(546, 168);
+            this.iconButton2.IconSize = 32;
+            this.iconButton2.Location = new System.Drawing.Point(545, 156);
             this.iconButton2.Name = "iconButton2";
-            this.iconButton2.Padding = new System.Windows.Forms.Padding(0, 3, 0, 0);
-            this.iconButton2.Size = new System.Drawing.Size(112, 45);
+            this.iconButton2.Padding = new System.Windows.Forms.Padding(0, 1, 0, 0);
+            this.iconButton2.Size = new System.Drawing.Size(112, 36);
             this.iconButton2.TabIndex = 2;
             this.iconButton2.Text = "Cập nhật";
             this.iconButton2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -497,9 +525,9 @@ namespace Interface_UI
             this.iconButton4.IconColor = System.Drawing.Color.Black;
             this.iconButton4.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton4.IconSize = 17;
-            this.iconButton4.Location = new System.Drawing.Point(471, 19);
+            this.iconButton4.Location = new System.Drawing.Point(471, 14);
             this.iconButton4.Name = "iconButton4";
-            this.iconButton4.Size = new System.Drawing.Size(129, 22);
+            this.iconButton4.Size = new System.Drawing.Size(129, 28);
             this.iconButton4.TabIndex = 4;
             this.iconButton4.Text = " Tìm kiếm";
             this.iconButton4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -510,7 +538,7 @@ namespace Interface_UI
             // 
             this.iconPictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(24)))), ((int)(((byte)(64)))));
             this.iconPictureBox1.ForeColor = System.Drawing.Color.MediumTurquoise;
-            this.iconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.FileInvoice;
+            this.iconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.FileSignature;
             this.iconPictureBox1.IconColor = System.Drawing.Color.MediumTurquoise;
             this.iconPictureBox1.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconPictureBox1.IconSize = 29;
@@ -525,7 +553,8 @@ namespace Interface_UI
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(233)))), ((int)(((byte)(232)))));
-            this.ClientSize = new System.Drawing.Size(671, 575);
+            this.ClientSize = new System.Drawing.Size(671, 512);
+            this.Controls.Add(this.iconButton5);
             this.Controls.Add(this.iconButton3);
             this.Controls.Add(this.iconButton1);
             this.Controls.Add(this.iconButton2);
@@ -592,5 +621,6 @@ namespace Interface_UI
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.ComboBox comboBox3;
+        private FontAwesome.Sharp.IconButton iconButton5;
     }
 }
