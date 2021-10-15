@@ -79,6 +79,24 @@
     <Compile Include="FormPhieuthutien.Designer.cs">
       <DependentUpon>FormPhieuthutien.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormPhieuxuathang%28sua%29.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPhieuxuathang%28sua%29.Designer.cs">
+      <DependentUpon>FormPhieuxuathang%28sua%29.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormPhieuxuathang%28Them%29.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPhieuxuathang%28Them%29.Designer.cs">
+      <DependentUpon>FormPhieuxuathang%28Them%29.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormPhieuxuathang%28Xoa%29.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPhieuxuathang%28Xoa%29.Designer.cs">
+      <DependentUpon>FormPhieuxuathang%28Xoa%29.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormPhieuxuathang.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -101,6 +119,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormPhieuthutien.resx">
       <DependentUpon>FormPhieuthutien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPhieuxuathang%28sua%29.resx">
+      <DependentUpon>FormPhieuxuathang%28sua%29.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPhieuxuathang%28Them%29.resx">
+      <DependentUpon>FormPhieuxuathang%28Them%29.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPhieuxuathang%28Xoa%29.resx">
+      <DependentUpon>FormPhieuxuathang%28Xoa%29.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormPhieuxuathang.resx">
       <DependentUpon>FormPhieuxuathang.cs</DependentUpon>

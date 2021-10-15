@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace Interface_UI
 {
-    public partial class FormPhieuthutien : Form
+    public partial class FormPhieuxuathang_Xoa_ : Form
     {
-        public FormPhieuthutien()
+        public FormPhieuxuathang_Xoa_()
         {
             InitializeComponent();
-        }
-
-        private void FormPhieuthutien_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }
