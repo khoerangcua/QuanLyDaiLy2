@@ -166,7 +166,7 @@ namespace Interface_UI
             this.groupBox3.Controls.Add(this.dataGridView1);
             this.groupBox3.Location = new System.Drawing.Point(14, 347);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(645, 216);
+            this.groupBox3.Size = new System.Drawing.Size(645, 164);
             this.groupBox3.TabIndex = 4;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Kết quả";
@@ -177,7 +177,7 @@ namespace Interface_UI
             this.dataGridView1.GridColor = System.Drawing.SystemColors.AppWorkspace;
             this.dataGridView1.Location = new System.Drawing.Point(5, 16);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(635, 194);
+            this.dataGridView1.Size = new System.Drawing.Size(635, 137);
             this.dataGridView1.TabIndex = 0;
             // 
             // IbMadaily
