@@ -40,6 +40,11 @@ namespace Interface_UI
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.IbMadaily = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.textBox5 = new System.Windows.Forms.TextBox();
             this.panel5 = new System.Windows.Forms.Panel();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -56,11 +61,6 @@ namespace Interface_UI
             this.IbDienthoai = new System.Windows.Forms.Label();
             this.IbLoaidaily = new System.Windows.Forms.Label();
             this.IbDiachi = new System.Windows.Forms.Label();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.panel8 = new System.Windows.Forms.Panel();
-            this.textBox6 = new System.Windows.Forms.TextBox();
             this.iconButton5 = new FontAwesome.Sharp.IconButton();
             this.iconButton3 = new FontAwesome.Sharp.IconButton();
             this.iconButton1 = new FontAwesome.Sharp.IconButton();
@@ -225,6 +225,58 @@ namespace Interface_UI
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin chung";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+            // 
+            // panel8
+            // 
+            this.panel8.BackColor = System.Drawing.Color.Gray;
+            this.panel8.Location = new System.Drawing.Point(370, 153);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(128, 2);
+            this.panel8.TabIndex = 11;
+            // 
+            // textBox6
+            // 
+            this.textBox6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(233)))), ((int)(((byte)(232)))));
+            this.textBox6.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox6.Location = new System.Drawing.Point(370, 135);
+            this.textBox6.Multiline = true;
+            this.textBox6.Name = "textBox6";
+            this.textBox6.Size = new System.Drawing.Size(122, 20);
+            this.textBox6.TabIndex = 10;
+            // 
+            // comboBox3
+            // 
+            this.comboBox3.Cursor = System.Windows.Forms.Cursors.Default;
+            this.comboBox3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox3.FormattingEnabled = true;
+            this.comboBox3.Items.AddRange(new object[] {
+            "Loại 1",
+            "Loại 2"});
+            this.comboBox3.Location = new System.Drawing.Point(370, 102);
+            this.comboBox3.Name = "comboBox3";
+            this.comboBox3.Size = new System.Drawing.Size(130, 26);
+            this.comboBox3.TabIndex = 22;
+            // 
+            // panel7
+            // 
+            this.panel7.BackColor = System.Drawing.Color.Gray;
+            this.panel7.Location = new System.Drawing.Point(370, 74);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(128, 2);
+            this.panel7.TabIndex = 9;
+            // 
+            // textBox5
+            // 
+            this.textBox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(233)))), ((int)(((byte)(232)))));
+            this.textBox5.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox5.Location = new System.Drawing.Point(370, 56);
+            this.textBox5.Multiline = true;
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(122, 20);
+            this.textBox5.TabIndex = 8;
             // 
             // panel5
             // 
@@ -393,58 +445,6 @@ namespace Interface_UI
             this.IbDiachi.TabIndex = 8;
             this.IbDiachi.Text = "Địa chỉ";
             this.IbDiachi.Click += new System.EventHandler(this.IbDiachi_Click);
-            // 
-            // panel7
-            // 
-            this.panel7.BackColor = System.Drawing.Color.Gray;
-            this.panel7.Location = new System.Drawing.Point(370, 74);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(128, 2);
-            this.panel7.TabIndex = 9;
-            // 
-            // textBox5
-            // 
-            this.textBox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(233)))), ((int)(((byte)(232)))));
-            this.textBox5.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.Location = new System.Drawing.Point(370, 56);
-            this.textBox5.Multiline = true;
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(122, 20);
-            this.textBox5.TabIndex = 8;
-            // 
-            // comboBox3
-            // 
-            this.comboBox3.Cursor = System.Windows.Forms.Cursors.Default;
-            this.comboBox3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Items.AddRange(new object[] {
-            "Loại 1",
-            "Loại 2"});
-            this.comboBox3.Location = new System.Drawing.Point(370, 102);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(130, 26);
-            this.comboBox3.TabIndex = 22;
-            // 
-            // panel8
-            // 
-            this.panel8.BackColor = System.Drawing.Color.Gray;
-            this.panel8.Location = new System.Drawing.Point(370, 153);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(128, 2);
-            this.panel8.TabIndex = 11;
-            // 
-            // textBox6
-            // 
-            this.textBox6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(233)))), ((int)(((byte)(232)))));
-            this.textBox6.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox6.Location = new System.Drawing.Point(370, 135);
-            this.textBox6.Multiline = true;
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(122, 20);
-            this.textBox6.TabIndex = 10;
             // 
             // iconButton5
             // 

@@ -55,6 +55,18 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormBaocaocongno.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBaocaocongno.Designer.cs">
+      <DependentUpon>FormBaocaocongno.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormBaocaodoanhso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBaocaodoanhso.Designer.cs">
+      <DependentUpon>FormBaocaodoanhso.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormChangepass.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -107,6 +119,12 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormBaocaocongno.resx">
+      <DependentUpon>FormBaocaocongno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormBaocaodoanhso.resx">
+      <DependentUpon>FormBaocaodoanhso.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormChangepass.resx">
       <DependentUpon>FormChangepass.cs</DependentUpon>

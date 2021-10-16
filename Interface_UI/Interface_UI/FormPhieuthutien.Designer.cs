@@ -338,9 +338,10 @@ namespace Interface_UI
             this.iconButton4.IconChar = FontAwesome.Sharp.IconChar.Search;
             this.iconButton4.IconColor = System.Drawing.Color.Black;
             this.iconButton4.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton4.IconSize = 17;
+            this.iconButton4.IconSize = 20;
             this.iconButton4.Location = new System.Drawing.Point(471, 14);
             this.iconButton4.Name = "iconButton4";
+            this.iconButton4.Padding = new System.Windows.Forms.Padding(0, 1, 0, 0);
             this.iconButton4.Size = new System.Drawing.Size(129, 28);
             this.iconButton4.TabIndex = 4;
             this.iconButton4.Text = " Tìm kiếm";
