@@ -17,7 +17,10 @@ namespace Interface_UI
         {
             InitializeComponent();
             customizeDesing();
+
         }
+        
+
         private void LabelEffect_Click(object sender,EventArgs e)
         {
               
@@ -27,6 +30,7 @@ namespace Interface_UI
             panelSubmenu.Visible = false;
             panelManage.Visible = false;
             panelReport.Visible = false;
+            
         }
         private void hideSubmenu()
         {
@@ -37,6 +41,7 @@ namespace Interface_UI
             if (panelReport.Visible == true)
                 panelReport.Visible = false;
         }
+       
         private void showSubmenu(Panel subMenu)
         {
             if (subMenu.Visible == false)
@@ -49,6 +54,10 @@ namespace Interface_UI
                 subMenu.Visible = false;
             }
         }
+       
+
+
+
 
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -109,23 +118,7 @@ namespace Interface_UI
             WindowState = FormWindowState.Minimized;
         }
 
-        
-
-        private void Phieuxuathang_Click(object sender, EventArgs e)
-        {
-            hideSubmenu();
-        }       
-
-        private void Phieuthutien_Click_1(object sender, EventArgs e)
-        {
-            hideSubmenu();
-        }
-
-        private void Phieuxuathang_Click_1(object sender, EventArgs e)
-        {
-            hideSubmenu();
-            
-        }
+      
 
         private void Report_Click(object sender, EventArgs e)
         {
@@ -190,5 +183,38 @@ namespace Interface_UI
         {
             
         }
+
+        private void DetailExport_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panelPhieuthu_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+       
+
+        private void Phieuthutien_Click(object sender, EventArgs e)
+        {
+            hideSubmenu();
+        }
+
+        private void Phieuxuathang_Click_3(object sender, EventArgs e)
+        {
+            hideSubmenu();
+           
+            
+        }
+
+        private void panelDetail_Paint(object sender, PaintEventArgs e)
+        {
+            
+        }
+
+       
+
+        
     }
 }

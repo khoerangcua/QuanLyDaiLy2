@@ -73,6 +73,18 @@
     <Compile Include="FormChangepass.Designer.cs">
       <DependentUpon>FormChangepass.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormChitietmathang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormChitietmathang.Designer.cs">
+      <DependentUpon>FormChitietmathang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormChitietxuathang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormChitietxuathang.Designer.cs">
+      <DependentUpon>FormChitietxuathang.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormHoso.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -121,6 +133,24 @@
     <Compile Include="FormSearch.Designer.cs">
       <DependentUpon>FormSearch.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormThaydoiquydinh%281%29.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormThaydoiquydinh%281%29.Designer.cs">
+      <DependentUpon>FormThaydoiquydinh%281%29.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormThaydoiquydinh%282%29.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormThaydoiquydinh%282%29.Designer.cs">
+      <DependentUpon>FormThaydoiquydinh%282%29.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormThaydoiquydinh%283%29.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormThaydoiquydinh%283%29.Designer.cs">
+      <DependentUpon>FormThaydoiquydinh%283%29.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
@@ -134,6 +164,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormChangepass.resx">
       <DependentUpon>FormChangepass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormChitietmathang.resx">
+      <DependentUpon>FormChitietmathang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormChitietxuathang.resx">
+      <DependentUpon>FormChitietxuathang.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormHoso.resx">
       <DependentUpon>FormHoso.cs</DependentUpon>
@@ -158,6 +194,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormSearch.resx">
       <DependentUpon>FormSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormThaydoiquydinh%281%29.resx">
+      <DependentUpon>FormThaydoiquydinh%281%29.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormThaydoiquydinh%282%29.resx">
+      <DependentUpon>FormThaydoiquydinh%282%29.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormThaydoiquydinh%283%29.resx">
+      <DependentUpon>FormThaydoiquydinh%283%29.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

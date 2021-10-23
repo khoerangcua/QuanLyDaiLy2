@@ -10,21 +10,11 @@ using System.Windows.Forms;
 
 namespace Interface_UI
 {
-    public partial class FormBaocaocongno : Form
+    public partial class FormThaydoiquydinh_2_ : Form
     {
-        public FormBaocaocongno()
+        public FormThaydoiquydinh_2_()
         {
             InitializeComponent();
-        }
-
-        private void FormBaocaocongno_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void iconButton1_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
