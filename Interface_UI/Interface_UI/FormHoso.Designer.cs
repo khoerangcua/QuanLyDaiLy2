@@ -482,7 +482,7 @@ namespace Interface_UI
             // 
             this.iconButton5.BackColor = System.Drawing.Color.MediumTurquoise;
             this.iconButton5.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconButton5.IconChar = FontAwesome.Sharp.IconChar.FileDownload;
+            this.iconButton5.IconChar = FontAwesome.Sharp.IconChar.RedoAlt;
             this.iconButton5.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(20)))));
             this.iconButton5.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton5.IconSize = 32;
@@ -492,7 +492,7 @@ namespace Interface_UI
             this.iconButton5.Padding = new System.Windows.Forms.Padding(3, 1, 0, 0);
             this.iconButton5.Size = new System.Drawing.Size(112, 36);
             this.iconButton5.TabIndex = 5;
-            this.iconButton5.Text = "Lưu";
+            this.iconButton5.Text = "Làm mới";
             this.iconButton5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.iconButton5.UseVisualStyleBackColor = false;
             // 
