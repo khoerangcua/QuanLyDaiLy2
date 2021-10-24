@@ -43,8 +43,12 @@ namespace Interface_UI
             this.Baocaodoanhthu = new FontAwesome.Sharp.IconButton();
             this.Report = new FontAwesome.Sharp.IconButton();
             this.panelManage = new System.Windows.Forms.Panel();
-            this.Phieuthutien = new FontAwesome.Sharp.IconButton();
+            this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
             this.Phieuxuathang = new FontAwesome.Sharp.IconButton();
+            this.Phieuthutien = new FontAwesome.Sharp.IconButton();
+            this.panelDetail = new System.Windows.Forms.Panel();
+            this.DetailProduct = new FontAwesome.Sharp.IconButton();
+            this.DetailExport = new FontAwesome.Sharp.IconButton();
             this.File = new FontAwesome.Sharp.IconButton();
             this.Manage = new FontAwesome.Sharp.IconButton();
             this.panelSubmenu = new System.Windows.Forms.Panel();
@@ -61,6 +65,8 @@ namespace Interface_UI
             this.panel2.SuspendLayout();
             this.panelReport.SuspendLayout();
             this.panelManage.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
+            this.panelDetail.SuspendLayout();
             this.panelSubmenu.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -76,6 +82,7 @@ namespace Interface_UI
             this.Menubar.Name = "Menubar";
             this.Menubar.Size = new System.Drawing.Size(909, 47);
             this.Menubar.TabIndex = 1;
+            
             // 
             // MenuSlidebar
             // 
@@ -173,9 +180,9 @@ namespace Interface_UI
             this.Regulate.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.Regulate.IconSize = 30;
             this.Regulate.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Regulate.Location = new System.Drawing.Point(0, 516);
+            this.Regulate.Location = new System.Drawing.Point(0, 583);
             this.Regulate.Name = "Regulate";
-            this.Regulate.Size = new System.Drawing.Size(238, 47);
+            this.Regulate.Size = new System.Drawing.Size(221, 41);
             this.Regulate.TabIndex = 24;
             this.Regulate.Text = "  Quy định";
             this.Regulate.UseVisualStyleBackColor = false;
@@ -194,9 +201,9 @@ namespace Interface_UI
             this.Search.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.Search.IconSize = 30;
             this.Search.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Search.Location = new System.Drawing.Point(0, 469);
+            this.Search.Location = new System.Drawing.Point(0, 542);
             this.Search.Name = "Search";
-            this.Search.Size = new System.Drawing.Size(238, 47);
+            this.Search.Size = new System.Drawing.Size(221, 41);
             this.Search.TabIndex = 23;
             this.Search.Text = "  Tra cứu";
             this.Search.UseVisualStyleBackColor = false;
@@ -206,9 +213,9 @@ namespace Interface_UI
             this.panelReport.Controls.Add(this.Baocaocongno);
             this.panelReport.Controls.Add(this.Baocaodoanhthu);
             this.panelReport.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelReport.Location = new System.Drawing.Point(0, 387);
+            this.panelReport.Location = new System.Drawing.Point(0, 460);
             this.panelReport.Name = "panelReport";
-            this.panelReport.Size = new System.Drawing.Size(238, 82);
+            this.panelReport.Size = new System.Drawing.Size(221, 82);
             this.panelReport.TabIndex = 19;
             this.panelReport.Paint += new System.Windows.Forms.PaintEventHandler(this.panelReport_Paint_1);
             // 
@@ -228,9 +235,9 @@ namespace Interface_UI
             this.Baocaocongno.Location = new System.Drawing.Point(0, 38);
             this.Baocaocongno.Margin = new System.Windows.Forms.Padding(10, 3, 10, 3);
             this.Baocaocongno.Name = "Baocaocongno";
-            this.Baocaocongno.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
+            this.Baocaocongno.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
             this.Baocaocongno.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.Baocaocongno.Size = new System.Drawing.Size(238, 38);
+            this.Baocaocongno.Size = new System.Drawing.Size(221, 38);
             this.Baocaocongno.TabIndex = 25;
             this.Baocaocongno.Text = "         Báo cáo công nợ";
             this.Baocaocongno.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -253,9 +260,9 @@ namespace Interface_UI
             this.Baocaodoanhthu.Location = new System.Drawing.Point(0, 0);
             this.Baocaodoanhthu.Margin = new System.Windows.Forms.Padding(10, 3, 10, 3);
             this.Baocaodoanhthu.Name = "Baocaodoanhthu";
-            this.Baocaodoanhthu.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
+            this.Baocaodoanhthu.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
             this.Baocaodoanhthu.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.Baocaodoanhthu.Size = new System.Drawing.Size(238, 38);
+            this.Baocaodoanhthu.Size = new System.Drawing.Size(221, 38);
             this.Baocaodoanhthu.TabIndex = 24;
             this.Baocaodoanhthu.Text = "         Báo cáo doanh số";
             this.Baocaodoanhthu.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -275,9 +282,9 @@ namespace Interface_UI
             this.Report.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.Report.IconSize = 30;
             this.Report.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Report.Location = new System.Drawing.Point(0, 340);
+            this.Report.Location = new System.Drawing.Point(0, 417);
             this.Report.Name = "Report";
-            this.Report.Size = new System.Drawing.Size(238, 47);
+            this.Report.Size = new System.Drawing.Size(221, 43);
             this.Report.TabIndex = 18;
             this.Report.Text = "  Báo cáo";
             this.Report.UseVisualStyleBackColor = false;
@@ -285,39 +292,30 @@ namespace Interface_UI
             // 
             // panelManage
             // 
-            this.panelManage.Controls.Add(this.Phieuthutien);
+            this.panelManage.Controls.Add(this.iconPictureBox1);
             this.panelManage.Controls.Add(this.Phieuxuathang);
+            this.panelManage.Controls.Add(this.Phieuthutien);
+            this.panelManage.Controls.Add(this.panelDetail);
             this.panelManage.Controls.Add(this.File);
             this.panelManage.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelManage.Location = new System.Drawing.Point(0, 215);
+            this.panelManage.Location = new System.Drawing.Point(0, 202);
             this.panelManage.Name = "panelManage";
-            this.panelManage.Size = new System.Drawing.Size(238, 125);
+            this.panelManage.Size = new System.Drawing.Size(221, 215);
             this.panelManage.TabIndex = 17;
             // 
-            // Phieuthutien
+            // iconPictureBox1
             // 
-            this.Phieuthutien.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(24)))), ((int)(((byte)(64)))));
-            this.Phieuthutien.Dock = System.Windows.Forms.DockStyle.Top;
-            this.Phieuthutien.FlatAppearance.BorderSize = 0;
-            this.Phieuthutien.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Phieuthutien.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Phieuthutien.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.Phieuthutien.IconChar = FontAwesome.Sharp.IconChar.FileInvoiceDollar;
-            this.Phieuthutien.IconColor = System.Drawing.Color.Turquoise;
-            this.Phieuthutien.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.Phieuthutien.IconSize = 30;
-            this.Phieuthutien.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Phieuthutien.Location = new System.Drawing.Point(0, 79);
-            this.Phieuthutien.Margin = new System.Windows.Forms.Padding(10, 3, 10, 3);
-            this.Phieuthutien.Name = "Phieuthutien";
-            this.Phieuthutien.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
-            this.Phieuthutien.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.Phieuthutien.Size = new System.Drawing.Size(238, 38);
-            this.Phieuthutien.TabIndex = 13;
-            this.Phieuthutien.Text = "         Phiếu thu tiền";
-            this.Phieuthutien.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Phieuthutien.UseVisualStyleBackColor = false;
-            this.Phieuthutien.Click += new System.EventHandler(this.Phieuthutien_Click_1);
+            this.iconPictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(24)))), ((int)(((byte)(67)))));
+            this.iconPictureBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(173)))), ((int)(((byte)(210)))));
+            this.iconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.ChevronDown;
+            this.iconPictureBox1.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(173)))), ((int)(((byte)(210)))));
+            this.iconPictureBox1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconPictureBox1.IconSize = 20;
+            this.iconPictureBox1.Location = new System.Drawing.Point(184, 102);
+            this.iconPictureBox1.Name = "iconPictureBox1";
+            this.iconPictureBox1.Size = new System.Drawing.Size(21, 20);
+            this.iconPictureBox1.TabIndex = 0;
+            this.iconPictureBox1.TabStop = false;
             // 
             // Phieuxuathang
             // 
@@ -332,17 +330,100 @@ namespace Interface_UI
             this.Phieuxuathang.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.Phieuxuathang.IconSize = 30;
             this.Phieuxuathang.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Phieuxuathang.Location = new System.Drawing.Point(0, 41);
+            this.Phieuxuathang.Location = new System.Drawing.Point(0, 85);
             this.Phieuxuathang.Margin = new System.Windows.Forms.Padding(10, 3, 10, 3);
             this.Phieuxuathang.Name = "Phieuxuathang";
-            this.Phieuxuathang.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
+            this.Phieuxuathang.Padding = new System.Windows.Forms.Padding(27, 0, 0, 0);
             this.Phieuxuathang.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.Phieuxuathang.Size = new System.Drawing.Size(238, 38);
-            this.Phieuxuathang.TabIndex = 12;
+            this.Phieuxuathang.Size = new System.Drawing.Size(221, 47);
+            this.Phieuxuathang.TabIndex = 17;
             this.Phieuxuathang.Text = "         Phiếu xuất hàng";
             this.Phieuxuathang.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.Phieuxuathang.UseVisualStyleBackColor = false;
-            this.Phieuxuathang.Click += new System.EventHandler(this.Phieuxuathang_Click_1);
+            this.Phieuxuathang.Click += new System.EventHandler(this.Phieuxuathang_Click_3);
+            // 
+            // Phieuthutien
+            // 
+            this.Phieuthutien.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(24)))), ((int)(((byte)(64)))));
+            this.Phieuthutien.Dock = System.Windows.Forms.DockStyle.Top;
+            this.Phieuthutien.FlatAppearance.BorderSize = 0;
+            this.Phieuthutien.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Phieuthutien.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Phieuthutien.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.Phieuthutien.IconChar = FontAwesome.Sharp.IconChar.FileInvoiceDollar;
+            this.Phieuthutien.IconColor = System.Drawing.Color.Turquoise;
+            this.Phieuthutien.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.Phieuthutien.IconSize = 30;
+            this.Phieuthutien.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Phieuthutien.Location = new System.Drawing.Point(0, 41);
+            this.Phieuthutien.Margin = new System.Windows.Forms.Padding(10, 3, 10, 3);
+            this.Phieuthutien.Name = "Phieuthutien";
+            this.Phieuthutien.Padding = new System.Windows.Forms.Padding(28, 0, 0, 0);
+            this.Phieuthutien.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.Phieuthutien.Size = new System.Drawing.Size(221, 44);
+            this.Phieuthutien.TabIndex = 16;
+            this.Phieuthutien.Text = "         Phiếu thu tiền";
+            this.Phieuthutien.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Phieuthutien.UseVisualStyleBackColor = false;
+            this.Phieuthutien.Click += new System.EventHandler(this.Phieuthutien_Click);
+            // 
+            // panelDetail
+            // 
+            this.panelDetail.Controls.Add(this.DetailProduct);
+            this.panelDetail.Controls.Add(this.DetailExport);
+            this.panelDetail.Location = new System.Drawing.Point(0, 131);
+            this.panelDetail.Name = "panelDetail";
+            this.panelDetail.Size = new System.Drawing.Size(244, 87);
+            this.panelDetail.TabIndex = 0;
+            this.panelDetail.Paint += new System.Windows.Forms.PaintEventHandler(this.panelDetail_Paint);
+            // 
+            // DetailProduct
+            // 
+            this.DetailProduct.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(15)))), ((int)(((byte)(64)))));
+            this.DetailProduct.Dock = System.Windows.Forms.DockStyle.Top;
+            this.DetailProduct.FlatAppearance.BorderSize = 0;
+            this.DetailProduct.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.DetailProduct.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DetailProduct.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.DetailProduct.IconChar = FontAwesome.Sharp.IconChar.FileImage;
+            this.DetailProduct.IconColor = System.Drawing.Color.Turquoise;
+            this.DetailProduct.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.DetailProduct.IconSize = 30;
+            this.DetailProduct.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.DetailProduct.Location = new System.Drawing.Point(0, 40);
+            this.DetailProduct.Margin = new System.Windows.Forms.Padding(10, 3, 10, 3);
+            this.DetailProduct.Name = "DetailProduct";
+            this.DetailProduct.Padding = new System.Windows.Forms.Padding(50, 0, 0, 0);
+            this.DetailProduct.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.DetailProduct.Size = new System.Drawing.Size(244, 43);
+            this.DetailProduct.TabIndex = 16;
+            this.DetailProduct.Text = "       Chi tiết mặt hàng";
+            this.DetailProduct.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.DetailProduct.UseVisualStyleBackColor = false;
+            // 
+            // DetailExport
+            // 
+            this.DetailExport.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(15)))), ((int)(((byte)(64)))));
+            this.DetailExport.Dock = System.Windows.Forms.DockStyle.Top;
+            this.DetailExport.FlatAppearance.BorderSize = 0;
+            this.DetailExport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.DetailExport.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DetailExport.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.DetailExport.IconChar = FontAwesome.Sharp.IconChar.FileExport;
+            this.DetailExport.IconColor = System.Drawing.Color.Turquoise;
+            this.DetailExport.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.DetailExport.IconSize = 30;
+            this.DetailExport.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.DetailExport.Location = new System.Drawing.Point(0, 0);
+            this.DetailExport.Margin = new System.Windows.Forms.Padding(10, 3, 10, 3);
+            this.DetailExport.Name = "DetailExport";
+            this.DetailExport.Padding = new System.Windows.Forms.Padding(53, 0, 0, 0);
+            this.DetailExport.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.DetailExport.Size = new System.Drawing.Size(244, 40);
+            this.DetailExport.TabIndex = 15;
+            this.DetailExport.Text = " Chi tiết xuất hàng";
+            this.DetailExport.UseVisualStyleBackColor = false;
+            this.DetailExport.Click += new System.EventHandler(this.DetailExport_Click);
             // 
             // File
             // 
@@ -360,9 +441,9 @@ namespace Interface_UI
             this.File.Location = new System.Drawing.Point(0, 0);
             this.File.Margin = new System.Windows.Forms.Padding(12, 3, 8, 3);
             this.File.Name = "File";
-            this.File.Padding = new System.Windows.Forms.Padding(42, 0, 0, 0);
+            this.File.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
             this.File.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.File.Size = new System.Drawing.Size(238, 41);
+            this.File.Size = new System.Drawing.Size(221, 41);
             this.File.TabIndex = 11;
             this.File.Text = "         Hồ sơ";
             this.File.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -382,9 +463,9 @@ namespace Interface_UI
             this.Manage.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.Manage.IconSize = 30;
             this.Manage.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Manage.Location = new System.Drawing.Point(0, 168);
+            this.Manage.Location = new System.Drawing.Point(0, 161);
             this.Manage.Name = "Manage";
-            this.Manage.Size = new System.Drawing.Size(238, 47);
+            this.Manage.Size = new System.Drawing.Size(221, 41);
             this.Manage.TabIndex = 12;
             this.Manage.Text = "  Quản lý";
             this.Manage.UseVisualStyleBackColor = false;
@@ -396,9 +477,9 @@ namespace Interface_UI
             this.panelSubmenu.Controls.Add(this.Changepass);
             this.panelSubmenu.Controls.Add(this.Loggin);
             this.panelSubmenu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelSubmenu.Location = new System.Drawing.Point(0, 44);
+            this.panelSubmenu.Location = new System.Drawing.Point(0, 43);
             this.panelSubmenu.Name = "panelSubmenu";
-            this.panelSubmenu.Size = new System.Drawing.Size(238, 124);
+            this.panelSubmenu.Size = new System.Drawing.Size(221, 118);
             this.panelSubmenu.TabIndex = 11;
             // 
             // Loggout
@@ -417,9 +498,9 @@ namespace Interface_UI
             this.Loggout.Location = new System.Drawing.Point(0, 76);
             this.Loggout.Margin = new System.Windows.Forms.Padding(10, 3, 10, 3);
             this.Loggout.Name = "Loggout";
-            this.Loggout.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
+            this.Loggout.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
             this.Loggout.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.Loggout.Size = new System.Drawing.Size(238, 38);
+            this.Loggout.Size = new System.Drawing.Size(221, 38);
             this.Loggout.TabIndex = 11;
             this.Loggout.Text = "         Đăng xuất";
             this.Loggout.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -442,9 +523,9 @@ namespace Interface_UI
             this.Changepass.Location = new System.Drawing.Point(0, 38);
             this.Changepass.Margin = new System.Windows.Forms.Padding(10, 3, 10, 3);
             this.Changepass.Name = "Changepass";
-            this.Changepass.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
+            this.Changepass.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
             this.Changepass.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.Changepass.Size = new System.Drawing.Size(238, 38);
+            this.Changepass.Size = new System.Drawing.Size(221, 38);
             this.Changepass.TabIndex = 10;
             this.Changepass.Text = "         Đổi mật khẩu";
             this.Changepass.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -467,9 +548,9 @@ namespace Interface_UI
             this.Loggin.Location = new System.Drawing.Point(0, 0);
             this.Loggin.Margin = new System.Windows.Forms.Padding(10, 3, 10, 3);
             this.Loggin.Name = "Loggin";
-            this.Loggin.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
+            this.Loggin.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
             this.Loggin.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.Loggin.Size = new System.Drawing.Size(238, 38);
+            this.Loggin.Size = new System.Drawing.Size(221, 38);
             this.Loggin.TabIndex = 9;
             this.Loggin.Text = "         Tài khoản";
             this.Loggin.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -491,7 +572,7 @@ namespace Interface_UI
             this.Homepage.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.Homepage.Location = new System.Drawing.Point(0, 0);
             this.Homepage.Name = "Homepage";
-            this.Homepage.Size = new System.Drawing.Size(238, 44);
+            this.Homepage.Size = new System.Drawing.Size(221, 43);
             this.Homepage.TabIndex = 5;
             this.Homepage.Text = "  Trang chủ";
             this.Homepage.UseVisualStyleBackColor = false;
@@ -529,6 +610,8 @@ namespace Interface_UI
             this.panel2.ResumeLayout(false);
             this.panelReport.ResumeLayout(false);
             this.panelManage.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).EndInit();
+            this.panelDetail.ResumeLayout(false);
             this.panelSubmenu.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -547,18 +630,22 @@ namespace Interface_UI
         private FontAwesome.Sharp.IconButton Changepass;
         private FontAwesome.Sharp.IconButton Loggin;
         private FontAwesome.Sharp.IconButton Manage;
-        private System.Windows.Forms.Panel panelManage;
         private FontAwesome.Sharp.IconButton Loggout;
-        private FontAwesome.Sharp.IconButton File;
-        private FontAwesome.Sharp.IconButton Phieuxuathang;
         private FontAwesome.Sharp.IconButton Report;
-        private FontAwesome.Sharp.IconButton Phieuthutien;
         private System.Windows.Forms.Panel panelReport;
         private FontAwesome.Sharp.IconButton Baocaodoanhthu;
         private FontAwesome.Sharp.IconButton Baocaocongno;
         private FontAwesome.Sharp.IconButton Search;
         private FontAwesome.Sharp.IconButton Regulate;
         private FontAwesome.Sharp.IconPictureBox MenuSlidebar;
+        private System.Windows.Forms.Panel panelManage;
+        private System.Windows.Forms.Panel panelDetail;
+        private FontAwesome.Sharp.IconButton File;
+        private FontAwesome.Sharp.IconPictureBox iconPictureBox1;
+        private FontAwesome.Sharp.IconButton DetailProduct;
+        private FontAwesome.Sharp.IconButton DetailExport;
+        private FontAwesome.Sharp.IconButton Phieuxuathang;
+        private FontAwesome.Sharp.IconButton Phieuthutien;
     }
 }
 
