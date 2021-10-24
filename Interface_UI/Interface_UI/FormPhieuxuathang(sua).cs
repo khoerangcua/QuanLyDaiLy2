@@ -16,5 +16,10 @@ namespace Interface_UI
         {
             InitializeComponent();
         }
+
+        private void FormPhieuxuathang_sua__Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
