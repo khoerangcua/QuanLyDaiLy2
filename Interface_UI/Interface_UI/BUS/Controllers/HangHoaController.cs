@@ -20,6 +20,9 @@ namespace Interface_UI.BUS.Controllers
         public TextBox TenHangHoaTextBox { get; set; }
         public TextBox DonGiaTextBox { get; set; }
         public TextBox DonViTinhTextBox { get; set; }
+        public Button ThemButton { get; set; }
+        public Button CapNhatButton { get; set; }
+        public Button XoaButton { get; set; }
         public DataGridView HangHoaData { get; set; }
         #endregion
 
@@ -28,22 +31,27 @@ namespace Interface_UI.BUS.Controllers
         {
             this.MessageFailure = "";
             this.db = new QuanLyDaiLyEntities();
+            //
+            //subcribe events
+            //
             this.HangHoaData.RowEnter += HangHoaData_RowEnter;
+            this.ThemButton.Click += ThemButton_Click;
+            this.XoaButton.Click += XoaButton_Click;
+            this.CapNhatButton.Click += CapNhatButton_Click;
             this.MaHangHoaTextBox.Enabled = false;
         }
+        
         #endregion
 
         #region methods
         public void LoadLanDau()
         {
-            var hanghoas = from hh in db.tb_HangHoa.ToList()
+            var hanghoas = from hh in db.tb_HangHoa
                            select new { MaHangHoa = hh.Ma_HangHoa, TenHangHoa = hh.Ten_HangHoa, DonGia = hh.Don_Gia, DonViTinh = hh.DonVi_Tinh };
             this.HangHoaData.DataSource = null;
-            this.HangHoaData.DataSource = hanghoas;
+            this.HangHoaData.DataSource = hanghoas.ToList();
 
         }
-
-       
 
         public bool ThemHangHoa()
         {
@@ -60,7 +68,12 @@ namespace Interface_UI.BUS.Controllers
                 mahanghoa = this.db.tb_HangHoa.Max(p => p.Ma_HangHoa) + 1;
             }
             string tenhanghoa = this.TenHangHoaTextBox.Text;
-            double dongia = double.Parse(this.DonGiaTextBox.Text);
+            double dongia = this.DonGiaTextBox.Text.All(char.IsDigit) || !string.IsNullOrEmpty(this.DonGiaTextBox.Text) ? double.Parse(this.DonGiaTextBox.Text):-1;
+            if (dongia == -1)
+            {
+                this.MessageFailure = "Don gia khong hop le";
+                return false;
+            }
             string donvitinh = this.DonViTinhTextBox.Text;
             //
             //thuc thi them hang hoa vao csdl
@@ -80,10 +93,10 @@ namespace Interface_UI.BUS.Controllers
                 //
                 //reset form
                 //
-                var hanghoas = from hh in db.tb_HangHoa.ToList()
+                var hanghoas = from hh in db.tb_HangHoa
                                select new { MaHangHoa = hh.Ma_HangHoa, TenHangHoa = hh.Ten_HangHoa, DonGia = hh.Don_Gia, DonViTinh = hh.DonVi_Tinh };
                 this.HangHoaData.DataSource = null;
-                this.HangHoaData.DataSource = hanghoas;
+                this.HangHoaData.DataSource = hanghoas.ToList();
 
                 return true;
             }
@@ -126,10 +139,10 @@ namespace Interface_UI.BUS.Controllers
                     //
                     //reset form
                     //
-                    var hanghoas = from hh in db.tb_HangHoa.ToList()
+                    var hanghoas = from hh in db.tb_HangHoa
                                    select new { MaHangHoa = hh.Ma_HangHoa, TenHangHoa = hh.Ten_HangHoa, DonGia = hh.Don_Gia, DonViTinh = hh.DonVi_Tinh };
                     this.HangHoaData.DataSource = null;
-                    this.HangHoaData.DataSource = hanghoas;
+                    this.HangHoaData.DataSource = hanghoas.ToList();
                     return true;
                 }
             }
@@ -161,7 +174,12 @@ namespace Interface_UI.BUS.Controllers
                 //lay thong tin hang hoa va cap nhat
                 //
                 hanghoa.Ten_HangHoa = this.TenHangHoaTextBox.Text;
-                hanghoa.Don_Gia = double.Parse(this.DonGiaTextBox.Text);
+                hanghoa.Don_Gia = this.DonGiaTextBox.Text.All(char.IsDigit) || !string.IsNullOrEmpty(this.DonGiaTextBox.Text) ? double.Parse(this.DonGiaTextBox.Text) : -1;
+                if (hanghoa.Don_Gia == -1)
+                {
+                    this.MessageFailure = "don gia khong hop le";
+                    return false;
+                }
                 hanghoa.DonVi_Tinh = this.DonViTinhTextBox.Text;
                 //
                 //kiem tra cap nhat co thanh cong ?
@@ -176,10 +194,10 @@ namespace Interface_UI.BUS.Controllers
                     //
                     //reset form
                     //
-                    var hanghoas = from hh in db.tb_HangHoa.ToList()
+                    var hanghoas = from hh in db.tb_HangHoa
                                    select new { MaHangHoa = hh.Ma_HangHoa, TenHangHoa = hh.Ten_HangHoa, DonGia = hh.Don_Gia, DonViTinh = hh.DonVi_Tinh };
                     this.HangHoaData.DataSource = null;
-                    this.HangHoaData.DataSource = hanghoas;
+                    this.HangHoaData.DataSource = hanghoas.ToList();
                     return true;
                 }
             }
@@ -193,6 +211,21 @@ namespace Interface_UI.BUS.Controllers
             this.TenHangHoaTextBox.Text = this.HangHoaData.Rows[e.RowIndex].Cells[1].Value.ToString();
             this.DonGiaTextBox.Text = this.HangHoaData.Rows[e.RowIndex].Cells[2].Value.ToString();
             this.DonViTinhTextBox.Text = this.HangHoaData.Rows[e.RowIndex].Cells[3].Value.ToString();
+        }
+
+        private void CapNhatButton_Click(object sender, EventArgs e)
+        {
+            this.SuaHangHoa();
+        }
+
+        private void XoaButton_Click(object sender, EventArgs e)
+        {
+            this.XoaHangHoa();
+        }
+
+        private void ThemButton_Click(object sender, EventArgs e)
+        {
+            this.ThemHangHoa();
         }
         #endregion
     }

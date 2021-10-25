@@ -4,18 +4,18 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="817e8f14d29b47b48c4286a905c29f93" Name="Diagram1">
+      <Diagram DiagramId="38d798382f8b4e399e4580855d8812a7" Name="Diagram1">
         <EntityTypeShape EntityType="QuanLyDaiLyModel.tb_BC_CongNo" Width="1.5" PointX="5.25" PointY="1.625" IsExpanded="true" />
         <EntityTypeShape EntityType="QuanLyDaiLyModel.tb_BC_DoanhSo" Width="1.5" PointX="5.25" PointY="4.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="QuanLyDaiLyModel.tb_ChiTiet_XuatHang" Width="1.5" PointX="7.5" PointY="10.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="QuanLyDaiLyModel.tb_DaiLy" Width="1.5" PointX="3" PointY="6.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="QuanLyDaiLyModel.tb_HangHoa" Width="1.5" PointX="5.25" PointY="16.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="QuanLyDaiLyModel.tb_LoaiDaiLy" Width="1.5" PointX="0.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="QuanLyDaiLyModel.tb_ChiTiet_XuatHang" Width="1.5" PointX="7.5" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="QuanLyDaiLyModel.tb_DaiLy" Width="1.5" PointX="3" PointY="6.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="QuanLyDaiLyModel.tb_HangHoa" Width="1.5" PointX="5.25" PointY="17" IsExpanded="true" />
+        <EntityTypeShape EntityType="QuanLyDaiLyModel.tb_LoaiDaiLy" Width="1.5" PointX="0.75" PointY="7.875" IsExpanded="true" />
         <EntityTypeShape EntityType="QuanLyDaiLyModel.tb_PhieuThuTien" Width="1.5" PointX="5.25" PointY="7.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="QuanLyDaiLyModel.tb_PhieuXuatHang" Width="1.5" PointX="5.25" PointY="10.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="QuanLyDaiLyModel.tb_Quan" Width="1.5" PointX="0.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="QuanLyDaiLyModel.tb_PhieuXuatHang" Width="1.5" PointX="5.25" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="QuanLyDaiLyModel.tb_Quan" Width="1.5" PointX="0.75" PointY="4.875" IsExpanded="true" />
         <EntityTypeShape EntityType="QuanLyDaiLyModel.tb_TaiKhoan" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="QuanLyDaiLyModel.tb_TienNoPhatSinh" Width="1.5" PointX="5.25" PointY="13.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="QuanLyDaiLyModel.tb_TienNoPhatSinh" Width="1.5" PointX="5.25" PointY="13.875" IsExpanded="true" />
         <AssociationConnector Association="QuanLyDaiLyModel.FK_tb_BC_CongNo_tb_DaiLy" ManuallyRouted="false" />
         <AssociationConnector Association="QuanLyDaiLyModel.FK_tb_BC_DoanhSo_tb_DaiLy" ManuallyRouted="false" />
         <AssociationConnector Association="QuanLyDaiLyModel.FK_tb_ChiTiet_XuatHang_tb_HangHoa" ManuallyRouted="false" />

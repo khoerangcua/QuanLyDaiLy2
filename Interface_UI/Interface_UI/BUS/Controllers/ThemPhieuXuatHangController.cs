@@ -49,9 +49,16 @@ namespace Interface_UI.BUS.Controllers
             this.tempPhieuXuatHang = new tb_PhieuXuatHang();
             this.tempListChiTietPhieuXuatHang = new List<tb_ChiTiet_XuatHang>();
             this.CurrentChiTietPhieuXuatHang = new tb_ChiTiet_XuatHang();
-            this.ChiTietPhieuXuatDataGridView.RowEnter += ChiTietPhieuXuatDataGridView_RowEnter;
             //
-            // trạng thái của các điều khiển
+            //subcribe events
+            //
+            this.ChiTietPhieuXuatDataGridView.RowEnter += ChiTietPhieuXuatDataGridView_RowEnter;
+            this.ThemButton.Click += ThemButton_Click;
+            this.XoaButton.Click += XoaButton_Click;
+            this.LuuButton.Click += LuuButton_Click;
+            this.HuyButton.Click += HuyButton_Click;
+            //
+            // set state of controle
             //
             this.ThemButton.Enabled = true;
             this.XoaButton.Enabled = false;
@@ -60,14 +67,13 @@ namespace Interface_UI.BUS.Controllers
             this.HangHoaComboBox.Enabled = true;
             this.DaiLyComboBox.Enabled = true;
             this.SoLuongTextBox.Enabled = true;
-            this.NgayLapTextBox.Enabled = true;
+            this.NgayLapTextBox.Enabled = false;
             this.TienNoHienTai.Enabled = false;
             this.GhiChuTextBox.Enabled = true;
             this.ChiTietPhieuXuatDataGridView.DataSource = null;
 
 
         }
-
         #endregion
 
         #region Methods
@@ -76,41 +82,27 @@ namespace Interface_UI.BUS.Controllers
             //
             // Load Đại lý ComboBox
             //
-            if (this.DaiLyComboBox != null)
-            {
-                if (db.tb_DaiLy.Any())
-                {
-                    var result1 = from dl in db.tb_DaiLy
-                                  select new { ID = dl.Ma_DaiLy, Ten = dl.Ten_DaiLy };
-                    this.DaiLyComboBox.DataSource = result1.ToList();
-                    this.DaiLyComboBox.ValueMember = "ID";
-                    this.DaiLyComboBox.DisplayMember = "Ten";
-                }
-            }
+            var dailys = from dl in db.tb_DaiLy
+                         select new { ID = dl.Ma_DaiLy, Ten = dl.Ten_DaiLy };
+            this.DaiLyComboBox.DataSource = dailys.ToList();
+            this.DaiLyComboBox.ValueMember = "ID";
+            this.DaiLyComboBox.DisplayMember = "Ten";
             //
             //Load Hàng hóa ComboBox
             //
-            if (this.HangHoaComboBox != null)
-            {
-                if (db.tb_HangHoa.Any())
-                {
-                    var result2 = from hh in db.tb_HangHoa
-                                  select new { ID = hh.Ma_HangHoa, Ten = hh.Ten_HangHoa };
-                    this.HangHoaComboBox.DataSource = result2.ToList();
-                    this.HangHoaComboBox.ValueMember = "ID";
-                    this.HangHoaComboBox.DisplayMember = "Ten";
-                }
-            }
+            var hanghoas = from hh in db.tb_HangHoa
+                           select new { ID = hh.Ma_HangHoa, Ten = hh.Ten_HangHoa };
+            this.HangHoaComboBox.DataSource = hanghoas.ToList();
+            this.HangHoaComboBox.ValueMember = "ID";
+            this.HangHoaComboBox.DisplayMember = "Ten";
             //
             //Load Ngày lập phiếu
             //
-            if (this.NgayLapTextBox != null)
-            {
-                this.NgayLapTextBox.Text = DateTime.Now.ToString();
-            }
+            this.NgayLapTextBox.Text = DateTime.Now.ToString();
+
         }
 
-        public bool ThemPhieuXuatHang()
+        private bool ThemPhieuXuatHang()
         {
             //
             // reset messagefailure
@@ -119,32 +111,24 @@ namespace Interface_UI.BUS.Controllers
             //
             //Lấy thông tin phiếu xuất hàng
             //
-            int maphieuxuat;
+            int maphieuxuat = 1;
             if (db.tb_PhieuXuatHang.Any())
             {
-                var result1 = db.tb_PhieuXuatHang.Max(pxh => pxh.Ma_PhieuXuat);
-                maphieuxuat = result1 + 1;
+                maphieuxuat = db.tb_PhieuXuatHang.Max(pxh => pxh.Ma_PhieuXuat) + 1;
             }
-            else
-            {
-                maphieuxuat = 1;
-            }
+
             int madaily = int.Parse(this.DaiLyComboBox.SelectedValue.ToString());
             DateTime ngaylap = DateTime.Now;
             string ghichu = this.GhiChuTextBox.Text;
             //
             //Lấy thông tin chi tiết phiếu xuất hàng
             //
-            int machitietphieuxuat;
+            int machitietphieuxuat = 1;
             if (db.tb_ChiTiet_XuatHang.Any())
             {
-                var result1 = db.tb_ChiTiet_XuatHang.Max(ctpxh => ctpxh.Ma_ChiTiet_XuatHang);
-                machitietphieuxuat = result1 + 1;
+                machitietphieuxuat = db.tb_ChiTiet_XuatHang.Max(ctpxh => ctpxh.Ma_ChiTiet_XuatHang) + 1;
             }
-            else
-            {
-                machitietphieuxuat = 1;
-            }
+
             int soluong = (this.SoLuongTextBox.Text).All(char.IsDigit) ? int.Parse(this.SoLuongTextBox.Text) : -1;
             int masanpham = int.Parse(this.HangHoaComboBox.SelectedValue.ToString());
             double dongia = (from hh in db.tb_HangHoa
@@ -169,29 +153,32 @@ namespace Interface_UI.BUS.Controllers
             //
             //Kiểm tra quy định nợ
             //
-            double notoida = (from dl in db.tb_DaiLy
-                              join ldl in db.tb_LoaiDaiLy on dl.Ma_Loai_DaiLy equals ldl.Ma_Loai_DaiLy
-                              where dl.Ma_DaiLy == madaily
-                              select ldl.TienNo_ToiDa).Single();
 
-            double tienno = 0;
-            if (db.tb_PhieuXuatHang.Any())
-            {
-                var result3 = from px in db.tb_PhieuXuatHang
-                              where px.Ma_DaiLy == madaily
-                              group px by px.Ma_DaiLy;
-                foreach (var item in result3)
-                {
-                    if (item.Key == madaily)
-                    {
-                        tienno = item.Sum(p => p.TongTien);
-                    }
-                }
-            }
+            //
+            //Nợ tối đa
+            //
+            double notoida = (from dl in db.tb_DaiLy
+                              where dl.Ma_DaiLy == madaily
+                              select dl.tb_LoaiDaiLy.TienNo_ToiDa).Single();
+
+            //
+            //tiền nợ cứng 
+            //
+            double nocung = (db.tb_PhieuXuatHang.Where(pxh => pxh.Ma_DaiLy == madaily))
+                                                .GroupBy(pxh => pxh.Ma_DaiLy)
+                                                .Select(pxh => pxh.Sum(p => p.TongTien))
+                                                .Single();
+            //
+            //tiền đã thu
+            //
+            double tiendathu = db.tb_PhieuThuTien.Where(ptt => ptt.Ma_DaiLy == madaily)
+                                                 .GroupBy(ptt => ptt.Ma_DaiLy)
+                                                 .Select(ptt => ptt.Sum(p => p.So_Tien_Thu))
+                                                 .Single();
 
             double notamthoi = tempPhieuXuatHang.TongTien;
 
-            if (tienno + notamthoi <= notoida)
+            if ((nocung + notamthoi)-tiendathu <= notoida)
             {
                 if (this.tempPhieuXuatHang.Ma_DaiLy == 0)
                 {
@@ -213,7 +200,7 @@ namespace Interface_UI.BUS.Controllers
                         Don_Gia = dongia,
                         Thanh_Tien = thanhtien,
 
-                    });                                                 
+                    });
                 }
                 else
                 {
@@ -232,28 +219,13 @@ namespace Interface_UI.BUS.Controllers
                     });
 
                     this.tempPhieuXuatHang.TongTien = this.tempListChiTietPhieuXuatHang.Sum(p => p.Thanh_Tien);
-                    
-                }
+
+                }                
                 //
                 //update form
-                //
-                double tienno1 = 0;
-                if (db.tb_PhieuXuatHang.Any())
-                {
-                    var result3 = from px in db.tb_PhieuXuatHang
-                                  where px.Ma_DaiLy == madaily
-                                  group px by px.Ma_DaiLy;
-                    foreach (var item in result3)
-                    {
-                        if (item.Key == madaily)
-                        {
-                            tienno1 = item.Sum(p => p.TongTien);
-                        }
-                    }
-                }
-                double notamthoi1 = tempPhieuXuatHang.TongTien;
+                //                
                 this.DaiLyComboBox.Enabled = false;
-                this.TienNoHienTai.Text = (tienno1 + notamthoi1).ToString();
+                this.TienNoHienTai.Text = (nocung - tiendathu + this.tempListChiTietPhieuXuatHang.Sum(p=>p.Thanh_Tien)).ToString();
                 this.NgayLapTextBox.Text = this.tempPhieuXuatHang.Ngay_Lap.ToString();
                 this.GhiChuTextBox.Enabled = false;
                 this.XoaButton.Enabled = true;
@@ -270,13 +242,13 @@ namespace Interface_UI.BUS.Controllers
             }
         }
 
-        public bool XoaPhieuXuatHang()
+        private bool XoaPhieuXuatHang()
         {
 
             //reset messagefailure
             this.MessageFailure = "";
             // xóa chi tiết phiếu xuất đã chọn
-            
+
             bool result = this.tempListChiTietPhieuXuatHang.Remove(CurrentChiTietPhieuXuatHang);
             if (result == false)
             {
@@ -286,7 +258,7 @@ namespace Interface_UI.BUS.Controllers
             //
             //reset form
             //
-            if (this.tempListChiTietPhieuXuatHang.Count()==0)
+            if (this.tempListChiTietPhieuXuatHang.Count() == 0)
             {
                 this.XoaButton.Enabled = false;
                 this.LuuButton.Enabled = false;
@@ -297,7 +269,7 @@ namespace Interface_UI.BUS.Controllers
             return true;
         }
 
-        public bool LuuPhieuXuatHang()
+        private bool LuuPhieuXuatHang()
         {
             db.tb_PhieuXuatHang.Add(this.tempPhieuXuatHang);
             foreach (var item in this.tempListChiTietPhieuXuatHang)
@@ -305,7 +277,7 @@ namespace Interface_UI.BUS.Controllers
                 db.tb_ChiTiet_XuatHang.Add(item);
             }
 
-            if (db.SaveChanges()==0)
+            if (db.SaveChanges() == 0)
             {
                 this.MessageFailure = "Lưu không thành công";
                 return false;
@@ -328,7 +300,7 @@ namespace Interface_UI.BUS.Controllers
             }
         }
 
-        public bool HuyPhieuXuatHang()
+        private bool HuyPhieuXuatHang()
         {
             this.tempPhieuXuatHang = new tb_PhieuXuatHang();
             this.tempListChiTietPhieuXuatHang.Clear();
@@ -357,9 +329,28 @@ namespace Interface_UI.BUS.Controllers
             this.CurrentChiTietPhieuXuatHang.Ma_ChiTiet_XuatHang = int.Parse(this.ChiTietPhieuXuatDataGridView.Rows[e.RowIndex].Cells[0].ToString());
             this.CurrentChiTietPhieuXuatHang.Ma_PhieuXuat = int.Parse(this.ChiTietPhieuXuatDataGridView.Rows[e.RowIndex].Cells[1].ToString());
             this.CurrentChiTietPhieuXuatHang.Ma_HangHoa = int.Parse(this.ChiTietPhieuXuatDataGridView.Rows[e.RowIndex].Cells[2].ToString());
-            this.CurrentChiTietPhieuXuatHang.So_Luong = int.Parse(this.ChiTietPhieuXuatDataGridView.Rows[e.RowIndex].Cells[0].ToString());
-            this.CurrentChiTietPhieuXuatHang.Don_Gia = double.Parse(this.ChiTietPhieuXuatDataGridView.Rows[e.RowIndex].Cells[0].ToString());
-            this.CurrentChiTietPhieuXuatHang.Thanh_Tien = double.Parse(this.ChiTietPhieuXuatDataGridView.Rows[e.RowIndex].Cells[0].ToString());
+            this.CurrentChiTietPhieuXuatHang.So_Luong = int.Parse(this.ChiTietPhieuXuatDataGridView.Rows[e.RowIndex].Cells[3].ToString());
+            this.CurrentChiTietPhieuXuatHang.Don_Gia = double.Parse(this.ChiTietPhieuXuatDataGridView.Rows[e.RowIndex].Cells[4].ToString());
+            this.CurrentChiTietPhieuXuatHang.Thanh_Tien = double.Parse(this.ChiTietPhieuXuatDataGridView.Rows[e.RowIndex].Cells[5].ToString());
+        }
+        private void HuyButton_Click(object sender, EventArgs e)
+        {
+            this.HuyPhieuXuatHang();
+        }
+
+        private void LuuButton_Click(object sender, EventArgs e)
+        {
+            this.LuuPhieuXuatHang();
+        }
+
+        private void XoaButton_Click(object sender, EventArgs e)
+        {
+            this.XoaPhieuXuatHang();
+        }
+
+        private void ThemButton_Click(object sender, EventArgs e)
+        {
+            this.ThemPhieuXuatHang();
         }
         #endregion
     }

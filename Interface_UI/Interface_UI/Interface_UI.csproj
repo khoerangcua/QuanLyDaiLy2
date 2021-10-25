@@ -33,11 +33,20 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="FontAwesome.Sharp, Version=5.15.3.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\FontAwesome.Sharp.5.15.3\lib\net472\FontAwesome.Sharp.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -49,6 +58,70 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BUS\Controllers\BaoCaoCongNoController.cs" />
+    <Compile Include="BUS\Controllers\BaoCaoDoanhSoController.cs" />
+    <Compile Include="BUS\Controllers\HangHoaController.cs" />
+    <Compile Include="BUS\Controllers\HoSoDaiLyController.cs" />
+    <Compile Include="BUS\Controllers\LoaiDaiLyController.cs" />
+    <Compile Include="BUS\Controllers\PhieuThuTienController.cs" />
+    <Compile Include="BUS\Controllers\QuanController.cs" />
+    <Compile Include="BUS\Controllers\SuaPhieuXuatHangController.cs" />
+    <Compile Include="BUS\Controllers\TaiKhoanController.cs" />
+    <Compile Include="BUS\Controllers\ThemPhieuXuatHangController.cs" />
+    <Compile Include="BUS\Controllers\TraCuuDaiLyController.cs" />
+    <Compile Include="BUS\Controllers\XoaPhieuXuatHangController.cs" />
+    <Compile Include="BUS\Validators\ChiTietPhieuXuatValidator.cs" />
+    <Compile Include="BUS\Validators\HoSoDaiLyValidator.cs" />
+    <Compile Include="BUS\Validators\PhieuXuatHangValidator.cs" />
+    <Compile Include="BUS\Validators\TaiKhoanValidator.cs" />
+    <Compile Include="DAO\QuanLyDaiLyModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QuanLyDaiLyModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAO\QuanLyDaiLyModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QuanLyDaiLyModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAO\QuanLyDaiLyModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QuanLyDaiLyModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="DAO\tb_BC_CongNo.cs">
+      <DependentUpon>QuanLyDaiLyModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAO\tb_BC_DoanhSo.cs">
+      <DependentUpon>QuanLyDaiLyModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAO\tb_ChiTiet_XuatHang.cs">
+      <DependentUpon>QuanLyDaiLyModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAO\tb_DaiLy.cs">
+      <DependentUpon>QuanLyDaiLyModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAO\tb_HangHoa.cs">
+      <DependentUpon>QuanLyDaiLyModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAO\tb_LoaiDaiLy.cs">
+      <DependentUpon>QuanLyDaiLyModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAO\tb_PhieuThuTien.cs">
+      <DependentUpon>QuanLyDaiLyModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAO\tb_PhieuXuatHang.cs">
+      <DependentUpon>QuanLyDaiLyModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAO\tb_Quan.cs">
+      <DependentUpon>QuanLyDaiLyModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAO\tb_TaiKhoan.cs">
+      <DependentUpon>QuanLyDaiLyModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAO\tb_TienNoPhatSinh.cs">
+      <DependentUpon>QuanLyDaiLyModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -214,6 +287,13 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EntityDeploy Include="DAO\QuanLyDaiLyModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>QuanLyDaiLyModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="DAO\QuanLyDaiLyModel.edmx.diagram">
+      <DependentUpon>QuanLyDaiLyModel.edmx</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -243,5 +323,21 @@
   <ItemGroup>
     <None Include="Resources\lock.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="DAO\QuanLyDaiLyModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>QuanLyDaiLyModel.Context.cs</LastGenOutput>
+      <DependentUpon>QuanLyDaiLyModel.edmx</DependentUpon>
+    </Content>
+    <Content Include="DAO\QuanLyDaiLyModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>QuanLyDaiLyModel.edmx</DependentUpon>
+      <LastGenOutput>QuanLyDaiLyModel.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

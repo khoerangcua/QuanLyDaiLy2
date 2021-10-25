@@ -10,17 +10,24 @@ namespace Interface_UI.BUS.Controllers
 {
     public class TaiKhoanController
     {
+        #region fields
         public string MessageFailure { get; set; }
         private TaiKhoanValidator taiKhoanValidator;
         public int CurrentID { get; set; }
         QuanLyDaiLyEntities db;
+        #endregion
+        
+        #region controls
         //dang nhap
-        public TextBox TaiKhoan { get; set; }
-        public TextBox MatKhau { get; set; }
+        public TextBox TaiKhoanTextBox { get; set; }
+        public TextBox MatKhauTextBox { get; set; }
+        public Button DangNhapButton { get; set; }
         //thay doi mat kahu
-        public TextBox MatKhauCu { get; set; }
-        public TextBox MatKhauMoi { get; set; }
-        public TextBox NhapLaiMatKhauMoi { get; set; }
+        public TextBox MatKhauCuTextBox { get; set; }
+        public TextBox MatKhauMoiTextBox { get; set; }
+        public TextBox NhapLaiMatKhauMoiTextBox { get; set; }
+        public Button XacNhanButton { get; set; }
+        #endregion
 
 
         public TaiKhoanController()
@@ -29,12 +36,25 @@ namespace Interface_UI.BUS.Controllers
             this.taiKhoanValidator = new TaiKhoanValidator();
             this.MessageFailure = "";
             this.CurrentID = -1;
-
-
-
+            //
+            //subcribe events
+            //
+            this.DangNhapButton.Click += DangNhapButton_Click;
+            this.XacNhanButton.Click += XacNhanButton_Click;
+        }
+        #region events
+        private void XacNhanButton_Click(object sender, EventArgs e)
+        {
+            this.ThayDoiMatKhau(this.CurrentID);
         }
 
-        public bool DangNhap()
+        private void DangNhapButton_Click(object sender, EventArgs e)
+        {
+            this.DangNhap();
+        }
+        #endregion
+
+        private bool DangNhap()
         {
             //
             //reset messagefailure
@@ -43,8 +63,8 @@ namespace Interface_UI.BUS.Controllers
             //
             // Lấy thông tin
             //
-            string taikhoan = this.TaiKhoan.Text;
-            string matkhau = this.MatKhau.Text;
+            string taikhoan = this.TaiKhoanTextBox.Text;
+            string matkhau = this.MatKhauTextBox.Text;
             //
             //kiểm tra thông tin đầu vào
             //            
@@ -71,15 +91,15 @@ namespace Interface_UI.BUS.Controllers
                     //
                     //reset form đăng nhập và lưu lại id tài khoản
                     //
-                    this.TaiKhoan.Text = "";
-                    this.MatKhau.Text = "";
+                    this.TaiKhoanTextBox.Text = "";
+                    this.MatKhauTextBox.Text = "";
                     this.CurrentID = result.ID_TaiKhoan;
                     return true;
                 }
             }
         }
 
-        public bool ThayDoiMatKhau(int currentID)
+        private bool ThayDoiMatKhau(int currentID)
         {
             //
             //reset messagefailure
@@ -88,9 +108,9 @@ namespace Interface_UI.BUS.Controllers
             //
             //Lấy thông tin
             //
-            string mkcu = this.MatKhauCu.Text;
-            string mkmoi = this.MatKhauMoi.Text;
-            string nhaplaimkmoi = this.NhapLaiMatKhauMoi.Text;
+            string mkcu = this.MatKhauCuTextBox.Text;
+            string mkmoi = this.MatKhauMoiTextBox.Text;
+            string nhaplaimkmoi = this.NhapLaiMatKhauMoiTextBox.Text;
             //
             //Kiểm tra thông tin đầu vào
             //
@@ -128,9 +148,9 @@ namespace Interface_UI.BUS.Controllers
                         //
                         //reset form thay đổi mật khẩu
                         //
-                        this.MatKhauCu.Text = "";
-                        this.MatKhauMoi.Text = "";
-                        this.NhapLaiMatKhauMoi.Text = "";
+                        this.MatKhauCuTextBox.Text = "";
+                        this.MatKhauMoiTextBox.Text = "";
+                        this.NhapLaiMatKhauMoiTextBox.Text = "";
                         return true;
                     }
                 }

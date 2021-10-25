@@ -18,6 +18,7 @@ namespace Interface_UI.DAO
         public int Ma_DaiLy { get; set; }
         public System.DateTime Ngay_Lap { get; set; }
         public double So_Tien_Thu { get; set; }
+        public string GhiChu { get; set; }
     
         public virtual tb_DaiLy tb_DaiLy { get; set; }
     }

@@ -76,6 +76,7 @@
           <Property Name="Ma_DaiLy" Type="int" Nullable="false" />
           <Property Name="Ngay_Lap" Type="datetime" Nullable="false" />
           <Property Name="So_Tien_Thu" Type="float" Nullable="false" />
+          <Property Name="GhiChu" Type="nchar" MaxLength="100" />
         </EntityType>
         <EntityType Name="tb_PhieuXuatHang">
           <Key>
@@ -358,6 +359,7 @@
           <Property Name="Ma_DaiLy" Type="Int32" Nullable="false" />
           <Property Name="Ngay_Lap" Type="DateTime" Nullable="false" Precision="3" />
           <Property Name="So_Tien_Thu" Type="Double" Nullable="false" />
+          <Property Name="GhiChu" Type="String" MaxLength="100" FixedLength="true" Unicode="true" />
           <NavigationProperty Name="tb_DaiLy" Relationship="Self.FK_tb_PhieuThuTien_tb_DaiLy" FromRole="tb_PhieuThuTien" ToRole="tb_DaiLy" />
         </EntityType>
         <EntityType Name="tb_PhieuXuatHang">
@@ -638,6 +640,7 @@
                 <ScalarProperty Name="Ma_DaiLy" ColumnName="Ma_DaiLy" />
                 <ScalarProperty Name="Ngay_Lap" ColumnName="Ngay_Lap" />
                 <ScalarProperty Name="So_Tien_Thu" ColumnName="So_Tien_Thu" />
+                <ScalarProperty Name="GhiChu" ColumnName="GhiChu" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

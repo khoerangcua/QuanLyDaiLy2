@@ -168,7 +168,7 @@ namespace Interface_UI
             "Điện thoại"});
             this.comboBox3.Location = new System.Drawing.Point(112, 66);
             this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(109, 28);
+            this.comboBox3.Size = new System.Drawing.Size(140, 28);
             this.comboBox3.TabIndex = 9;
             // 
             // comboBox1
@@ -186,7 +186,7 @@ namespace Interface_UI
             "Điện thoại"});
             this.comboBox1.Location = new System.Drawing.Point(112, 124);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(109, 28);
+            this.comboBox1.Size = new System.Drawing.Size(140, 28);
             this.comboBox1.TabIndex = 8;
             // 
             // label1

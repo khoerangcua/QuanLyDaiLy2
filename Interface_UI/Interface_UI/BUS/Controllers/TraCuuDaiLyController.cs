@@ -10,53 +10,66 @@ namespace Interface_UI.BUS.Controllers
 {
     public class TraCuuDaiLyController
     {
+        #region fields
         public string MessageFailure { get; set; }
         QuanLyDaiLyEntities db;
+        #endregion
 
+        #region controls
         public TextBox DaiLyTextBox { get; set; }
         public ComboBox LoaiDaiLyComboBox { get; set; }
         public ComboBox QuanComboBox { get; set; }
         public DataGridView DaiLyData { get; set; }
+        public Button TimButton { get; set; }
+        #endregion
 
+        #region constructor
         public TraCuuDaiLyController()
         {
             this.MessageFailure = "";
             db = new QuanLyDaiLyEntities();
+            //
+            //subcribe events
+            //
+            this.TimButton.Click += TimButton_Click;            
 
         }
+        #endregion
 
+        #region methods
         public void LoadLanDau()
         {
             //
             // load quan combobox
             //
-            var ds_quan = from q in db.tb_Quan.ToList()
-                          select new { Id = q.Ma_Quan, Name = q.Ten_Quan };
-            this.QuanComboBox.DataSource = ds_quan;
+            var quans = from q in db.tb_Quan
+                        select new { Id = q.Ma_Quan, Name = q.Ten_Quan };
+            this.QuanComboBox.DataSource = quans.ToList();
             this.QuanComboBox.ValueMember = "Id";
             this.QuanComboBox.DisplayMember = "Name";
             //
             // load loai dai ly combobox
             //
-            var ds_loaidaily = from ldl in db.tb_LoaiDaiLy.ToList()
-                               select new { Id = ldl.Ma_Loai_DaiLy, Name = ldl.Ten_Loai };
-            this.LoaiDaiLyComboBox.DataSource = ds_loaidaily;
+            var loaidailys = from ldl in db.tb_LoaiDaiLy
+                             select new { Id = ldl.Ma_Loai_DaiLy, Name = ldl.Ten_Loai };
+            this.LoaiDaiLyComboBox.DataSource = loaidailys.ToList();
             this.LoaiDaiLyComboBox.ValueMember = "Id";
             this.LoaiDaiLyComboBox.DisplayMember = "Name";
-            
+
         }
 
-        public void TimKiem()
+        private void TimKiem()
         {
+            //
+            //reset messagefailure
+            //
             this.MessageFailure = "";
             //
-            //lay thong tin
+            //lay thong tin ten, maloai, maquan
             //
-
             string tendaily = this.DaiLyTextBox.Text;
             int maloaidaily = int.Parse(this.LoaiDaiLyComboBox.SelectedValue.ToString());
             int maquan = int.Parse(this.QuanComboBox.SelectedValue.ToString());
-
             //
             // load tien no
             //
@@ -98,12 +111,21 @@ namespace Interface_UI.BUS.Controllers
             var tienno_nophatsinh = from n in dstienno
                                     join nps in dsnophatsinh on n.MaDaiLy equals nps.MaDaiLy
                                     select new { MaDaiLy = n.MaDaiLy, TenDaiLy = n.TenDaiLy, LoaiDaiLy = n.LoaiDaiLy, Quan = n.Quan, TongNo = n.TienNo, TongNoPhatSinh = nps.TienNoPhatSinh };
-            var dsdaily_tieno = from tn in tienno_nophatsinh join dt in dstiendathu on tn.MaDaiLy equals dt.MaDaiLy
-                         select new { MaDaiLy = tn.MaDaiLy, TenDaiLy = tn.TenDaiLy, LoaiDaiLy = tn.LoaiDaiLy, Quan = tn.Quan, TienNo = (tn.TongNo + tn.TongNoPhatSinh)-dt.TienDaThu };
+            var dsdaily_tieno = from tn in tienno_nophatsinh
+                                join dt in dstiendathu on tn.MaDaiLy equals dt.MaDaiLy
+                                select new { MaDaiLy = tn.MaDaiLy, TenDaiLy = tn.TenDaiLy, LoaiDaiLy = tn.LoaiDaiLy, Quan = tn.Quan, TienNo = (tn.TongNo + tn.TongNoPhatSinh) - dt.TienDaThu };
 
             this.DaiLyData.DataSource = null;
             this.DaiLyData.DataSource = dsdaily_tieno;
 
         }
+        #endregion
+
+        #region events
+        private void TimButton_Click(object sender, EventArgs e)
+        {
+            this.TimKiem();
+        }
+        #endregion
     }
 }

@@ -19,6 +19,9 @@ namespace Interface_UI.BUS.Controllers
         public TextBox MaLoaiDaiLyTextBox { get; set; }
         public TextBox TenLoaiDaiLyTextBox { get; set; }
         public TextBox TienNoToiDaTextBox { get; set; }
+        public Button ThemButton { get; set; }
+        public Button CapNhatButton { get; set; }
+        public Button XoaButton { get; set; }
         public DataGridView LoaiDaiLyData { get; set; }
         #endregion
 
@@ -27,22 +30,33 @@ namespace Interface_UI.BUS.Controllers
         {
             this.MessageFailure = "";
             this.db = new QuanLyDaiLyEntities();
+            //
+            //subcribe events
+            //
             this.LoaiDaiLyData.RowEnter += LoaiDaiLyData_RowEnter;
+            this.ThemButton.Click += ThemButton_Click;
+            this.CapNhatButton.Click += CapNhatButton_Click;
+            this.XoaButton.Click += XoaButton_Click;
+            //
+            //set state of controls
+            //
             this.MaLoaiDaiLyTextBox.Enabled = false;
         }
+
+        
 
         #endregion
 
         #region methods
         public void LoadLanDau()
         {
-            var loaidailys = from ldl in db.tb_LoaiDaiLy.ToList()
+            var loaidailys = from ldl in db.tb_LoaiDaiLy
                              select new { MaLoai = ldl.Ma_Loai_DaiLy, TenLoai = ldl.Ten_Loai, TienNoToiDa = ldl.TienNo_ToiDa };
             this.LoaiDaiLyData.DataSource = null;
-            this.LoaiDaiLyData.DataSource = loaidailys;
+            this.LoaiDaiLyData.DataSource = loaidailys.ToList();
         }
 
-        public bool ThemLoaiDaiLy()
+        private bool ThemLoaiDaiLy()
         {
             this.MessageFailure = "";
             //
@@ -78,7 +92,7 @@ namespace Interface_UI.BUS.Controllers
 
         }
 
-        public bool XoaLoaiDaiLy()
+        private bool XoaLoaiDaiLy()
         {
             this.MessageFailure = "";
             //
@@ -86,9 +100,9 @@ namespace Interface_UI.BUS.Controllers
             //
             int maloaidaily = int.Parse(this.MaLoaiDaiLyTextBox.Text);
             //
-            //tim loai dai ly tuong ung
+            //tim kiem loai dai ly tuong ung
             //
-            var loaidaily = db.tb_LoaiDaiLy.ToList().FirstOrDefault(p => p.Ma_Loai_DaiLy == maloaidaily);
+            var loaidaily = db.tb_LoaiDaiLy.FirstOrDefault(p => p.Ma_Loai_DaiLy == maloaidaily);
             if (loaidaily == default)
             {
                 this.MessageFailure = "loai dai ly khong ton tai";
@@ -110,16 +124,16 @@ namespace Interface_UI.BUS.Controllers
                     //
                     //resert form
                     //
-                    var loaidailys = from ldl in db.tb_LoaiDaiLy.ToList()
+                    var loaidailys = from ldl in db.tb_LoaiDaiLy
                                      select new { MaLoai = ldl.Ma_Loai_DaiLy, TenLoai = ldl.Ten_Loai, TienNoToiDa = ldl.TienNo_ToiDa };
                     this.LoaiDaiLyData.DataSource = null;
-                    this.LoaiDaiLyData.DataSource = loaidailys;
+                    this.LoaiDaiLyData.DataSource = loaidailys.ToList();
                     return true;
                 }
             }
         }
 
-        public bool CapNhatLoaiDaiLy()
+        private bool CapNhatLoaiDaiLy()
         {
             this.MessageFailure = "";
             //
@@ -129,7 +143,7 @@ namespace Interface_UI.BUS.Controllers
             string tenloaidaily = this.TenLoaiDaiLyTextBox.Text;
             double tiennotoida = double.Parse(TienNoToiDaTextBox.Text);
 
-            var loaidaily = db.tb_LoaiDaiLy.ToList().FirstOrDefault(p => p.Ma_Loai_DaiLy == maloaidaily);
+            var loaidaily = db.tb_LoaiDaiLy.FirstOrDefault(p => p.Ma_Loai_DaiLy == maloaidaily);
             if (loaidaily == default)
             {
                 this.MessageFailure = "loai dai ly khong ton tai";
@@ -149,10 +163,10 @@ namespace Interface_UI.BUS.Controllers
                     //
                     //reset form
                     //
-                    var loaidailys = from ldl in db.tb_LoaiDaiLy.ToList()
+                    var loaidailys = from ldl in db.tb_LoaiDaiLy
                                      select new { MaLoai = ldl.Ma_Loai_DaiLy, TenLoai = ldl.Ten_Loai, TienNoToiDa = ldl.TienNo_ToiDa };
                     this.LoaiDaiLyData.DataSource = null;
-                    this.LoaiDaiLyData.DataSource = loaidailys;
+                    this.LoaiDaiLyData.DataSource = loaidailys.ToList();
                     return true;
                 }
             }
@@ -165,6 +179,20 @@ namespace Interface_UI.BUS.Controllers
             this.MaLoaiDaiLyTextBox.Text = this.LoaiDaiLyData.Rows[e.RowIndex].Cells[0].Value.ToString();
             this.TenLoaiDaiLyTextBox.Text = this.LoaiDaiLyData.Rows[e.RowIndex].Cells[1].Value.ToString();
             this.TienNoToiDaTextBox.Text = this.LoaiDaiLyData.Rows[e.RowIndex].Cells[2].Value.ToString();
+        }
+        private void XoaButton_Click(object sender, EventArgs e)
+        {
+            this.XoaLoaiDaiLy();
+        }
+
+        private void CapNhatButton_Click(object sender, EventArgs e)
+        {
+            this.CapNhatLoaiDaiLy();
+        }
+
+        private void ThemButton_Click(object sender, EventArgs e)
+        {
+            this.ThemLoaiDaiLy();
         }
         #endregion
 
