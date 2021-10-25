@@ -20,8 +20,8 @@ namespace Interface_UI.DAO
             this.tb_BC_CongNo = new HashSet<tb_BC_CongNo>();
             this.tb_BC_DoanhSo = new HashSet<tb_BC_DoanhSo>();
             this.tb_PhieuThuTien = new HashSet<tb_PhieuThuTien>();
-            this.tb_PhieuXuatHang = new HashSet<tb_PhieuXuatHang>();
             this.tb_TienNoPhatSinh = new HashSet<tb_TienNoPhatSinh>();
+            this.tb_PhieuXuatHang = new HashSet<tb_PhieuXuatHang>();
         }
     
         public int Ma_DaiLy { get; set; }
@@ -42,8 +42,8 @@ namespace Interface_UI.DAO
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<tb_PhieuThuTien> tb_PhieuThuTien { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<tb_PhieuXuatHang> tb_PhieuXuatHang { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<tb_TienNoPhatSinh> tb_TienNoPhatSinh { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<tb_PhieuXuatHang> tb_PhieuXuatHang { get; set; }
     }
 }

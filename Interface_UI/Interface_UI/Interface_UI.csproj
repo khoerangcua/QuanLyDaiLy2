@@ -70,9 +70,7 @@
     <Compile Include="BUS\Controllers\ThemPhieuXuatHangController.cs" />
     <Compile Include="BUS\Controllers\TraCuuDaiLyController.cs" />
     <Compile Include="BUS\Controllers\XoaPhieuXuatHangController.cs" />
-    <Compile Include="BUS\Validators\ChiTietPhieuXuatValidator.cs" />
     <Compile Include="BUS\Validators\HoSoDaiLyValidator.cs" />
-    <Compile Include="BUS\Validators\PhieuXuatHangValidator.cs" />
     <Compile Include="BUS\Validators\TaiKhoanValidator.cs" />
     <Compile Include="DAO\QuanLyDaiLyModel.Context.cs">
       <AutoGen>True</AutoGen>

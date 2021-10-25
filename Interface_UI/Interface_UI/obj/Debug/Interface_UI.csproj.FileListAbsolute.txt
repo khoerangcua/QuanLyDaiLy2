@@ -34,3 +34,35 @@ D:\Quản lý đại lý\QuanLyDaiLy2\Interface_UI\Interface_UI\obj\Debug\Interf
 D:\Quản lý đại lý\QuanLyDaiLy2\Interface_UI\Interface_UI\obj\Debug\Interface_UI.FormPhieuxuathang_Xoa_.resources
 D:\Quản lý đại lý\QuanLyDaiLy2\Interface_UI\Interface_UI\obj\Debug\Interface_UI.FormSearch.resources
 D:\Quản lý đại lý\QuanLyDaiLy2\Interface_UI\Interface_UI\obj\Debug\Interface_UI.FormChitietmathang.resources
+E:\HocTap\2021-HKC\SE\project\New folder\test\Interface_UI\Interface_UI\bin\Debug\Interface_UI.exe.config
+E:\HocTap\2021-HKC\SE\project\New folder\test\Interface_UI\Interface_UI\bin\Debug\Interface_UI.exe
+E:\HocTap\2021-HKC\SE\project\New folder\test\Interface_UI\Interface_UI\bin\Debug\Interface_UI.pdb
+E:\HocTap\2021-HKC\SE\project\New folder\test\Interface_UI\Interface_UI\bin\Debug\EntityFramework.dll
+E:\HocTap\2021-HKC\SE\project\New folder\test\Interface_UI\Interface_UI\bin\Debug\EntityFramework.SqlServer.dll
+E:\HocTap\2021-HKC\SE\project\New folder\test\Interface_UI\Interface_UI\bin\Debug\FontAwesome.Sharp.dll
+E:\HocTap\2021-HKC\SE\project\New folder\test\Interface_UI\Interface_UI\bin\Debug\EntityFramework.xml
+E:\HocTap\2021-HKC\SE\project\New folder\test\Interface_UI\Interface_UI\bin\Debug\EntityFramework.SqlServer.xml
+E:\HocTap\2021-HKC\SE\project\New folder\test\Interface_UI\Interface_UI\obj\Debug\Interface_UI.csproj.AssemblyReference.cache
+E:\HocTap\2021-HKC\SE\project\New folder\test\Interface_UI\Interface_UI\obj\Debug\Interface_UI.Form1.resources
+E:\HocTap\2021-HKC\SE\project\New folder\test\Interface_UI\Interface_UI\obj\Debug\Interface_UI.FormBaocaocongno.resources
+E:\HocTap\2021-HKC\SE\project\New folder\test\Interface_UI\Interface_UI\obj\Debug\Interface_UI.FormBaocaodoanhso.resources
+E:\HocTap\2021-HKC\SE\project\New folder\test\Interface_UI\Interface_UI\obj\Debug\Interface_UI.FormChangepass.resources
+E:\HocTap\2021-HKC\SE\project\New folder\test\Interface_UI\Interface_UI\obj\Debug\Interface_UI.FormChitietmathang.resources
+E:\HocTap\2021-HKC\SE\project\New folder\test\Interface_UI\Interface_UI\obj\Debug\Interface_UI.FormChitietxuathang.resources
+E:\HocTap\2021-HKC\SE\project\New folder\test\Interface_UI\Interface_UI\obj\Debug\Interface_UI.FormHoso.resources
+E:\HocTap\2021-HKC\SE\project\New folder\test\Interface_UI\Interface_UI\obj\Debug\Interface_UI.FormLogin.resources
+E:\HocTap\2021-HKC\SE\project\New folder\test\Interface_UI\Interface_UI\obj\Debug\Interface_UI.FormPhieuthutien.resources
+E:\HocTap\2021-HKC\SE\project\New folder\test\Interface_UI\Interface_UI\obj\Debug\Interface_UI.FormPhieuxuathang_sua_.resources
+E:\HocTap\2021-HKC\SE\project\New folder\test\Interface_UI\Interface_UI\obj\Debug\Interface_UI.FormPhieuxuathang_Them_.resources
+E:\HocTap\2021-HKC\SE\project\New folder\test\Interface_UI\Interface_UI\obj\Debug\Interface_UI.FormPhieuxuathang_Xoa_.resources
+E:\HocTap\2021-HKC\SE\project\New folder\test\Interface_UI\Interface_UI\obj\Debug\Interface_UI.FormPhieuxuathang.resources
+E:\HocTap\2021-HKC\SE\project\New folder\test\Interface_UI\Interface_UI\obj\Debug\Interface_UI.FormSearch.resources
+E:\HocTap\2021-HKC\SE\project\New folder\test\Interface_UI\Interface_UI\obj\Debug\Interface_UI.FormThaydoiquydinh_1_.resources
+E:\HocTap\2021-HKC\SE\project\New folder\test\Interface_UI\Interface_UI\obj\Debug\Interface_UI.FormThaydoiquydinh_2_.resources
+E:\HocTap\2021-HKC\SE\project\New folder\test\Interface_UI\Interface_UI\obj\Debug\Interface_UI.FormThaydoiquydinh_3_.resources
+E:\HocTap\2021-HKC\SE\project\New folder\test\Interface_UI\Interface_UI\obj\Debug\Interface_UI.Properties.Resources.resources
+E:\HocTap\2021-HKC\SE\project\New folder\test\Interface_UI\Interface_UI\obj\Debug\Interface_UI.csproj.GenerateResource.cache
+E:\HocTap\2021-HKC\SE\project\New folder\test\Interface_UI\Interface_UI\obj\Debug\Interface_UI.csproj.CoreCompileInputs.cache
+E:\HocTap\2021-HKC\SE\project\New folder\test\Interface_UI\Interface_UI\obj\Debug\Interface_UI.csproj.CopyComplete
+E:\HocTap\2021-HKC\SE\project\New folder\test\Interface_UI\Interface_UI\obj\Debug\Interface_UI.exe
+E:\HocTap\2021-HKC\SE\project\New folder\test\Interface_UI\Interface_UI\obj\Debug\Interface_UI.pdb

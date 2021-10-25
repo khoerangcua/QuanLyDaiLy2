@@ -29,13 +29,7 @@ namespace Interface_UI.BUS.Controllers
         {
             this.MessageFailure = "";
             this.db = new QuanLyDaiLyEntities();
-            this.Data.RowEnter += Data_RowEnter;
-            this.TimKiemButton.Click += TimKiemButton_Click;
-            this.XoaButton.Click += XoaButton_Click;
-            //
-            //set state of control
-            //
-            this.XoaButton.Enabled = false;
+            
         }
         #endregion
 
@@ -49,26 +43,35 @@ namespace Interface_UI.BUS.Controllers
             var dailys = from dl in db.tb_DaiLy
                          select new { ID = dl.Ma_DaiLy, Name = dl.Ten_DaiLy };
             this.DaiLyComboBox.DataSource = dailys.ToList();
+            this.DaiLyComboBox.DisplayMember = "Name";
+            this.DaiLyComboBox.ValueMember = "ID";
 
             //
             //Load Thang ComboBox
             //
-
             var thangs = (from thang in db.tb_PhieuXuatHang
                           select new { ID = thang.Ngay_Lap.Month, Value = thang.Ngay_Lap.Month }).Distinct();
             this.ThangComboBox.DataSource = thangs.ToList();
             this.ThangComboBox.ValueMember = "ID";
             this.ThangComboBox.DisplayMember = "Value";
-
+            //
             //Load Nam ComboBox
             //
-            //
-
             var nams = (from thang in db.tb_PhieuXuatHang
                         select new { ID = thang.Ngay_Lap.Year, Value = thang.Ngay_Lap.Year }).Distinct();
             this.NamComboBox.DataSource = nams.ToList();
             this.NamComboBox.ValueMember = "ID";
             this.NamComboBox.DisplayMember = "Value";
+            //
+            //subcribe events
+            //
+            this.Data.RowEnter += Data_RowEnter;
+            this.TimKiemButton.Click += TimKiemButton_Click;
+            this.XoaButton.Click += XoaButton_Click;
+            //
+            //set state of control
+            //
+            this.XoaButton.Enabled = false;
 
         }
 
@@ -90,14 +93,14 @@ namespace Interface_UI.BUS.Controllers
             //Thuc hien tim kiem
             //
 
-            var phieuxuathangs = from px in db.tb_PhieuXuatHang.ToList()
+            var phieuxuathangs = from px in db.tb_PhieuXuatHang
                           where px.Ma_DaiLy == madaily && px.Ngay_Lap.Month == thang && px.Ngay_Lap.Year == nam
                           select px;
-            if (phieuxuathangs.Count()>0)
+            if (phieuxuathangs.Any())
             {
                 this.XoaButton.Enabled = true;
                 this.Data.DataSource = null;
-                Data.DataSource = phieuxuathangs;
+                this.Data.DataSource = phieuxuathangs.ToList();
                 
             }
             else
@@ -125,6 +128,27 @@ namespace Interface_UI.BUS.Controllers
             //
             if (db.SaveChanges()>0)
             {
+                
+                //
+                //reset Thang ComboBox
+                //
+                var thangs = (from thang in db.tb_PhieuXuatHang
+                              select new { ID = thang.Ngay_Lap.Month, Value = thang.Ngay_Lap.Month }).Distinct();
+                this.ThangComboBox.DataSource = thangs.ToList();
+                this.ThangComboBox.ValueMember = "ID";
+                this.ThangComboBox.DisplayMember = "Value";
+                //
+                //reset Nam ComboBox
+                //
+                var nams = (from thang in db.tb_PhieuXuatHang
+                            select new { ID = thang.Ngay_Lap.Year, Value = thang.Ngay_Lap.Year }).Distinct();
+                this.NamComboBox.DataSource = nams.ToList();
+                this.NamComboBox.ValueMember = "ID";
+                this.NamComboBox.DisplayMember = "Value";
+                //
+                //reset datagridview
+                //
+                this.Data.DataSource = null;
                 return true;
             }
             else

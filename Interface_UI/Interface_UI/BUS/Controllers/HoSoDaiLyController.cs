@@ -51,14 +51,8 @@ namespace Interface_UI.BUS.Controllers
             this.db = new QuanLyDaiLyEntities();
             this.hoSoDaiLyValidator = new HoSoDaiLyValidator();
             this.MessageFailure = "";
-            this.HoSoDaiLyDataGridView.RowEnter += HoSoDaiLyDataGridView_RowEnter;
-            this.ThemButton.Click += ThemButton_Click;
-            this.XoaButton.Click += XoaButton_Click;
-            this.SuaButton.Click += SuaButton_Click;
-            this.TimKiemButton.Click += TimKiemButton_Click;
-            this.ResetButton.Click += ResetButton_Click;
-            this.MaDaiLyText.Enabled = false;
-            this.NgayTiepNhanText.Enabled = false;
+            
+            
 
         }
 
@@ -83,9 +77,9 @@ namespace Interface_UI.BUS.Controllers
 
             QuanComboBox_HienThi.DataSource = quans.ToList();
             QuanComboBox_HienThi.ValueMember = "MaQuan";
-            QuanComboBox_TimKiem.DisplayMember = "TenQuan";
+            QuanComboBox_HienThi.DisplayMember = "TenQuan";
 
-            QuanComboBox_TimKiem.DataSource = quans;
+            QuanComboBox_TimKiem.DataSource = quans.ToList();
             QuanComboBox_TimKiem.ValueMember = "MaQuan";
             QuanComboBox_TimKiem.DisplayMember = "TenQuan";
             //
@@ -107,6 +101,20 @@ namespace Interface_UI.BUS.Controllers
             // Load danh sach dai ly 
             //
             LoadDaiLy();
+            //
+            //subcribe events
+            //
+            this.HoSoDaiLyDataGridView.RowEnter += HoSoDaiLyDataGridView_RowEnter;
+            this.ThemButton.Click += ThemButton_Click;
+            this.XoaButton.Click += XoaButton_Click;
+            this.SuaButton.Click += SuaButton_Click;
+            this.TimKiemButton.Click += TimKiemButton_Click;
+            this.ResetButton.Click += ResetButton_Click;
+            //
+            //set state of controls
+            //
+            this.MaDaiLyText.Enabled = false;
+            this.NgayTiepNhanText.Enabled = false;
 
         }
 
@@ -371,9 +379,9 @@ namespace Interface_UI.BUS.Controllers
             this.MaDaiLyText.Text = this.HoSoDaiLyDataGridView.Rows[e.RowIndex].Cells[0].Value.ToString();
             this.TenDaiLyText_HienThi.Text = this.HoSoDaiLyDataGridView.Rows[e.RowIndex].Cells[1].Value.ToString();
             this.DienThoaiText.Text = this.HoSoDaiLyDataGridView.Rows[e.RowIndex].Cells[2].Value.ToString();
-            this.QuanComboBox_HienThi.SelectedValue = this.HoSoDaiLyDataGridView.Rows[e.RowIndex].Cells[3].Value.ToString();
-            this.EmailText.Text = this.HoSoDaiLyDataGridView.Rows[e.RowIndex].Cells[4].Value.ToString();
-            this.LoaiDaiLyComboBox.SelectedValue = this.HoSoDaiLyDataGridView.Rows[e.RowIndex].Cells[5].Value.ToString();
+            this.QuanComboBox_HienThi.SelectedValue = int.Parse(this.HoSoDaiLyDataGridView.Rows[e.RowIndex].Cells[3].Value.ToString());
+            this.EmailText.Text = this.HoSoDaiLyDataGridView.Rows[e.RowIndex].Cells[4].Value.ToString();  
+            this.LoaiDaiLyComboBox.SelectedValue = int.Parse(this.HoSoDaiLyDataGridView.Rows[e.RowIndex].Cells[5].Value.ToString());
             this.DiaChiText.Text = this.HoSoDaiLyDataGridView.Rows[e.RowIndex].Cells[6].Value.ToString();
             this.NgayTiepNhanText.Text = this.HoSoDaiLyDataGridView.Rows[e.RowIndex].Cells[7].Value.ToString();
         }

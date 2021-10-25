@@ -29,7 +29,7 @@ namespace Interface_UI.BUS.Controllers
         public Button XoaButton { get; set; }
         public Button ResetButton { get; set; }
         public Button TimKiemButton { get; set; }
-        public DataGridView PhieuXuatHangData { get; set; }
+        public DataGridView PhieuThuTienData { get; set; }
         #endregion
 
         #region constructor
@@ -38,23 +38,7 @@ namespace Interface_UI.BUS.Controllers
 
             this.MessageFaiure = "";
             this.db = new QuanLyDaiLyEntities();
-            //
-            //subcribe events
-            //
-            this.ThemButton.Click += ThemButton_Click;
-            this.SuaButton.Click += SuaButton_Click;
-            this.XoaButton.Click += XoaButton_Click;
-            this.ResetButton.Click += ResetButton_Click;
-            this.TimKiemButton.Click += TimKiemButton_Click;
-            //
-            //set state
-            //
-            MaPhieuThuTextBox.Enabled = false;
-            XoaButton.Enabled = false;
-            SuaButton.Enabled = false;
-            NgayLapPhieuTextBox.Enabled = false;
-            PhieuXuatHangData.Enabled = false;
-            this.PhieuXuatHangData.RowEnter += PhieuXuatHangData_RowEnter;
+            
 
         }
 
@@ -75,19 +59,16 @@ namespace Interface_UI.BUS.Controllers
             //
             // load thang combobox
             //
-
-            var thangs = from ptt in db.tb_PhieuThuTien
-                         select new { ID = ptt.Ngay_Lap.Month, Name = ptt.Ngay_Lap.Month };
+            var thangs = (from ptt in db.tb_PhieuThuTien
+                         select new { ID = ptt.Ngay_Lap.Month, Name = ptt.Ngay_Lap.Month }).Distinct();
             this.ThangComboBox_TimKiem.DataSource = thangs.ToList();
             this.ThangComboBox_TimKiem.ValueMember = "ID";
             this.ThangComboBox_TimKiem.DisplayMember = "Name";
-
             // 
             //load nam combobox
-            //
-            
-                var nams = from ptt in db.tb_PhieuThuTien
-                           select new { ID = ptt.Ngay_Lap.Year, Name = ptt.Ngay_Lap.Year };
+            //            
+                var nams = (from ptt in db.tb_PhieuThuTien
+                           select new { ID = ptt.Ngay_Lap.Year, Name = ptt.Ngay_Lap.Year }).Distinct();
                 this.NamComboBox_TimKiem.DataSource = nams.ToList();
                 this.NamComboBox_TimKiem.ValueMember = "ID";
                 this.NamComboBox_TimKiem.DisplayMember = "Name";
@@ -96,6 +77,25 @@ namespace Interface_UI.BUS.Controllers
             //load ngay lap phieu
             //
             this.NgayLapPhieuTextBox.Text = DateTime.Now.ToString();
+            //
+            //subcribe events
+            //
+            this.ThemButton.Click += ThemButton_Click;
+            this.SuaButton.Click += SuaButton_Click;
+            this.XoaButton.Click += XoaButton_Click;
+            this.ResetButton.Click += ResetButton_Click;
+            this.TimKiemButton.Click += TimKiemButton_Click;
+            this.PhieuThuTienData.RowEnter += PhieuThuTienData_RowEnter;
+            //
+            //set state
+            //
+            this.PhieuThuTienData.Enabled = true;
+            MaPhieuThuTextBox.Enabled = false;
+            XoaButton.Enabled = false;
+            SuaButton.Enabled = false;
+            NgayLapPhieuTextBox.Enabled = false;
+            
+            
         }
 
         private bool ThemPhieuThuTien()
@@ -104,34 +104,38 @@ namespace Interface_UI.BUS.Controllers
             //reset message failure
             //
             this.MessageFaiure = "";
-
             //
             // lay thong tin phieu thu tien
             //
-
             int idphieuthutien = 1;
             if (db.tb_PhieuThuTien.Any())
             {
                 idphieuthutien = db.tb_PhieuThuTien.Max(p => p.Ma_PhieuThu) + 1;
             }
             int iddaily = int.Parse(this.DaiLyComboBox.SelectedValue.ToString());
-            double tienthu = this.TienThuTextBox.Text.All(char.IsDigit) || !string.IsNullOrEmpty(this.TienThuTextBox.Text)? double.Parse(this.TienThuTextBox.Text) : -1;
-            string ghichu = this.GhiChuTextBox.Text;
-            double tienthutoida = 0;
+            double tienthu = this.TienThuTextBox.Text.All(char.IsDigit) && !string.IsNullOrEmpty(this.TienThuTextBox.Text)? double.Parse(this.TienThuTextBox.Text) : -1;
+            string ghichu = this.GhiChuTextBox.Text;            
             DateTime ngaylap = DateTime.Now;
-            if (db.tb_PhieuXuatHang.Any())
+            //
+            // tonng tien no
+            //
+            var phieuxuathangs = db.tb_PhieuXuatHang.Where(p => p.Ma_DaiLy == iddaily);
+            double tongtienno = 0;
+            if (phieuxuathangs.Any())
             {
-                double tongtienno = db.tb_PhieuXuatHang.Where(p => p.Ma_DaiLy == iddaily).Sum(p => p.TongTien);
-                double tongtiendathu = db.tb_PhieuThuTien.Where(p => p.Ma_DaiLy == iddaily).Sum(p => p.So_Tien_Thu);
-                tienthutoida = tongtienno - tongtiendathu;
+                 tongtienno = phieuxuathangs.Sum(p => p.TongTien);
             }
-            else
+            //
+            //tong tien da thu
+            //
+            var phieuthutiens = db.tb_PhieuThuTien.Where(p => p.Ma_DaiLy == iddaily);
+            double tongtiendathu = 0;
+            if (phieuthutiens.Any())
             {
-                this.MessageFaiure = "khong co no";
-                return false;
-            }
-            
 
+                tongtiendathu = phieuthutiens.Sum(p => p.So_Tien_Thu);         
+            }
+           
             //
             //kiem tra input
             //
@@ -140,7 +144,7 @@ namespace Interface_UI.BUS.Controllers
                 this.MessageFaiure = "thien thu khong hop le";
                 return false;
             }
-            if (tienthu > tienthutoida)
+            if (tienthu + tongtiendathu > tongtienno)
             {
                 this.MessageFaiure = "thien thu vuot qua tien no";
                 return false;
@@ -159,14 +163,34 @@ namespace Interface_UI.BUS.Controllers
                 this.MessageFaiure = "luu khong thanh cong";
                 return false;
             }
+
             //
-            // reset form
+            // reset thang combobox
             //
-            var phieuthutiens = from ptt in db.tb_PhieuThuTien
+
+            var thangs = (from ptt in db.tb_PhieuThuTien
+                         select new { ID = ptt.Ngay_Lap.Month, Name = ptt.Ngay_Lap.Month }).Distinct();
+            this.ThangComboBox_TimKiem.DataSource = thangs.ToList();
+            this.ThangComboBox_TimKiem.ValueMember = "ID";
+            this.ThangComboBox_TimKiem.DisplayMember = "Name";
+
+            // 
+            //reset nam combobox
+            //
+
+            var nams = (from ptt in db.tb_PhieuThuTien
+                       select new { ID = ptt.Ngay_Lap.Year, Name = ptt.Ngay_Lap.Year }).Distinct();
+            this.NamComboBox_TimKiem.DataSource = nams.ToList();
+            this.NamComboBox_TimKiem.ValueMember = "ID";
+            this.NamComboBox_TimKiem.DisplayMember = "Name";
+            //
+            //reset datagridview
+            //
+            var phieuthutiens2 = from ptt in db.tb_PhieuThuTien
                                 where ptt.Ma_DaiLy == iddaily && ptt.Ngay_Lap.Month == ngaylap.Month && ptt.Ngay_Lap.Year == ptt.Ngay_Lap.Year
                                 select ptt;
-            this.PhieuXuatHangData.DataSource = null;
-            this.PhieuXuatHangData.DataSource = phieuthutiens.ToList();
+            this.PhieuThuTienData.DataSource = null;
+            this.PhieuThuTienData.DataSource = phieuthutiens2.ToList();
             return true;
         }
 
@@ -177,7 +201,7 @@ namespace Interface_UI.BUS.Controllers
             this.NgayLapPhieuTextBox.Text = DateTime.Now.ToString();
             this.GhiChuTextBox.Text = "";
             this.TenDaiLyTextBox_TimKiem.Text = "";
-            this.PhieuXuatHangData.DataSource = null;
+            this.PhieuThuTienData.DataSource = null;
             this.SuaButton.Enabled = false;
             this.XoaButton.Enabled = false;
         }
@@ -201,20 +225,27 @@ namespace Interface_UI.BUS.Controllers
                 return false;
             }
 
-            var phieuthutiens = from ptt in db.tb_PhieuThuTien.ToList()
-                         where ptt.tb_DaiLy.Ten_DaiLy.Contains(key_tendaily) && ptt.Ngay_Lap.Month == thang && ptt.Ngay_Lap.Year == nam
-                         select ptt;
-            if (phieuthutiens.Count()==0)
+            var phieuthutiens = from ptt in db.tb_PhieuThuTien
+                                where ptt.tb_DaiLy.Ten_DaiLy.Contains(key_tendaily) && ptt.Ngay_Lap.Month == thang && ptt.Ngay_Lap.Year == nam
+                                select ptt;
+            if (phieuthutiens.Any())
             {
-                this.MessageFaiure = "khong tim thay dai ly phu hop";
-                return false;
+
+                this.PhieuThuTienData.DataSource = null;
+                this.PhieuThuTienData.DataSource = phieuthutiens.ToList();
+                this.PhieuThuTienData.Enabled = true;
+                this.XoaButton.Enabled = true;
+                this.SuaButton.Enabled = true;
+                return true;
+                
             }
 
-            this.PhieuXuatHangData.DataSource = null;
-            this.PhieuXuatHangData.DataSource = phieuthutiens;
-            this.XoaButton.Enabled = true;
-            this.SuaButton.Enabled = true;
-            return true;
+            this.MessageFaiure = "khong tim thay dai ly phu hop";
+            this.PhieuThuTienData.DataSource = null;
+            return false;
+
+
+
 
         }
 
@@ -227,8 +258,9 @@ namespace Interface_UI.BUS.Controllers
             //
             //lay thong tin phieu thu tien
             //
+            int maphieuthu = int.Parse(this.MaPhieuThuTextBox.Text);
             var phieuthutien = (from ptt in db.tb_PhieuThuTien
-                               where ptt.Ma_PhieuThu == int.Parse(this.MaPhieuThuTextBox.Text)
+                               where ptt.Ma_PhieuThu == maphieuthu
                                select ptt).Single();
             db.tb_PhieuThuTien.Remove(phieuthutien);
             if (db.SaveChanges()>0)
@@ -248,11 +280,12 @@ namespace Interface_UI.BUS.Controllers
                     this.MessageFaiure = "da xoa phieu xuat hang cua dai ly";
                     this.XoaButton.Enabled = false;
                     this.SuaButton.Enabled = false;
+                    this.PhieuThuTienData.DataSource = null;
                     return false;
                 }
 
-                this.PhieuXuatHangData.DataSource = null;
-                this.PhieuXuatHangData.DataSource = phieuthutiens;
+                this.PhieuThuTienData.DataSource = null;
+                this.PhieuThuTienData.DataSource = phieuthutiens.ToList();
                 this.XoaButton.Enabled = true;
                 this.SuaButton.Enabled = true;
                 return true;
@@ -286,7 +319,7 @@ namespace Interface_UI.BUS.Controllers
             //lay thong tin phieu thu tien da duoc cap nhat
             //
             int madaily = int.Parse(this.DaiLyComboBox.SelectedValue.ToString());
-            double sotienthumoi = this.TienThuTextBox.Text.All(char.IsDigit) || !string.IsNullOrEmpty(this.TienThuTextBox.Text)? double.Parse(this.TienThuTextBox.Text) : -1;
+            double sotienthumoi = this.TienThuTextBox.Text.All(char.IsDigit) && !string.IsNullOrEmpty(this.TienThuTextBox.Text)? double.Parse(this.TienThuTextBox.Text) : -1;
             if (sotienthumoi == -1)
             {
                 this.MessageFaiure = "Tien thu khong hop le";
@@ -296,10 +329,22 @@ namespace Interface_UI.BUS.Controllers
             //
             //kiem tra tien thu toi da
             //
+            double tongno = 0;
+            var phieuxuathangs = db.tb_PhieuXuatHang.Where(pxh => pxh.Ma_DaiLy == madaily);
+            if (phieuxuathangs.Any())
+            {
+                tongno = phieuxuathangs.Sum(pxh => pxh.TongTien);
+            }
 
-            var tongno = db.tb_PhieuXuatHang.Where(pxh => pxh.Ma_DaiLy == madaily).Sum(pxh => pxh.TongTien);
+            double tongtiendathu = 0;
+            var phieuthutiens = db.tb_PhieuThuTien.Where(ptt => ptt.Ma_DaiLy == madaily);
+            if (phieuthutiens.Any())
+            {
+                tongtiendathu = phieuthutiens.Sum(ptt => ptt.So_Tien_Thu);
+            }
+
             var tienthu_phieuthutien_hientai = db.tb_PhieuThuTien.Where(ptt => ptt.Ma_PhieuThu == maphieuthutien).Select(ptt => ptt.So_Tien_Thu).Single();
-            var tongtiendathu = db.tb_PhieuThuTien.Where(ptt => ptt.Ma_DaiLy == madaily).Sum(ptt => ptt.So_Tien_Thu);
+            
             bool kiemtra = tongtiendathu - tienthu_phieuthutien_hientai + sotienthumoi > tongno;
             if (kiemtra)
             {
@@ -308,8 +353,21 @@ namespace Interface_UI.BUS.Controllers
             }
             else
             {
-                TimKiemPhieuThuTien();
-                return true;
+                phieuthutien.Ma_DaiLy = madaily;
+                phieuthutien.So_Tien_Thu = sotienthumoi;
+                phieuthutien.GhiChu = ghichu;
+                if (db.SaveChanges()>0)
+                {
+                    TimKiemPhieuThuTien();
+                    return true;
+                }
+                else
+                {
+                    this.MessageFaiure = "sua khong thanh cong";
+                    return false;
+                }
+                
+                
             }
             
 
@@ -322,13 +380,13 @@ namespace Interface_UI.BUS.Controllers
         #endregion
 
         #region events
-        private void PhieuXuatHangData_RowEnter(object sender, DataGridViewCellEventArgs e)
+        private void PhieuThuTienData_RowEnter(object sender, DataGridViewCellEventArgs e)
         {
-            this.MaPhieuThuTextBox.Text = this.PhieuXuatHangData.Rows[e.RowIndex].Cells[0].Value.ToString();
-            this.DaiLyComboBox.SelectedValue = this.PhieuXuatHangData.Rows[e.RowIndex].Cells[1].Value.ToString();
-            this.NgayLapPhieuTextBox.Text = this.PhieuXuatHangData.Rows[e.RowIndex].Cells[2].Value.ToString();
-            this.TienThuTextBox.Text = this.PhieuXuatHangData.Rows[e.RowIndex].Cells[3].Value.ToString();
-            this.GhiChuTextBox.Text = this.PhieuXuatHangData.Rows[e.RowIndex].Cells[4].Value.ToString();
+            this.MaPhieuThuTextBox.Text = this.PhieuThuTienData.Rows[e.RowIndex].Cells[0].Value.ToString();
+            this.DaiLyComboBox.SelectedValue = int.Parse(this.PhieuThuTienData.Rows[e.RowIndex].Cells[1].Value.ToString());
+            this.NgayLapPhieuTextBox.Text = this.PhieuThuTienData.Rows[e.RowIndex].Cells[2].Value.ToString();
+            this.TienThuTextBox.Text = this.PhieuThuTienData.Rows[e.RowIndex].Cells[3].Value.ToString();
+            this.GhiChuTextBox.Text = this.PhieuThuTienData.Rows[e.RowIndex].Cells[4].Value.ToString();
         }
         private void TimKiemButton_Click(object sender, EventArgs e)
         {

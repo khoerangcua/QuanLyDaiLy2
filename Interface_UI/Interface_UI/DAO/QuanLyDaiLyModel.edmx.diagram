@@ -12,19 +12,19 @@
         <EntityTypeShape EntityType="QuanLyDaiLyModel.tb_HangHoa" Width="1.5" PointX="5.25" PointY="17" IsExpanded="true" />
         <EntityTypeShape EntityType="QuanLyDaiLyModel.tb_LoaiDaiLy" Width="1.5" PointX="0.75" PointY="7.875" IsExpanded="true" />
         <EntityTypeShape EntityType="QuanLyDaiLyModel.tb_PhieuThuTien" Width="1.5" PointX="5.25" PointY="7.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="QuanLyDaiLyModel.tb_PhieuXuatHang" Width="1.5" PointX="5.25" PointY="10.75" IsExpanded="true" />
         <EntityTypeShape EntityType="QuanLyDaiLyModel.tb_Quan" Width="1.5" PointX="0.75" PointY="4.875" IsExpanded="true" />
         <EntityTypeShape EntityType="QuanLyDaiLyModel.tb_TaiKhoan" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="QuanLyDaiLyModel.tb_TienNoPhatSinh" Width="1.5" PointX="5.25" PointY="13.875" IsExpanded="true" />
         <AssociationConnector Association="QuanLyDaiLyModel.FK_tb_BC_CongNo_tb_DaiLy" ManuallyRouted="false" />
         <AssociationConnector Association="QuanLyDaiLyModel.FK_tb_BC_DoanhSo_tb_DaiLy" ManuallyRouted="false" />
         <AssociationConnector Association="QuanLyDaiLyModel.FK_tb_ChiTiet_XuatHang_tb_HangHoa" ManuallyRouted="false" />
-        <AssociationConnector Association="QuanLyDaiLyModel.FK_tb_ChiTiet_XuatHang_tb_PhieuXuatHang" ManuallyRouted="false" />
         <AssociationConnector Association="QuanLyDaiLyModel.FK_tb_DaiLy_tb_LoaiDaiLy" ManuallyRouted="false" />
         <AssociationConnector Association="QuanLyDaiLyModel.FK_tb_DaiLy_tb_Quan" ManuallyRouted="false" />
         <AssociationConnector Association="QuanLyDaiLyModel.FK_tb_PhieuThuTien_tb_DaiLy" ManuallyRouted="false" />
-        <AssociationConnector Association="QuanLyDaiLyModel.FK_tb_PhieuXuatHang_tb_DaiLy" ManuallyRouted="false" />
         <AssociationConnector Association="QuanLyDaiLyModel.FK_tb_TienNoPhatSinh_tb_DaiLy" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="QuanLyDaiLyModel.tb_PhieuXuatHang" Width="1.5" PointX="5.25" PointY="19.75" />
+        <AssociationConnector Association="QuanLyDaiLyModel.FK_tb_ChiTiet_XuatHang_tb_PhieuXuatHang" />
+        <AssociationConnector Association="QuanLyDaiLyModel.FK_tb_PhieuXuatHang_tb_DaiLy" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

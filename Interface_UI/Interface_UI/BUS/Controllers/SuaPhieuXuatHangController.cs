@@ -14,7 +14,7 @@ namespace Interface_UI.BUS.Controllers
         #region messagefaiure, db, validators
         public string MessageFailure { get; set; }
         private QuanLyDaiLyEntities db;
-        private ChiTietPhieuXuatValidator chiTietPhieuXuatValidator;
+
 
         #endregion
 
@@ -32,7 +32,7 @@ namespace Interface_UI.BUS.Controllers
         public ComboBox HangHoaComboBox { get; set; }
         public TextBox SoLuongTextBox { get; set; }
         public TextBox NoHienTaiTextBox { get; set; }
-        public TextBox GhiChuTexBox { get; set; }
+
         public DataGridView PhieuXuatHangData { get; set; }
         public DataGridView ChiTietPhieuXuatHangData { get; set; }
         public Button TimButton { get; set; }
@@ -47,36 +47,13 @@ namespace Interface_UI.BUS.Controllers
         {
             this.MessageFailure = "";
             this.db = new QuanLyDaiLyEntities();
-            this.chiTietPhieuXuatValidator = new ChiTietPhieuXuatValidator();
+
             this.tempthemChiTiet_XuatHangs = new List<tb_ChiTiet_XuatHang>();
             this.tempxoaChiTiet_XuatHangs = new List<tb_ChiTiet_XuatHang>();
-            //
-            //subcribe events
-            //
-            this.PhieuXuatHangData.RowEnter += PhieuXuatHangData_RowEnter;
-            this.ChiTietPhieuXuatHangData.RowEnter += ChiTietPhieuXuatHangData_RowEnter;
-            this.ThemButton.Click += ThemButton_Click;
-            this.XoaButton.Click += XoaButton_Click;
-            this.LuuButton.Click += LuuButton_Click;
-            this.HuyButton.Click += HuyButton_Click;
-            this.TimButton.Click += TimButton_Click;
-            //
-            // set state of controls
-            //
-            HangHoaComboBox.Enabled = false;
-            SoLuongTextBox.Enabled = false;
-            NoHienTaiTextBox.Enabled = false;
-            GhiChuTexBox.Enabled = false;
-            PhieuXuatHangData.Enabled = false;
-            ChiTietPhieuXuatHangData.Enabled = false;
-            XoaButton.Enabled = false;
-            ThemButton.Enabled = false;
-            LuuButton.Enabled = false;
-            HuyButton.Enabled = false;
 
         }
 
-        
+
 
 
         #endregion
@@ -124,7 +101,30 @@ namespace Interface_UI.BUS.Controllers
             this.HangHoaComboBox.ValueMember = "ID";
             this.HangHoaComboBox.DisplayMember = "Name";
 
-
+            //
+            //subcribe events
+            //
+            this.PhieuXuatHangData.RowEnter += PhieuXuatHangData_RowEnter;
+            this.ChiTietPhieuXuatHangData.RowEnter += ChiTietPhieuXuatHangData_RowEnter;
+            this.ThemButton.Click += ThemButton_Click;
+            this.XoaButton.Click += XoaButton_Click;
+            this.LuuButton.Click += LuuButton_Click;
+            this.HuyButton.Click += HuyButton_Click;
+            this.TimButton.Click += TimButton_Click;
+            //
+            // set state of controls
+            //
+            HangHoaComboBox.Enabled = false;
+            SoLuongTextBox.Enabled = false;
+            NoHienTaiTextBox.Enabled = false;
+            ThemButton.Enabled = false;
+            XoaButton.Enabled = false;
+            PhieuXuatHangData.Enabled = false;
+            ChiTietPhieuXuatHangData.Enabled = true;
+            XoaButton.Enabled = false;
+            ThemButton.Enabled = false;
+            LuuButton.Enabled = false;
+            HuyButton.Enabled = false;
 
 
 
@@ -142,11 +142,26 @@ namespace Interface_UI.BUS.Controllers
             var phieuxuathangs = from px in db.tb_PhieuXuatHang
                                  where px.Ma_DaiLy == madaily && px.Ngay_Lap.Month == thang && px.Ngay_Lap.Year == nam
                                  select px;
+            if (phieuxuathangs.Any())
+            {
+                this.PhieuXuatHangData.DataSource = null;
+                this.PhieuXuatHangData.DataSource = phieuxuathangs.ToList();
+                this.PhieuXuatHangData.Enabled = true;
+                this.ThemButton.Enabled = true;
+                this.XoaButton.Enabled = true;
+                this.SoLuongTextBox.Enabled = true;
+                this.HangHoaComboBox.Enabled = true;
+            }
+            else
+            {
+                this.PhieuXuatHangData.DataSource = null;
+                this.ChiTietPhieuXuatHangData.DataSource = null;
+                this.ThemButton.Enabled = false;
+                this.XoaButton.Enabled = false;
+                this.SoLuongTextBox.Enabled = false;
+                this.HangHoaComboBox.Enabled = false;
 
-            this.PhieuXuatHangData.DataSource = null;
-            this.PhieuXuatHangData.DataSource = phieuxuathangs.ToList();
-            this.PhieuXuatHangData.Enabled = true;
-            
+            }
             LoadNoHienTai();
         }
 
@@ -161,21 +176,26 @@ namespace Interface_UI.BUS.Controllers
                 idchitietphieuxuat = db.tb_ChiTiet_XuatHang.Max(p => p.Ma_ChiTiet_XuatHang) + 1;
 
             }
+            if (this.tempthemChiTiet_XuatHangs.Any())
+            {
+                idchitietphieuxuat = tempthemChiTiet_XuatHangs.Max(p => p.Ma_ChiTiet_XuatHang) + 1;
+            }
 
             int idphieuxuathang = this.currentIDPhieuXuatHang;
             int idhanghoa = int.Parse(this.HangHoaComboBox.SelectedValue.ToString());
-            int soluong = this.SoLuongTextBox.Text.All(char.IsDigit) ? int.Parse(this.SoLuongTextBox.Text) : -1;
+            int soluong = this.SoLuongTextBox.Text.All(char.IsDigit) && !string.IsNullOrEmpty(this.SoLuongTextBox.Text) ? int.Parse(this.SoLuongTextBox.Text) : -1;
+            int mahanghoa = int.Parse(this.HangHoaComboBox.SelectedValue.ToString());
             double dongia = (from hh in db.tb_HangHoa
-                             where hh.Ma_HangHoa == int.Parse(this.HangHoaComboBox.SelectedValue.ToString())
+                             where hh.Ma_HangHoa == mahanghoa
                              select hh.Don_Gia).Single();
             double thanhtien = soluong * dongia;
             //
             // kiem tra thong tin input
             //
-            bool checkinput = this.chiTietPhieuXuatValidator.KiemTraChiTietPhieuXuat(idphieuxuathang, idhanghoa, soluong, dongia, thanhtien);
-            if (checkinput == false)
+
+            if (soluong == -1)
             {
-                this.MessageFailure = "chua dien day du thong tin";
+                this.MessageFailure = "so luong khong hop le";
                 return false;
             }
             else
@@ -183,8 +203,9 @@ namespace Interface_UI.BUS.Controllers
                 //
                 //kiem tra tien no toi da
                 // 
-                double tiennotoida = (from dl in db.tb_DaiLy.ToList()                                     
-                                      where dl.Ma_DaiLy == int.Parse(this.DaiLyComboBox.SelectedValue.ToString())
+                int madaily = int.Parse(this.DaiLyComboBox.SelectedValue.ToString());
+                double tiennotoida = (from dl in db.tb_DaiLy.ToList()
+                                      where dl.Ma_DaiLy == madaily
                                       select dl.tb_LoaiDaiLy.TienNo_ToiDa).Single();
 
                 if (double.Parse(this.NoHienTaiTextBox.Text) + thanhtien > tiennotoida)
@@ -209,6 +230,7 @@ namespace Interface_UI.BUS.Controllers
                     this.DaiLyComboBox.Enabled = false;
                     this.LuuButton.Enabled = true;
                     this.HuyButton.Enabled = true;
+                    this.ChiTietPhieuXuatHangData.DataSource = null;
                     LoadChiTietPhieuXuatHang();
                     LoadNoHienTai();
                     return true;
@@ -229,8 +251,8 @@ namespace Interface_UI.BUS.Controllers
             int idphieuxuat = int.Parse(this.ChiTietPhieuXuatHangData.Rows[rowChiTietPhieuXuatHang].Cells[1].Value.ToString());
             int idhanghoa = int.Parse(this.ChiTietPhieuXuatHangData.Rows[rowChiTietPhieuXuatHang].Cells[2].Value.ToString());
             int soluong = int.Parse(this.ChiTietPhieuXuatHangData.Rows[rowChiTietPhieuXuatHang].Cells[3].Value.ToString());
-            double dongia = int.Parse(this.ChiTietPhieuXuatHangData.Rows[rowChiTietPhieuXuatHang].Cells[4].Value.ToString());
-            double thanhtien = int.Parse(this.ChiTietPhieuXuatHangData.Rows[rowChiTietPhieuXuatHang].Cells[5].Value.ToString());
+            double dongia = double.Parse(this.ChiTietPhieuXuatHangData.Rows[rowChiTietPhieuXuatHang].Cells[4].Value.ToString());
+            double thanhtien = double.Parse(this.ChiTietPhieuXuatHangData.Rows[rowChiTietPhieuXuatHang].Cells[5].Value.ToString());
             tb_ChiTiet_XuatHang chiTiet_XuatHang = new tb_ChiTiet_XuatHang()
             {
                 Ma_ChiTiet_XuatHang = idchitietphieuxuat,
@@ -243,6 +265,7 @@ namespace Interface_UI.BUS.Controllers
             };
             this.tempxoaChiTiet_XuatHangs.Add(chiTiet_XuatHang);
             LoadChiTietPhieuXuatHang();
+            LoadNoHienTai();
             this.DaiLyComboBox.Enabled = false;
             this.LuuButton.Enabled = true;
             this.HuyButton.Enabled = true;
@@ -258,27 +281,34 @@ namespace Interface_UI.BUS.Controllers
             //
             //thuc thi luu thay doi
             //
-            if (this.tempthemChiTiet_XuatHangs.Count() + this.tempxoaChiTiet_XuatHangs.Count() > 0)
+            if (this.tempthemChiTiet_XuatHangs.Any() || this.tempxoaChiTiet_XuatHangs.Any())
             {
-                db.tb_ChiTiet_XuatHang.AddRange(this.tempthemChiTiet_XuatHangs);
-                db.tb_ChiTiet_XuatHang.RemoveRange(this.tempxoaChiTiet_XuatHangs);
-                if (db.SaveChanges() > 0)
-                {
 
-                    this.tempthemChiTiet_XuatHangs.Clear();
-                    this.tempxoaChiTiet_XuatHangs.Clear();
-                    LoadNoHienTai();
-                    LoadChiTietPhieuXuatHang();
-                    this.LuuButton.Enabled = false;
-                    this.HuyButton.Enabled = false;
-                    this.DaiLyComboBox.Enabled = true;
-                    return true;
-                }
-                else
+                foreach (var item in tempthemChiTiet_XuatHangs)
                 {
-                    this.MessageFailure = "Thay doi khong thanh cong";
-                    return false;
+                    db.tb_ChiTiet_XuatHang.Add(item);
                 }
+                this.db.SaveChanges();
+                foreach (var item in tempxoaChiTiet_XuatHangs)
+                {
+                    var chitietphieuxuat = db.tb_ChiTiet_XuatHang.Where(p => p.Ma_ChiTiet_XuatHang == item.Ma_ChiTiet_XuatHang).Single();
+                    db.tb_ChiTiet_XuatHang.Remove(chitietphieuxuat);
+                }
+                this.db.SaveChanges();
+
+
+
+                db.tb_PhieuXuatHang.Where(pxh => pxh.Ma_PhieuXuat == currentIDPhieuXuatHang).Single().TongTien = db.tb_ChiTiet_XuatHang.Where(p => p.Ma_PhieuXuat == currentIDPhieuXuatHang).Sum(p => p.Thanh_Tien);
+
+                this.tempthemChiTiet_XuatHangs.Clear();
+                this.tempxoaChiTiet_XuatHangs.Clear();
+                LoadNoHienTai();
+                LoadChiTietPhieuXuatHang();
+                this.LuuButton.Enabled = false;
+                this.HuyButton.Enabled = false;
+                this.DaiLyComboBox.Enabled = true;
+                return true;
+
             }
             else
             {
@@ -313,16 +343,27 @@ namespace Interface_UI.BUS.Controllers
 
         private void LoadChiTietPhieuXuatHang()
         {
-            var chitietphieuxuathangs = from ctpx in db.tb_ChiTiet_XuatHang
-                                        where ctpx.Ma_PhieuXuat == this.currentIDPhieuXuatHang
-                                        select ctpx;
-            chitietphieuxuathangs.ToList().AddRange(this.tempthemChiTiet_XuatHangs);
+            List<tb_ChiTiet_XuatHang> chitietphieuxuathangs = new List<tb_ChiTiet_XuatHang>();
+            var results = (from ctpx in db.tb_ChiTiet_XuatHang
+                           where ctpx.Ma_PhieuXuat == this.currentIDPhieuXuatHang
+                           select ctpx).ToList();
+            chitietphieuxuathangs.AddRange(results);
+            chitietphieuxuathangs.AddRange(this.tempthemChiTiet_XuatHangs);
             foreach (var item in this.tempxoaChiTiet_XuatHangs)
             {
-                chitietphieuxuathangs.ToList().Remove(item);
+                var result = chitietphieuxuathangs.Where(p => p.Ma_ChiTiet_XuatHang == item.Ma_ChiTiet_XuatHang).Single();
+                chitietphieuxuathangs.Remove(result);
             }
-            this.ChiTietPhieuXuatHangData.DataSource = null;
-            this.ChiTietPhieuXuatHangData.DataSource = chitietphieuxuathangs;
+            if (chitietphieuxuathangs.Count() == 0)
+            {
+                this.XoaButton.Enabled = false;
+                this.ChiTietPhieuXuatHangData.DataSource = null;
+            }
+            else
+            {
+                this.ChiTietPhieuXuatHangData.DataSource = null;
+                this.ChiTietPhieuXuatHangData.DataSource = chitietphieuxuathangs;
+            }
 
         }
 
@@ -336,12 +377,11 @@ namespace Interface_UI.BUS.Controllers
 
         private void PhieuXuatHangData_RowEnter(object sender, DataGridViewCellEventArgs e)
         {
+
             this.currentIDPhieuXuatHang = int.Parse(this.PhieuXuatHangData.Rows[e.RowIndex].Cells[0].Value.ToString());
             LoadChiTietPhieuXuatHang();
-            this.ThemButton.Enabled = true;
-            this.XoaButton.Enabled = true;
-            this.SoLuongTextBox.Enabled = true;
-            this.HangHoaComboBox.Enabled = true;
+
+
         }
         private void HuyButton_Click(object sender, EventArgs e)
         {
