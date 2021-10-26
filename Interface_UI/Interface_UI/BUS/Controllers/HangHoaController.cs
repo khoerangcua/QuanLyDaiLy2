@@ -31,14 +31,7 @@ namespace Interface_UI.BUS.Controllers
         {
             this.MessageFailure = "";
             this.db = new QuanLyDaiLyEntities();
-            //
-            //subcribe events
-            //
-            this.HangHoaData.RowEnter += HangHoaData_RowEnter;
-            this.ThemButton.Click += ThemButton_Click;
-            this.XoaButton.Click += XoaButton_Click;
-            this.CapNhatButton.Click += CapNhatButton_Click;
-            this.MaHangHoaTextBox.Enabled = false;
+           
         }
         
         #endregion
@@ -50,6 +43,14 @@ namespace Interface_UI.BUS.Controllers
                            select new { MaHangHoa = hh.Ma_HangHoa, TenHangHoa = hh.Ten_HangHoa, DonGia = hh.Don_Gia, DonViTinh = hh.DonVi_Tinh };
             this.HangHoaData.DataSource = null;
             this.HangHoaData.DataSource = hanghoas.ToList();
+            //
+            //subcribe events
+            //
+            this.HangHoaData.RowEnter += HangHoaData_RowEnter;
+            this.ThemButton.Click += ThemButton_Click;
+            this.XoaButton.Click += XoaButton_Click;
+            this.CapNhatButton.Click += CapNhatButton_Click;
+            this.MaHangHoaTextBox.Enabled = false;
 
         }
 

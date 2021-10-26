@@ -31,15 +31,7 @@ namespace Interface_UI.BUS.Controllers
         {
             this.MessageFailure = "";
             this.db = new QuanLyDaiLyEntities();
-            //
-            //subcribe events
-            //
-            this.InButton.Click += InButton_Click;
-            this.TimButton.Click += TimButton_Click;
-            //
-            //set state of controls
-            //
-            this.InButton.Enabled = false;
+           
         }
 
 
@@ -65,6 +57,15 @@ namespace Interface_UI.BUS.Controllers
             this.NamConboBox.DataSource = nams.ToList();
             this.NamConboBox.ValueMember = "Nam";
             this.NamConboBox.DisplayMember = "Nam";
+            //
+            //subcribe events
+            //
+            this.InButton.Click += InButton_Click;
+            this.TimButton.Click += TimButton_Click;
+            //
+            //set state of controls
+            //
+            this.InButton.Enabled = false;
 
 
         }
@@ -83,18 +84,19 @@ namespace Interface_UI.BUS.Controllers
             //
             //Load no dau
             //
-            var dsnodau_select = from pxh in db.tb_PhieuXuatHang.ToList()
+            var dsnodau_select = from pxh in db.tb_PhieuXuatHang
                                  where pxh.Ngay_Lap.Month == thang && pxh.Ngay_Lap.Year == nam
                                  select new { MaDaiLy = pxh.Ma_DaiLy, TenDaiLy = pxh.tb_DaiLy.Ten_DaiLy, TongTien = pxh.TongTien };
+            
             var dsnodau_group = from dsnd in dsnodau_select
                                 group dsnd by dsnd.MaDaiLy;
 
             var dsnodau = from dsnd in dsnodau_group
-                          select new { MaDaiLy = dsnd.Key, TenDaiLy = dsnd.Select(p => p.TenDaiLy).Single(), NoBanDau = dsnd.Sum(p => p.TongTien) };
+                          select new { MaDaiLy = dsnd.Key, TenDaiLy = dsnd.Select(p => p.TenDaiLy).FirstOrDefault(), NoBanDau = dsnd.Sum(p => p.TongTien) };
             //
             //Load no phat sinh
             //
-            var dsnophatsinh_select = from nps in db.tb_TienNoPhatSinh.ToList()
+            var dsnophatsinh_select = from nps in db.tb_TienNoPhatSinh
                                       where nps.NgayLap.Month == thang && nps.NgayLap.Year == nam
                                       select new { MaDaiLy = nps.Ma_DaiLy, NoPhatSinh = nps.SoTienPhatSinh };
             var dsnophatsinh_group = from nps in dsnophatsinh_select
@@ -104,26 +106,23 @@ namespace Interface_UI.BUS.Controllers
             //
             //load tien da thu 
             //
-            var dsphieuthutien_select = from ptt in db.tb_PhieuThuTien.ToList()
+            var dsphieuthutien_select = from ptt in db.tb_PhieuThuTien
                                         where ptt.Ngay_Lap.Month == thang && ptt.Ngay_Lap.Year == nam
                                         select new { MaDaiLy = ptt.Ma_DaiLy, TienDaThu = ptt.So_Tien_Thu };
             var dsphieuthutien_group = from ptt in dsphieuthutien_select
                                        group ptt by ptt.MaDaiLy;
-            var dsphieuthutien = from ptt in dsphieuthutien_group.ToList()
+            var dsphieuthutien = from ptt in dsphieuthutien_group
                                  select new { MaDaiLy = ptt.Key, TienDaThu = ptt.Sum(p => p.TienDaThu) };
             //
             // join tien no, tien phat sinh, tien da thu
             //
-            var nobandau_nophatsinh_join = from pxh in dsnodau
-                                           join nps in dsnophatsinh on pxh.MaDaiLy equals nps.MaDaiLy
-                                           select new { MaDaiLy = pxh.MaDaiLy, TenDaiLy = pxh.TenDaiLy, TienNoBanDau = pxh.NoBanDau, TienNoPhatSinh = nps.NoPhatSinh };
-
-            var nobandau_nophatsinh_nocuoi_join = from nbd_npp in nobandau_nophatsinh_join.ToList()
-                                                  join ptt in dsphieuthutien.ToList() on nbd_npp.MaDaiLy equals ptt.MaDaiLy
-                                                  select new { TenDaiLy = nbd_npp.TenDaiLy, NoBanDau = nbd_npp.TienNoBanDau, NoPhatSinh = nbd_npp.TienNoPhatSinh, NoCuoi = (nbd_npp.TienNoBanDau + nbd_npp.TienNoPhatSinh) - ptt.TienDaThu };
+            var nobandau_nophatsinh_groupjoin = dsnodau.GroupJoin(dsnophatsinh, nd => nd.MaDaiLy, nps => nps.MaDaiLy, (nd, nps) => new { MaDaiLy = nd.MaDaiLy, TenDaiLy = nd.TenDaiLy, TienNoBanDau = nd.NoBanDau, NoPhatsinh = nps.Count()!= 0 ? nps.Select(p=>p.NoPhatSinh).FirstOrDefault() : 0 });
+            var nobandau_nophatsinh_tiendathu_groupjoin = nobandau_nophatsinh_groupjoin.GroupJoin(dsphieuthutien, a => a.MaDaiLy, b => b.MaDaiLy, (a, b) => new { MaDaiLy = a.MaDaiLy, TenDaiLy = a.TenDaiLy, TienNoBanDau = a.TienNoBanDau, NoPhatSinh = a.NoPhatsinh, NoCuoi = (a.TienNoBanDau + a.NoPhatsinh) - (b.Count() != 0 ? b.Select(p => p.TienDaThu).FirstOrDefault() : 0) });
+            
 
             this.BaoCaoDoanhSoData.DataSource = null;
-            this.BaoCaoDoanhSoData.DataSource = nobandau_nophatsinh_nocuoi_join;
+            this.BaoCaoDoanhSoData.DataSource = nobandau_nophatsinh_tiendathu_groupjoin.ToList();
+            
 
         }
         #endregion

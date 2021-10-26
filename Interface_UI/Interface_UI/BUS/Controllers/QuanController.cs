@@ -28,16 +28,7 @@ namespace Interface_UI.BUS.Controllers
         {
             this.MessageFailure = "";
             this.db = new QuanLyDaiLyEntities();
-            //
-            //subcribe events
-            //
-            this.QuanData.RowEnter += QuanData_RowEnter;
-            this.CapNhatButotn.Click += CapNhatButotn_Click;
-            //
-            //set control status
-            //
-            this.MaQuanTextBox.Enabled = false;
-            this.TenQuanTextBox.Enabled = false;
+            
         }
 
        
@@ -53,6 +44,16 @@ namespace Interface_UI.BUS.Controllers
                         select new { MaQuan = q.Ma_Quan, TenQuan = q.Ten_Quan, SoLuongDaiLyToiDa = q.DaiLy_ToiDa };
             this.QuanData.DataSource = null;
             this.QuanData.DataSource = quans.ToList();
+            //
+            //subcribe events
+            //
+            this.QuanData.RowEnter += QuanData_RowEnter;
+            this.CapNhatButotn.Click += CapNhatButotn_Click;
+            //
+            //set control status
+            //
+            this.MaQuanTextBox.Enabled = false;
+            this.TenQuanTextBox.Enabled = false;
 
         }
 
@@ -101,9 +102,9 @@ namespace Interface_UI.BUS.Controllers
         #region event
         private void QuanData_RowEnter(object sender, DataGridViewCellEventArgs e)
         {
-            this.MaQuanTextBox.Text = this.QuanData.Rows[e.RowIndex].Cells[0].ToString();
-            this.TenQuanTextBox.Text = this.QuanData.Rows[e.RowIndex].Cells[1].ToString();
-            this.LuongDaiLyToiDaTextBox.Text = this.QuanData.Rows[e.RowIndex].Cells[2].ToString();
+            this.MaQuanTextBox.Text = this.QuanData.Rows[e.RowIndex].Cells[0].Value.ToString();
+            this.TenQuanTextBox.Text = this.QuanData.Rows[e.RowIndex].Cells[1].Value.ToString();
+            this.LuongDaiLyToiDaTextBox.Text = this.QuanData.Rows[e.RowIndex].Cells[2].Value.ToString();
         }
         private void CapNhatButotn_Click(object sender, EventArgs e)
         {

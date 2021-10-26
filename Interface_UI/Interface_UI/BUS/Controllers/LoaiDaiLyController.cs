@@ -30,17 +30,7 @@ namespace Interface_UI.BUS.Controllers
         {
             this.MessageFailure = "";
             this.db = new QuanLyDaiLyEntities();
-            //
-            //subcribe events
-            //
-            this.LoaiDaiLyData.RowEnter += LoaiDaiLyData_RowEnter;
-            this.ThemButton.Click += ThemButton_Click;
-            this.CapNhatButton.Click += CapNhatButton_Click;
-            this.XoaButton.Click += XoaButton_Click;
-            //
-            //set state of controls
-            //
-            this.MaLoaiDaiLyTextBox.Enabled = false;
+            
         }
 
         
@@ -54,6 +44,17 @@ namespace Interface_UI.BUS.Controllers
                              select new { MaLoai = ldl.Ma_Loai_DaiLy, TenLoai = ldl.Ten_Loai, TienNoToiDa = ldl.TienNo_ToiDa };
             this.LoaiDaiLyData.DataSource = null;
             this.LoaiDaiLyData.DataSource = loaidailys.ToList();
+            //
+            //subcribe events
+            //
+            this.LoaiDaiLyData.RowEnter += LoaiDaiLyData_RowEnter;
+            this.ThemButton.Click += ThemButton_Click;
+            this.CapNhatButton.Click += CapNhatButton_Click;
+            this.XoaButton.Click += XoaButton_Click;
+            //
+            //set state of controls
+            //
+            this.MaLoaiDaiLyTextBox.Enabled = false;
         }
 
         private bool ThemLoaiDaiLy()
@@ -84,10 +85,10 @@ namespace Interface_UI.BUS.Controllers
             //
             // reset form
             //
-            var loaidailys = from ldl in db.tb_LoaiDaiLy.ToList()
+            var loaidailys = from ldl in db.tb_LoaiDaiLy
                              select new { MaLoai = ldl.Ma_Loai_DaiLy, TenLoai = ldl.Ten_Loai, TienNoToiDa = ldl.TienNo_ToiDa };
             this.LoaiDaiLyData.DataSource = null;
-            this.LoaiDaiLyData.DataSource = loaidailys;
+            this.LoaiDaiLyData.DataSource = loaidailys.ToList();
             return true;
 
         }

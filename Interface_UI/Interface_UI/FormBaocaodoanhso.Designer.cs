@@ -34,20 +34,20 @@ namespace Interface_UI
             this.panel1 = new System.Windows.Forms.Panel();
             this.TieudePhieuxuat = new System.Windows.Forms.Label();
             this.dashboardPhieuxuat = new FontAwesome.Sharp.IconPictureBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.baocaodoanhsos_datagridview = new System.Windows.Forms.DataGridView();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.iconButton1 = new FontAwesome.Sharp.IconButton();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
+            this.timkiem_button = new FontAwesome.Sharp.IconButton();
+            this.nam_combobox = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.iconButton6 = new FontAwesome.Sharp.IconButton();
+            this.thang_combobox = new System.Windows.Forms.ComboBox();
+            this.in_button = new FontAwesome.Sharp.IconButton();
             this.iconButton3 = new FontAwesome.Sharp.IconButton();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dashboardPhieuxuat)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.baocaodoanhsos_datagridview)).BeginInit();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -57,18 +57,20 @@ namespace Interface_UI
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(233)))), ((int)(((byte)(232)))));
             this.panel2.Controls.Add(this.label1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(0, 41);
+            this.panel2.Location = new System.Drawing.Point(0, 50);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(671, 60);
+            this.panel2.Size = new System.Drawing.Size(895, 74);
             this.panel2.TabIndex = 8;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(212, 17);
+            this.label1.Location = new System.Drawing.Point(283, 21);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(222, 29);
+            this.label1.Size = new System.Drawing.Size(272, 36);
             this.label1.TabIndex = 0;
             this.label1.Text = "Báo cáo doanh số";
             // 
@@ -79,8 +81,9 @@ namespace Interface_UI
             this.panel1.Controls.Add(this.dashboardPhieuxuat);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(671, 41);
+            this.panel1.Size = new System.Drawing.Size(895, 50);
             this.panel1.TabIndex = 7;
             // 
             // TieudePhieuxuat
@@ -88,9 +91,10 @@ namespace Interface_UI
             this.TieudePhieuxuat.AutoSize = true;
             this.TieudePhieuxuat.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TieudePhieuxuat.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.TieudePhieuxuat.Location = new System.Drawing.Point(42, 14);
+            this.TieudePhieuxuat.Location = new System.Drawing.Point(56, 17);
+            this.TieudePhieuxuat.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.TieudePhieuxuat.Name = "TieudePhieuxuat";
-            this.TieudePhieuxuat.Size = new System.Drawing.Size(122, 17);
+            this.TieudePhieuxuat.Size = new System.Drawing.Size(155, 22);
             this.TieudePhieuxuat.TabIndex = 2;
             this.TieudePhieuxuat.Text = "Báo cáo doanh số";
             // 
@@ -101,29 +105,34 @@ namespace Interface_UI
             this.dashboardPhieuxuat.IconChar = FontAwesome.Sharp.IconChar.ChartLine;
             this.dashboardPhieuxuat.IconColor = System.Drawing.Color.Turquoise;
             this.dashboardPhieuxuat.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.dashboardPhieuxuat.IconSize = 29;
-            this.dashboardPhieuxuat.Location = new System.Drawing.Point(10, 9);
+            this.dashboardPhieuxuat.IconSize = 36;
+            this.dashboardPhieuxuat.Location = new System.Drawing.Point(13, 11);
+            this.dashboardPhieuxuat.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dashboardPhieuxuat.Name = "dashboardPhieuxuat";
-            this.dashboardPhieuxuat.Size = new System.Drawing.Size(29, 29);
+            this.dashboardPhieuxuat.Size = new System.Drawing.Size(39, 36);
             this.dashboardPhieuxuat.TabIndex = 1;
             this.dashboardPhieuxuat.TabStop = false;
             // 
-            // dataGridView1
+            // baocaodoanhsos_datagridview
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.GridColor = System.Drawing.SystemColors.AppWorkspace;
-            this.dataGridView1.Location = new System.Drawing.Point(5, 19);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(635, 190);
-            this.dataGridView1.TabIndex = 0;
+            this.baocaodoanhsos_datagridview.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.baocaodoanhsos_datagridview.GridColor = System.Drawing.SystemColors.AppWorkspace;
+            this.baocaodoanhsos_datagridview.Location = new System.Drawing.Point(7, 23);
+            this.baocaodoanhsos_datagridview.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.baocaodoanhsos_datagridview.Name = "baocaodoanhsos_datagridview";
+            this.baocaodoanhsos_datagridview.RowHeadersWidth = 51;
+            this.baocaodoanhsos_datagridview.Size = new System.Drawing.Size(847, 234);
+            this.baocaodoanhsos_datagridview.TabIndex = 0;
             // 
             // groupBox3
             // 
             this.groupBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(233)))), ((int)(((byte)(232)))));
-            this.groupBox3.Controls.Add(this.dataGridView1);
-            this.groupBox3.Location = new System.Drawing.Point(13, 206);
+            this.groupBox3.Controls.Add(this.baocaodoanhsos_datagridview);
+            this.groupBox3.Location = new System.Drawing.Point(17, 254);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(646, 215);
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox3.Size = new System.Drawing.Size(861, 265);
             this.groupBox3.TabIndex = 39;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Kết quả";
@@ -131,62 +140,68 @@ namespace Interface_UI
             // groupBox2
             // 
             this.groupBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(233)))), ((int)(((byte)(232)))));
-            this.groupBox2.Controls.Add(this.iconButton1);
-            this.groupBox2.Controls.Add(this.comboBox4);
+            this.groupBox2.Controls.Add(this.timkiem_button);
+            this.groupBox2.Controls.Add(this.nam_combobox);
             this.groupBox2.Controls.Add(this.label3);
             this.groupBox2.Controls.Add(this.label2);
-            this.groupBox2.Controls.Add(this.comboBox3);
-            this.groupBox2.Location = new System.Drawing.Point(17, 104);
+            this.groupBox2.Controls.Add(this.thang_combobox);
+            this.groupBox2.Location = new System.Drawing.Point(23, 128);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(633, 85);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Size = new System.Drawing.Size(844, 105);
             this.groupBox2.TabIndex = 40;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Tìm kiếm";
+            this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
             // 
-            // iconButton1
+            // timkiem_button
             // 
-            this.iconButton1.BackColor = System.Drawing.Color.MediumTurquoise;
-            this.iconButton1.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.Search;
-            this.iconButton1.IconColor = System.Drawing.Color.Black;
-            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton1.IconSize = 32;
-            this.iconButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton1.Location = new System.Drawing.Point(480, 24);
-            this.iconButton1.Name = "iconButton1";
-            this.iconButton1.Padding = new System.Windows.Forms.Padding(3, 1, 0, 0);
-            this.iconButton1.Size = new System.Drawing.Size(112, 36);
-            this.iconButton1.TabIndex = 28;
-            this.iconButton1.Text = "Tìm kiếm";
-            this.iconButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iconButton1.UseVisualStyleBackColor = false;
+            this.timkiem_button.BackColor = System.Drawing.Color.MediumTurquoise;
+            this.timkiem_button.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.timkiem_button.IconChar = FontAwesome.Sharp.IconChar.Search;
+            this.timkiem_button.IconColor = System.Drawing.Color.Black;
+            this.timkiem_button.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.timkiem_button.IconSize = 32;
+            this.timkiem_button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.timkiem_button.Location = new System.Drawing.Point(640, 30);
+            this.timkiem_button.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.timkiem_button.Name = "timkiem_button";
+            this.timkiem_button.Padding = new System.Windows.Forms.Padding(4, 1, 0, 0);
+            this.timkiem_button.Size = new System.Drawing.Size(149, 44);
+            this.timkiem_button.TabIndex = 28;
+            this.timkiem_button.Text = "Tìm kiếm";
+            this.timkiem_button.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.timkiem_button.UseVisualStyleBackColor = false;
             // 
-            // comboBox4
+            // nam_combobox
             // 
-            this.comboBox4.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.comboBox4.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.comboBox4.BackColor = System.Drawing.SystemColors.Window;
-            this.comboBox4.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Items.AddRange(new object[] {
+            this.nam_combobox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.nam_combobox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.nam_combobox.BackColor = System.Drawing.SystemColors.Window;
+            this.nam_combobox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.nam_combobox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.nam_combobox.FormattingEnabled = true;
+            this.nam_combobox.Items.AddRange(new object[] {
             "Mã đại lý",
             "Tên đại lý",
             "Email",
             "Điện thoại"});
-            this.comboBox4.Location = new System.Drawing.Point(307, 28);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(101, 28);
-            this.comboBox4.TabIndex = 12;
+            this.nam_combobox.Location = new System.Drawing.Point(409, 34);
+            this.nam_combobox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.nam_combobox.Name = "nam_combobox";
+            this.nam_combobox.Size = new System.Drawing.Size(133, 33);
+            this.nam_combobox.TabIndex = 12;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label3.Location = new System.Drawing.Point(262, 32);
+            this.label3.Location = new System.Drawing.Point(349, 39);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(39, 19);
+            this.label3.Size = new System.Drawing.Size(47, 22);
             this.label3.TabIndex = 11;
             this.label3.Text = "Năm";
             // 
@@ -195,46 +210,49 @@ namespace Interface_UI
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label2.Location = new System.Drawing.Point(29, 32);
+            this.label2.Location = new System.Drawing.Point(39, 39);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(46, 19);
+            this.label2.Size = new System.Drawing.Size(58, 22);
             this.label2.TabIndex = 10;
             this.label2.Text = "Tháng";
             // 
-            // comboBox3
+            // thang_combobox
             // 
-            this.comboBox3.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.comboBox3.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.comboBox3.BackColor = System.Drawing.SystemColors.Window;
-            this.comboBox3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Items.AddRange(new object[] {
+            this.thang_combobox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.thang_combobox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.thang_combobox.BackColor = System.Drawing.SystemColors.Window;
+            this.thang_combobox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.thang_combobox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.thang_combobox.FormattingEnabled = true;
+            this.thang_combobox.Items.AddRange(new object[] {
             "Mã đại lý",
             "Tên đại lý",
             "Email",
             "Điện thoại"});
-            this.comboBox3.Location = new System.Drawing.Point(81, 28);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(121, 28);
-            this.comboBox3.TabIndex = 9;
+            this.thang_combobox.Location = new System.Drawing.Point(108, 34);
+            this.thang_combobox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.thang_combobox.Name = "thang_combobox";
+            this.thang_combobox.Size = new System.Drawing.Size(160, 33);
+            this.thang_combobox.TabIndex = 9;
             // 
-            // iconButton6
+            // in_button
             // 
-            this.iconButton6.BackColor = System.Drawing.Color.MediumTurquoise;
-            this.iconButton6.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconButton6.IconChar = FontAwesome.Sharp.IconChar.FileExport;
-            this.iconButton6.IconColor = System.Drawing.Color.Lavender;
-            this.iconButton6.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton6.IconSize = 32;
-            this.iconButton6.Location = new System.Drawing.Point(434, 447);
-            this.iconButton6.Name = "iconButton6";
-            this.iconButton6.Padding = new System.Windows.Forms.Padding(0, 1, 35, 0);
-            this.iconButton6.Size = new System.Drawing.Size(112, 36);
-            this.iconButton6.TabIndex = 36;
-            this.iconButton6.Text = "In";
-            this.iconButton6.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iconButton6.UseVisualStyleBackColor = false;
+            this.in_button.BackColor = System.Drawing.Color.MediumTurquoise;
+            this.in_button.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.in_button.IconChar = FontAwesome.Sharp.IconChar.FileExport;
+            this.in_button.IconColor = System.Drawing.Color.Lavender;
+            this.in_button.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.in_button.IconSize = 32;
+            this.in_button.Location = new System.Drawing.Point(579, 550);
+            this.in_button.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.in_button.Name = "in_button";
+            this.in_button.Padding = new System.Windows.Forms.Padding(0, 1, 47, 0);
+            this.in_button.Size = new System.Drawing.Size(149, 44);
+            this.in_button.TabIndex = 36;
+            this.in_button.Text = "In";
+            this.in_button.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.in_button.UseVisualStyleBackColor = false;
             // 
             // iconButton3
             // 
@@ -245,10 +263,11 @@ namespace Interface_UI
             this.iconButton3.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton3.IconSize = 32;
             this.iconButton3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton3.Location = new System.Drawing.Point(140, 447);
+            this.iconButton3.Location = new System.Drawing.Point(187, 550);
+            this.iconButton3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.iconButton3.Name = "iconButton3";
-            this.iconButton3.Padding = new System.Windows.Forms.Padding(3, 1, 0, 0);
-            this.iconButton3.Size = new System.Drawing.Size(112, 36);
+            this.iconButton3.Padding = new System.Windows.Forms.Padding(4, 1, 0, 0);
+            this.iconButton3.Size = new System.Drawing.Size(149, 44);
             this.iconButton3.TabIndex = 41;
             this.iconButton3.Text = "Quay lại";
             this.iconButton3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -256,25 +275,27 @@ namespace Interface_UI
             // 
             // FormBaocaodoanhso
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(233)))), ((int)(((byte)(232)))));
-            this.ClientSize = new System.Drawing.Size(671, 512);
+            this.ClientSize = new System.Drawing.Size(895, 630);
             this.Controls.Add(this.iconButton3);
-            this.Controls.Add(this.iconButton6);
+            this.Controls.Add(this.in_button);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "FormBaocaodoanhso";
             this.Text = "FormBaocaodoanhso";
+            this.Load += new System.EventHandler(this.FormBaocaodoanhso_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dashboardPhieuxuat)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.baocaodoanhsos_datagridview)).EndInit();
             this.groupBox3.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
@@ -289,15 +310,15 @@ namespace Interface_UI
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label TieudePhieuxuat;
         private FontAwesome.Sharp.IconPictureBox dashboardPhieuxuat;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView baocaodoanhsos_datagridview;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.GroupBox groupBox2;
-        private FontAwesome.Sharp.IconButton iconButton1;
-        private System.Windows.Forms.ComboBox comboBox4;
+        private FontAwesome.Sharp.IconButton timkiem_button;
+        private System.Windows.Forms.ComboBox nam_combobox;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox comboBox3;
-        private FontAwesome.Sharp.IconButton iconButton6;
+        private System.Windows.Forms.ComboBox thang_combobox;
+        private FontAwesome.Sharp.IconButton in_button;
         private FontAwesome.Sharp.IconButton iconButton3;
     }
 }

@@ -16,7 +16,7 @@ namespace Interface_UI
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormPhieuxuathang_sua_());
+            Application.Run(new FormThaydoiquydinh_3_());
         }
     }
 }
