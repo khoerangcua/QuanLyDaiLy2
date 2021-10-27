@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Interface_UI.DAO;
+using Interface_UI.Reports;
 
 namespace Interface_UI.BUS.Controllers
 {
@@ -13,6 +14,9 @@ namespace Interface_UI.BUS.Controllers
         #region fields
         public string MessageFailure { get; set; }
         QuanLyDaiLyEntities db;
+        #endregion
+        #region Currents
+        List<BaoCaoDoanhSoObject> baoCaoDoanhSoObjects;
         #endregion
 
         #region controls
@@ -28,6 +32,7 @@ namespace Interface_UI.BUS.Controllers
         {
             this.db = new QuanLyDaiLyEntities();
             this.MessageFailure = "";
+            this.baoCaoDoanhSoObjects = new List<BaoCaoDoanhSoObject>();
             
 
         }
@@ -95,15 +100,30 @@ namespace Interface_UI.BUS.Controllers
                                        group dspx by dspx.MaDaiLy;
 
                 var baocaodoanhso = from pxh in dsphieuxuathang2
-                                    select new { MaDaiLy = pxh.Key, TenDaiLy = pxh.Select(p => p.TenDaiLy).FirstOrDefault(), SoPhieuThu = pxh.Count(), TongTriGia = pxh.Sum(p => p.TongTien), TyLe = Math.Round( pxh.Sum(p => p.TongTien) / bcds_tong,3 )};
+                                    select new { MaDaiLy = pxh.Key, TenDaiLy = pxh.Select(p => p.TenDaiLy).FirstOrDefault(), SoPhieuXuat = pxh.Count(), TongTriGia = pxh.Sum(p => p.TongTien), TyLe = Math.Round( pxh.Sum(p => p.TongTien) / bcds_tong,3 )};
                 this.InButton.Enabled = true;
                 this.BaoCaoDoanhSoData.DataSource = null;
                 this.BaoCaoDoanhSoData.DataSource = baocaodoanhso.ToList();
+
+                this.InButton.Enabled = true;
+                foreach (var item in baocaodoanhso)
+                {
+                    this.baoCaoDoanhSoObjects.Add(
+                        new BaoCaoDoanhSoObject
+                        {
+                            DaiLy = item.TenDaiLy,
+                            SoPhieuXuat = item.SoPhieuXuat,
+                            TongTriGia = item.TongTriGia,
+                            TyLe = item.TyLe
+                        });
+                }
 
             }
             else
             {
                 this.MessageFailure = "khong ton tai phieu xuat hang tuong ung";
+                this.InButton.Enabled = false;
+
             }
 
 
@@ -113,7 +133,8 @@ namespace Interface_UI.BUS.Controllers
         #region event
         private void InButton_Click(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            BaoCaoDoanhSoReportViewerForm baoCaoDoanhSoReportViewerForm = new BaoCaoDoanhSoReportViewerForm() { baoCaoDoanhSoObjects = this.baoCaoDoanhSoObjects };
+            baoCaoDoanhSoReportViewerForm.ShowDialog();
         }
 
         private void TimButton_Click(object sender, EventArgs e)

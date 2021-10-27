@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Interface_UI.DAO;
+using Interface_UI.Reports;
 
 namespace Interface_UI.BUS.Controllers
 {
@@ -25,12 +26,16 @@ namespace Interface_UI.BUS.Controllers
             get; set;
         }
         #endregion
+        #region Current Data
+        List<BaoCaoCongNoOj> BaoCaoCongNoOjs { get; set; }
+        #endregion
 
         #region constructor
         public BaoCaoCongNoController()
         {
             this.MessageFailure = "";
             this.db = new QuanLyDaiLyEntities();
+            this.BaoCaoCongNoOjs = new List<BaoCaoCongNoOj>();
            
         }
 
@@ -118,10 +123,36 @@ namespace Interface_UI.BUS.Controllers
             //
             var nobandau_nophatsinh_groupjoin = dsnodau.GroupJoin(dsnophatsinh, nd => nd.MaDaiLy, nps => nps.MaDaiLy, (nd, nps) => new { MaDaiLy = nd.MaDaiLy, TenDaiLy = nd.TenDaiLy, TienNoBanDau = nd.NoBanDau, NoPhatsinh = nps.Count()!= 0 ? nps.Select(p=>p.NoPhatSinh).FirstOrDefault() : 0 });
             var nobandau_nophatsinh_tiendathu_groupjoin = nobandau_nophatsinh_groupjoin.GroupJoin(dsphieuthutien, a => a.MaDaiLy, b => b.MaDaiLy, (a, b) => new { MaDaiLy = a.MaDaiLy, TenDaiLy = a.TenDaiLy, TienNoBanDau = a.TienNoBanDau, NoPhatSinh = a.NoPhatsinh, NoCuoi = (a.TienNoBanDau + a.NoPhatsinh) - (b.Count() != 0 ? b.Select(p => p.TienDaThu).FirstOrDefault() : 0) });
-            
 
-            this.BaoCaoDoanhSoData.DataSource = null;
-            this.BaoCaoDoanhSoData.DataSource = nobandau_nophatsinh_tiendathu_groupjoin.ToList();
+            if (nobandau_nophatsinh_tiendathu_groupjoin.Any())
+            {
+                this.BaoCaoDoanhSoData.DataSource = null;
+                this.BaoCaoDoanhSoData.DataSource = nobandau_nophatsinh_tiendathu_groupjoin.ToList();
+                this.InButton.Enabled = true;
+                this.BaoCaoCongNoOjs.Clear();
+                foreach (var item in nobandau_nophatsinh_tiendathu_groupjoin)
+                {
+                    this.BaoCaoCongNoOjs.Add(
+                        new BaoCaoCongNoOj
+                        {
+                            DaiLy = item.TenDaiLy,
+                            NoDau = item.TienNoBanDau,
+                            PhatSinh = item.NoPhatSinh,
+                            NoCuoi = item.NoCuoi
+                        });
+                }
+                
+
+
+            }
+            else
+            {
+                this.BaoCaoDoanhSoData.DataSource = null;
+                this.InButton.Enabled = false;
+
+            }
+
+            
             
 
         }
@@ -135,7 +166,8 @@ namespace Interface_UI.BUS.Controllers
 
         private void InButton_Click(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            BaoCaoCongNoReportViewerForm baoCaoCongNoReportViewerForm = new BaoCaoCongNoReportViewerForm { BaoCaoCongNoList = this.BaoCaoCongNoOjs };
+            baoCaoCongNoReportViewerForm.ShowDialog();
         }
         #endregion
     }

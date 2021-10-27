@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Interface_UI.Reports;
 
 namespace Interface_UI
 {
@@ -16,7 +17,7 @@ namespace Interface_UI
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormSearch());
+            Application.Run(new FormBaocaodoanhso());
         }
     }
 }
