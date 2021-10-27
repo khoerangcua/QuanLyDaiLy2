@@ -101,6 +101,14 @@ namespace Interface_UI.BUS.Controllers
             //
             int maloaidaily = int.Parse(this.MaLoaiDaiLyTextBox.Text);
             //
+            //kt loai dai ly da duoc su dung? 
+            //
+            if (this.db.tb_DaiLy.Any(p=>p.Ma_Loai_DaiLy == maloaidaily))
+            {
+                this.MessageFailure = String.Format("da ton tai loai dai ly {0}", maloaidaily);
+                return false;
+            }
+            //
             //tim kiem loai dai ly tuong ung
             //
             var loaidaily = db.tb_LoaiDaiLy.FirstOrDefault(p => p.Ma_Loai_DaiLy == maloaidaily);
@@ -152,6 +160,35 @@ namespace Interface_UI.BUS.Controllers
             }
             else
             {
+                //
+                //kiem tra no toi dai
+                //
+
+
+                //
+                //load ds daily thuoc loai dai ly da chon
+                //
+                var dailys = this.db.tb_DaiLy.Where(dl => dl.Ma_Loai_DaiLy == maloaidaily)
+                                             .Select(dl => 
+                                             new 
+                                             { 
+                                                 MaDaiLy = dl.Ma_DaiLy, 
+                                                 NoCung = dl.tb_PhieuXuatHang.Any()?dl.tb_PhieuXuatHang.Sum(pxh => pxh.TongTien):0,
+                                                 NoPhatSinh = dl.tb_TienNoPhatSinh.Any()?dl.tb_TienNoPhatSinh.Sum(nps => nps.SoTienPhatSinh):0, 
+                                                 TienDaThu = dl.tb_PhieuThuTien.Any() ? dl.tb_PhieuThuTien.Sum(ptt => ptt.So_Tien_Thu) : 0 
+                                             });
+
+                foreach (var item in dailys)
+                {
+
+                }
+                
+                if (dailys.Any(dl=>dl.NoCung+dl.NoPhatSinh-dl.TienDaThu>tiennotoida))
+                {
+                    this.MessageFailure = "ton tai dai ly hien tai co no vuot qua tien no toi da";
+                    return false;
+                }
+
                 loaidaily.Ten_Loai = tenloaidaily;
                 loaidaily.TienNo_ToiDa = tiennotoida;
                 if (db.SaveChanges() == 0)

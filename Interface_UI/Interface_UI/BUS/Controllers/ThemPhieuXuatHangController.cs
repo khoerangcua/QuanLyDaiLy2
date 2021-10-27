@@ -154,18 +154,27 @@ namespace Interface_UI.BUS.Controllers
             double notoida = (from dl in db.tb_DaiLy
                               where dl.Ma_DaiLy == madaily
                               select dl.tb_LoaiDaiLy.TienNo_ToiDa).Single();
-
-            var phieuxuathangs = db.tb_PhieuXuatHang.Where(pxh => pxh.Ma_DaiLy == madaily);
             //
             //Nợ cứng
             //
+            var phieuxuathangs = db.tb_PhieuXuatHang.Where(pxh => pxh.Ma_DaiLy == madaily);
+            
             double nocung = 0;            
             if (phieuxuathangs.Any())
             {
                 nocung = phieuxuathangs.Sum(pxh => pxh.TongTien);
 
             }
-
+            //
+            //no phat sinh
+            //
+            var nophatsinhs = db.tb_TienNoPhatSinh.Where(nps => nps.Ma_DaiLy == madaily);
+            double nophatsinh = 0;
+            if (nophatsinhs.Any())
+            {
+                nophatsinh = nophatsinhs.Sum(nps => nps.SoTienPhatSinh);
+            }
+            
             //
             //Tiền đã thu
             //
@@ -181,7 +190,7 @@ namespace Interface_UI.BUS.Controllers
             //
             double notamthoi = tempPhieuXuatHang.TongTien + thanhtien;
 
-            if ((nocung + notamthoi)-tiendathu <= notoida)
+            if ((nocung + nophatsinh + notamthoi)-tiendathu <= notoida)
             {
                 if (this.tempListChiTietPhieuXuatHang.Count() == 0)
                 {
@@ -333,21 +342,30 @@ namespace Interface_UI.BUS.Controllers
         private void LoadNoHienTai()
         {
             int madaily = int.Parse(this.DaiLyComboBox.SelectedValue.ToString());
+
             var phieuxuathangs = db.tb_PhieuXuatHang.Where(pxh => pxh.Ma_DaiLy == madaily);
+            var nophatsinhs = db.tb_TienNoPhatSinh.Where(nps => nps.Ma_DaiLy == madaily);
             var phieuthutiens = db.tb_PhieuThuTien.Where(ptt => ptt.Ma_DaiLy == madaily);
+
             double nocung = 0;
+            double nophatsinh = 0;
             double tiendathu = 0;
             if (phieuxuathangs.Any())
             {
                 nocung = phieuxuathangs.Sum(pxh => pxh.TongTien);
 
             }
+            if (nophatsinhs.Any())
+            {
+                nophatsinh = nophatsinhs.Sum(nps => nps.SoTienPhatSinh); 
+            }
+            
             if (phieuthutiens.Any())
             {
                 tiendathu = phieuthutiens.Sum(ptt => ptt.So_Tien_Thu);
             }
 
-            this.TienNoHienTai.Text = (nocung - tiendathu + this.tempListChiTietPhieuXuatHang.Sum(p => p.Thanh_Tien)).ToString();
+            this.TienNoHienTai.Text = (nocung + nophatsinh - tiendathu + this.tempListChiTietPhieuXuatHang.Sum(p => p.Thanh_Tien)).ToString();
         }
         #endregion
 

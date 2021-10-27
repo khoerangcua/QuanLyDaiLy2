@@ -76,6 +76,15 @@ namespace Interface_UI.BUS.Controllers
             else
             {
                 int luongdailytoida = int.Parse(this.LuongDaiLyToiDaTextBox.Text);
+                //
+                //kiem tra luong dai ly hien tai
+                //
+                bool luongdailyhientai = this.db.tb_Quan.FirstOrDefault(q => q.Ma_Quan == maquan).tb_DaiLy.Count() > luongdailytoida;
+                if (luongdailyhientai==true)
+                {
+                    this.MessageFailure = "luong dai ly toi da nho hon luong dai ly hien tai";
+                    return false;
+                }
                 quan.DaiLy_ToiDa = luongdailytoida;
                 if (db.SaveChanges()==0)
                 {

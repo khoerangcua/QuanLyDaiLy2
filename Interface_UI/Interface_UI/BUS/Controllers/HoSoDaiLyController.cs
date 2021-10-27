@@ -22,7 +22,10 @@ namespace Interface_UI.BUS.Controllers
         //Validator
         //
         HoSoDaiLyValidator hoSoDaiLyValidator;
-
+        //
+        //temp fields
+        //
+        int oldIdQuan { get; set; }
         //
         //Controls
         //
@@ -161,6 +164,16 @@ namespace Interface_UI.BUS.Controllers
             string diachi = this.DiaChiText.Text;
             DateTime ngaytiepnhan = DateTime.Now;
             //
+            //kiem tra dai ly toi da
+            //
+            var sldailytoida = this.db.tb_Quan.FirstOrDefault(q=>q.Ma_Quan == maquan).DaiLy_ToiDa;
+            var sldailyhientai = this.db.tb_DaiLy.Count(p => p.Ma_Quan == maquan);
+            if (sldailyhientai==sldailytoida)
+            {
+                this.MessageFailure = "vuot qua quy dinh so luong dai ly toi da";
+                return false;
+            }
+            //
             //Kiểm tra thông tin đầu vào
             //
             bool checkinput = this.hoSoDaiLyValidator.KiemTraThongTinDaiLy(ten, sdt, email, diachi);
@@ -296,6 +309,19 @@ namespace Interface_UI.BUS.Controllers
                 else
                 {
                     //
+                    //kiem tra quy dinh ve quan
+                    //
+                    if (maquan!=oldIdQuan)
+                    {
+                        var sldailytoida = this.db.tb_Quan.FirstOrDefault(q => q.Ma_Quan == maquan).DaiLy_ToiDa;
+                        var sldailyhientai = this.db.tb_DaiLy.Count(p => p.Ma_Quan == maquan);
+                        if (sldailyhientai == sldailytoida)
+                        {
+                            this.MessageFailure = "vuot qua quy dinh so luong dai ly toi da";
+                            return false;
+                        }
+                    }
+                    //
                     //Kiểm tra thông tin đầu vào
                     //
                     bool checkinput = this.hoSoDaiLyValidator.KiemTraThongTinDaiLy(ten, sdt, email, diachi);
@@ -315,6 +341,7 @@ namespace Interface_UI.BUS.Controllers
                         daily.Email = email;
                         daily.Ma_Loai_DaiLy = maloai;
                         daily.Dia_Chi = diachi;
+
                         
                         //
                         //Kiểm tra lưu vào cơ sở dữ liệu
@@ -384,6 +411,10 @@ namespace Interface_UI.BUS.Controllers
             this.LoaiDaiLyComboBox.SelectedValue = int.Parse(this.HoSoDaiLyDataGridView.Rows[e.RowIndex].Cells[5].Value.ToString());
             this.DiaChiText.Text = this.HoSoDaiLyDataGridView.Rows[e.RowIndex].Cells[6].Value.ToString();
             this.NgayTiepNhanText.Text = this.HoSoDaiLyDataGridView.Rows[e.RowIndex].Cells[7].Value.ToString();
+            //
+            //luu oldidquan
+            //
+            this.oldIdQuan = int.Parse(this.HoSoDaiLyDataGridView.Rows[e.RowIndex].Cells[3].Value.ToString());
         }
 
         private void TimKiemButton_Click(object sender, EventArgs e)
