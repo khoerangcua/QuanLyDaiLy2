@@ -37,9 +37,13 @@ namespace Interface_UI
             this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.iconButton3 = new FontAwesome.Sharp.IconButton();
             this.iconButton2 = new FontAwesome.Sharp.IconButton();
+            this.panelPhieuxuat = new System.Windows.Forms.Panel();
+            this.panelChildExport = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dashboardPhieuxuat)).BeginInit();
             this.panel2.SuspendLayout();
+            this.panelPhieuxuat.SuspendLayout();
+            this.panelChildExport.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -47,7 +51,6 @@ namespace Interface_UI
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(45)))), ((int)(((byte)(87)))));
             this.panel1.Controls.Add(this.TieudePhieuxuat);
             this.panel1.Controls.Add(this.dashboardPhieuxuat);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(671, 41);
@@ -58,7 +61,7 @@ namespace Interface_UI
             this.TieudePhieuxuat.AutoSize = true;
             this.TieudePhieuxuat.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TieudePhieuxuat.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.TieudePhieuxuat.Location = new System.Drawing.Point(42, 14);
+            this.TieudePhieuxuat.Location = new System.Drawing.Point(43, 12);
             this.TieudePhieuxuat.Name = "TieudePhieuxuat";
             this.TieudePhieuxuat.Size = new System.Drawing.Size(112, 17);
             this.TieudePhieuxuat.TabIndex = 2;
@@ -82,7 +85,6 @@ namespace Interface_UI
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(233)))), ((int)(((byte)(232)))));
             this.panel2.Controls.Add(this.label1);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 41);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(671, 60);
@@ -106,7 +108,7 @@ namespace Interface_UI
             this.iconButton1.IconColor = System.Drawing.Color.Green;
             this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton1.IconSize = 100;
-            this.iconButton1.Location = new System.Drawing.Point(207, 107);
+            this.iconButton1.Location = new System.Drawing.Point(66, 70);
             this.iconButton1.Name = "iconButton1";
             this.iconButton1.Padding = new System.Windows.Forms.Padding(0, 20, 5, 0);
             this.iconButton1.Size = new System.Drawing.Size(278, 132);
@@ -115,6 +117,7 @@ namespace Interface_UI
             this.iconButton1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.iconButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.iconButton1.UseVisualStyleBackColor = false;
+            this.iconButton1.Click += new System.EventHandler(this.iconButton1_Click);
             // 
             // iconButton3
             // 
@@ -125,7 +128,7 @@ namespace Interface_UI
             this.iconButton3.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton3.IconSize = 100;
             this.iconButton3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton3.Location = new System.Drawing.Point(73, 266);
+            this.iconButton3.Location = new System.Drawing.Point(339, 259);
             this.iconButton3.Name = "iconButton3";
             this.iconButton3.Padding = new System.Windows.Forms.Padding(45, 20, 0, 0);
             this.iconButton3.Size = new System.Drawing.Size(278, 132);
@@ -133,6 +136,7 @@ namespace Interface_UI
             this.iconButton3.Text = "Xoá";
             this.iconButton3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.iconButton3.UseVisualStyleBackColor = false;
+            this.iconButton3.Click += new System.EventHandler(this.iconButton3_Click);
             // 
             // iconButton2
             // 
@@ -142,7 +146,7 @@ namespace Interface_UI
             this.iconButton2.IconColor = System.Drawing.Color.MediumBlue;
             this.iconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton2.IconSize = 100;
-            this.iconButton2.Location = new System.Drawing.Point(217, 425);
+            this.iconButton2.Location = new System.Drawing.Point(210, 164);
             this.iconButton2.Name = "iconButton2";
             this.iconButton2.Padding = new System.Windows.Forms.Padding(0, 20, 0, 0);
             this.iconButton2.Size = new System.Drawing.Size(278, 132);
@@ -150,6 +154,30 @@ namespace Interface_UI
             this.iconButton2.Text = "Cập nhật";
             this.iconButton2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.iconButton2.UseVisualStyleBackColor = false;
+            this.iconButton2.Click += new System.EventHandler(this.iconButton2_Click);
+            // 
+            // panelPhieuxuat
+            // 
+            this.panelPhieuxuat.Controls.Add(this.iconButton3);
+            this.panelPhieuxuat.Controls.Add(this.iconButton2);
+            this.panelPhieuxuat.Controls.Add(this.iconButton1);
+            this.panelPhieuxuat.Location = new System.Drawing.Point(0, 99);
+            this.panelPhieuxuat.Name = "panelPhieuxuat";
+            this.panelPhieuxuat.Size = new System.Drawing.Size(671, 476);
+            this.panelPhieuxuat.TabIndex = 4;
+            this.panelPhieuxuat.Paint += new System.Windows.Forms.PaintEventHandler(this.panelPhieuxuathang_Paint);
+            // 
+            // panelChildExport
+            // 
+            this.panelChildExport.Controls.Add(this.panel2);
+            this.panelChildExport.Controls.Add(this.panel1);
+            this.panelChildExport.Controls.Add(this.panelPhieuxuat);
+            this.panelChildExport.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelChildExport.Location = new System.Drawing.Point(0, 0);
+            this.panelChildExport.Name = "panelChildExport";
+            this.panelChildExport.Size = new System.Drawing.Size(671, 575);
+            this.panelChildExport.TabIndex = 5;
+            this.panelChildExport.Paint += new System.Windows.Forms.PaintEventHandler(this.panelChildExport_Paint);
             // 
             // FormPhieuxuathang
             // 
@@ -157,19 +185,18 @@ namespace Interface_UI
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(233)))), ((int)(((byte)(232)))));
             this.ClientSize = new System.Drawing.Size(671, 575);
-            this.Controls.Add(this.iconButton2);
-            this.Controls.Add(this.iconButton3);
-            this.Controls.Add(this.iconButton1);
-            this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panelChildExport);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormPhieuxuathang";
             this.Text = "FormPhieuxuathang";
+            this.Load += new System.EventHandler(this.FormPhieuxuathang_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dashboardPhieuxuat)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            this.panelPhieuxuat.ResumeLayout(false);
+            this.panelChildExport.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -184,5 +211,7 @@ namespace Interface_UI
         private FontAwesome.Sharp.IconButton iconButton1;
         private FontAwesome.Sharp.IconButton iconButton3;
         private FontAwesome.Sharp.IconButton iconButton2;
+        private System.Windows.Forms.Panel panelPhieuxuat;
+        private System.Windows.Forms.Panel panelChildExport;
     }
 }
