@@ -156,23 +156,17 @@
     <Compile Include="FormBaocaodoanhso.Designer.cs">
       <DependentUpon>FormBaocaodoanhso.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormChangepass-Homepage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormChangepass-Homepage.Designer.cs">
+      <DependentUpon>FormChangepass-Homepage.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormChangepass.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormChangepass.Designer.cs">
       <DependentUpon>FormChangepass.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FormChitietmathang.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormChitietmathang.Designer.cs">
-      <DependentUpon>FormChitietmathang.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FormChitietxuathang.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormChitietxuathang.Designer.cs">
-      <DependentUpon>FormChitietxuathang.cs</DependentUpon>
     </Compile>
     <Compile Include="FormHoso.cs">
       <SubType>Form</SubType>
@@ -266,14 +260,11 @@
     <EmbeddedResource Include="FormBaocaodoanhso.resx">
       <DependentUpon>FormBaocaodoanhso.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormChangepass-Homepage.resx">
+      <DependentUpon>FormChangepass-Homepage.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormChangepass.resx">
       <DependentUpon>FormChangepass.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormChitietmathang.resx">
-      <DependentUpon>FormChitietmathang.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormChitietxuathang.resx">
-      <DependentUpon>FormChitietxuathang.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormHoso.resx">
       <DependentUpon>FormHoso.cs</DependentUpon>

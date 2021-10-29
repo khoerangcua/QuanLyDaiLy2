@@ -30,50 +30,45 @@ namespace Interface_UI
         private void InitializeComponent()
         {
             this.Menubar = new System.Windows.Forms.Panel();
-            this.MenuSlidebar = new FontAwesome.Sharp.IconPictureBox();
-            this.Minimizar = new FontAwesome.Sharp.IconPictureBox();
-            this.Exit = new FontAwesome.Sharp.IconPictureBox();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.panelQuydinh = new System.Windows.Forms.Panel();
+            this.panelReport = new System.Windows.Forms.Panel();
+            this.panelManage = new System.Windows.Forms.Panel();
+            this.panelSubmenu = new System.Windows.Forms.Panel();
+            this.panelChildForm = new System.Windows.Forms.Panel();
+            this.Hanghoa = new FontAwesome.Sharp.IconButton();
+            this.Sodailytrongquan = new FontAwesome.Sharp.IconButton();
+            this.Loaidaily = new FontAwesome.Sharp.IconButton();
             this.Regulate = new FontAwesome.Sharp.IconButton();
             this.Search = new FontAwesome.Sharp.IconButton();
-            this.panelReport = new System.Windows.Forms.Panel();
             this.Baocaocongno = new FontAwesome.Sharp.IconButton();
             this.Baocaodoanhthu = new FontAwesome.Sharp.IconButton();
             this.Report = new FontAwesome.Sharp.IconButton();
-            this.panelManage = new System.Windows.Forms.Panel();
-            this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
             this.Phieuxuathang = new FontAwesome.Sharp.IconButton();
             this.Phieuthutien = new FontAwesome.Sharp.IconButton();
-            this.panelDetail = new System.Windows.Forms.Panel();
-            this.DetailProduct = new FontAwesome.Sharp.IconButton();
-            this.DetailExport = new FontAwesome.Sharp.IconButton();
             this.File = new FontAwesome.Sharp.IconButton();
             this.Manage = new FontAwesome.Sharp.IconButton();
-            this.panelSubmenu = new System.Windows.Forms.Panel();
             this.Loggout = new FontAwesome.Sharp.IconButton();
             this.Changepass = new FontAwesome.Sharp.IconButton();
-            this.Loggin = new FontAwesome.Sharp.IconButton();
             this.Homepage = new FontAwesome.Sharp.IconButton();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.Minimizar = new FontAwesome.Sharp.IconPictureBox();
+            this.Exit = new FontAwesome.Sharp.IconPictureBox();
             this.Menubar.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.MenuSlidebar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Minimizar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Exit)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.panelQuydinh.SuspendLayout();
             this.panelReport.SuspendLayout();
             this.panelManage.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
-            this.panelDetail.SuspendLayout();
             this.panelSubmenu.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Minimizar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Exit)).BeginInit();
             this.SuspendLayout();
             // 
             // Menubar
             // 
             this.Menubar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(24)))), ((int)(((byte)(64)))));
-            this.Menubar.Controls.Add(this.MenuSlidebar);
             this.Menubar.Controls.Add(this.Minimizar);
             this.Menubar.Controls.Add(this.Exit);
             this.Menubar.Controls.Add(this.panel4);
@@ -82,58 +77,10 @@ namespace Interface_UI
             this.Menubar.Name = "Menubar";
             this.Menubar.Size = new System.Drawing.Size(909, 47);
             this.Menubar.TabIndex = 1;
-            
-            // 
-            // MenuSlidebar
-            // 
-            this.MenuSlidebar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(24)))), ((int)(((byte)(64)))));
-            this.MenuSlidebar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.MenuSlidebar.IconChar = FontAwesome.Sharp.IconChar.Bars;
-            this.MenuSlidebar.IconColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.MenuSlidebar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.MenuSlidebar.IconSize = 36;
-            this.MenuSlidebar.Location = new System.Drawing.Point(3, 9);
-            this.MenuSlidebar.Name = "MenuSlidebar";
-            this.MenuSlidebar.Size = new System.Drawing.Size(36, 36);
-            this.MenuSlidebar.TabIndex = 12;
-            this.MenuSlidebar.TabStop = false;
-            this.MenuSlidebar.Click += new System.EventHandler(this.MenuSlidebar_Click);
-            // 
-            // Minimizar
-            // 
-            this.Minimizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.Minimizar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(24)))), ((int)(((byte)(64)))));
-            this.Minimizar.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.Minimizar.IconChar = FontAwesome.Sharp.IconChar.Minus;
-            this.Minimizar.IconColor = System.Drawing.SystemColors.ButtonFace;
-            this.Minimizar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.Minimizar.IconSize = 30;
-            this.Minimizar.Location = new System.Drawing.Point(834, 9);
-            this.Minimizar.Name = "Minimizar";
-            this.Minimizar.Size = new System.Drawing.Size(30, 31);
-            this.Minimizar.TabIndex = 11;
-            this.Minimizar.TabStop = false;
-            this.Minimizar.Click += new System.EventHandler(this.Minimizar_Click_1);
-            // 
-            // Exit
-            // 
-            this.Exit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.Exit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(24)))), ((int)(((byte)(64)))));
-            this.Exit.ForeColor = System.Drawing.Color.Red;
-            this.Exit.IconChar = FontAwesome.Sharp.IconChar.PowerOff;
-            this.Exit.IconColor = System.Drawing.Color.Red;
-            this.Exit.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.Exit.IconSize = 30;
-            this.Exit.Location = new System.Drawing.Point(864, 9);
-            this.Exit.Name = "Exit";
-            this.Exit.Size = new System.Drawing.Size(30, 31);
-            this.Exit.TabIndex = 5;
-            this.Exit.TabStop = false;
-            this.Exit.Click += new System.EventHandler(this.Exit_Click);
             // 
             // panel4
             // 
-            this.panel4.Location = new System.Drawing.Point(59, 14);
+            this.panel4.Location = new System.Drawing.Point(43, 9);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(146, 30);
             this.panel4.TabIndex = 0;
@@ -152,6 +99,7 @@ namespace Interface_UI
             // 
             this.panel2.AutoScroll = true;
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(45)))), ((int)(((byte)(87)))));
+            this.panel2.Controls.Add(this.panelQuydinh);
             this.panel2.Controls.Add(this.Regulate);
             this.panel2.Controls.Add(this.Search);
             this.panel2.Controls.Add(this.panelReport);
@@ -167,6 +115,134 @@ namespace Interface_UI
             this.panel2.TabIndex = 0;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
+            // panelQuydinh
+            // 
+            this.panelQuydinh.Controls.Add(this.Hanghoa);
+            this.panelQuydinh.Controls.Add(this.Sodailytrongquan);
+            this.panelQuydinh.Controls.Add(this.Loaidaily);
+            this.panelQuydinh.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelQuydinh.Location = new System.Drawing.Point(0, 503);
+            this.panelQuydinh.Name = "panelQuydinh";
+            this.panelQuydinh.Size = new System.Drawing.Size(221, 118);
+            this.panelQuydinh.TabIndex = 25;
+            // 
+            // panelReport
+            // 
+            this.panelReport.Controls.Add(this.Baocaocongno);
+            this.panelReport.Controls.Add(this.Baocaodoanhthu);
+            this.panelReport.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelReport.Location = new System.Drawing.Point(0, 339);
+            this.panelReport.Name = "panelReport";
+            this.panelReport.Size = new System.Drawing.Size(221, 82);
+            this.panelReport.TabIndex = 19;
+            this.panelReport.Paint += new System.Windows.Forms.PaintEventHandler(this.panelReport_Paint_1);
+            // 
+            // panelManage
+            // 
+            this.panelManage.Controls.Add(this.Phieuxuathang);
+            this.panelManage.Controls.Add(this.Phieuthutien);
+            this.panelManage.Controls.Add(this.File);
+            this.panelManage.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelManage.Location = new System.Drawing.Point(0, 163);
+            this.panelManage.Name = "panelManage";
+            this.panelManage.Size = new System.Drawing.Size(221, 133);
+            this.panelManage.TabIndex = 17;
+            // 
+            // panelSubmenu
+            // 
+            this.panelSubmenu.Controls.Add(this.Loggout);
+            this.panelSubmenu.Controls.Add(this.Changepass);
+            this.panelSubmenu.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelSubmenu.Location = new System.Drawing.Point(0, 43);
+            this.panelSubmenu.Name = "panelSubmenu";
+            this.panelSubmenu.Size = new System.Drawing.Size(221, 79);
+            this.panelSubmenu.TabIndex = 11;
+            // 
+            // panelChildForm
+            // 
+            this.panelChildForm.BackgroundImage = global::Interface_UI.Properties.Resources.background1;
+            this.panelChildForm.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelChildForm.Location = new System.Drawing.Point(238, 47);
+            this.panelChildForm.Name = "panelChildForm";
+            this.panelChildForm.Size = new System.Drawing.Size(671, 575);
+            this.panelChildForm.TabIndex = 3;
+            this.panelChildForm.Paint += new System.Windows.Forms.PaintEventHandler(this.panelChildForm_Paint);
+            // 
+            // Hanghoa
+            // 
+            this.Hanghoa.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(24)))), ((int)(((byte)(64)))));
+            this.Hanghoa.Dock = System.Windows.Forms.DockStyle.Top;
+            this.Hanghoa.FlatAppearance.BorderSize = 0;
+            this.Hanghoa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Hanghoa.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Hanghoa.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.Hanghoa.IconChar = FontAwesome.Sharp.IconChar.CalendarAlt;
+            this.Hanghoa.IconColor = System.Drawing.Color.Turquoise;
+            this.Hanghoa.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.Hanghoa.IconSize = 30;
+            this.Hanghoa.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Hanghoa.Location = new System.Drawing.Point(0, 76);
+            this.Hanghoa.Margin = new System.Windows.Forms.Padding(10, 3, 10, 3);
+            this.Hanghoa.Name = "Hanghoa";
+            this.Hanghoa.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
+            this.Hanghoa.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.Hanghoa.Size = new System.Drawing.Size(221, 38);
+            this.Hanghoa.TabIndex = 11;
+            this.Hanghoa.Text = "         Hàng hoá";
+            this.Hanghoa.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Hanghoa.UseVisualStyleBackColor = false;
+            this.Hanghoa.Click += new System.EventHandler(this.Hanghoa_Click);
+            // 
+            // Sodailytrongquan
+            // 
+            this.Sodailytrongquan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(24)))), ((int)(((byte)(64)))));
+            this.Sodailytrongquan.Dock = System.Windows.Forms.DockStyle.Top;
+            this.Sodailytrongquan.FlatAppearance.BorderSize = 0;
+            this.Sodailytrongquan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Sodailytrongquan.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
+            this.Sodailytrongquan.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.Sodailytrongquan.IconChar = FontAwesome.Sharp.IconChar.CalendarWeek;
+            this.Sodailytrongquan.IconColor = System.Drawing.Color.Turquoise;
+            this.Sodailytrongquan.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.Sodailytrongquan.IconSize = 30;
+            this.Sodailytrongquan.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Sodailytrongquan.Location = new System.Drawing.Point(0, 38);
+            this.Sodailytrongquan.Margin = new System.Windows.Forms.Padding(10, 3, 10, 3);
+            this.Sodailytrongquan.Name = "Sodailytrongquan";
+            this.Sodailytrongquan.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
+            this.Sodailytrongquan.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.Sodailytrongquan.Size = new System.Drawing.Size(221, 38);
+            this.Sodailytrongquan.TabIndex = 10;
+            this.Sodailytrongquan.Text = "         Số đại lý trong quận";
+            this.Sodailytrongquan.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Sodailytrongquan.UseVisualStyleBackColor = false;
+            this.Sodailytrongquan.Click += new System.EventHandler(this.Sodailytrongquan_Click);
+            // 
+            // Loaidaily
+            // 
+            this.Loaidaily.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(24)))), ((int)(((byte)(64)))));
+            this.Loaidaily.Dock = System.Windows.Forms.DockStyle.Top;
+            this.Loaidaily.FlatAppearance.BorderSize = 0;
+            this.Loaidaily.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Loaidaily.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Loaidaily.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.Loaidaily.IconChar = FontAwesome.Sharp.IconChar.CalendarCheck;
+            this.Loaidaily.IconColor = System.Drawing.Color.Turquoise;
+            this.Loaidaily.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.Loaidaily.IconSize = 30;
+            this.Loaidaily.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Loaidaily.Location = new System.Drawing.Point(0, 0);
+            this.Loaidaily.Margin = new System.Windows.Forms.Padding(10, 3, 10, 3);
+            this.Loaidaily.Name = "Loaidaily";
+            this.Loaidaily.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
+            this.Loaidaily.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.Loaidaily.Size = new System.Drawing.Size(221, 38);
+            this.Loaidaily.TabIndex = 9;
+            this.Loaidaily.Text = "         Loại đại lý";
+            this.Loaidaily.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Loaidaily.UseVisualStyleBackColor = false;
+            this.Loaidaily.Click += new System.EventHandler(this.Loaidaily_Click);
+            // 
             // Regulate
             // 
             this.Regulate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(45)))), ((int)(((byte)(87)))));
@@ -180,7 +256,7 @@ namespace Interface_UI
             this.Regulate.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.Regulate.IconSize = 30;
             this.Regulate.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Regulate.Location = new System.Drawing.Point(0, 583);
+            this.Regulate.Location = new System.Drawing.Point(0, 462);
             this.Regulate.Name = "Regulate";
             this.Regulate.Size = new System.Drawing.Size(221, 41);
             this.Regulate.TabIndex = 24;
@@ -201,23 +277,13 @@ namespace Interface_UI
             this.Search.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.Search.IconSize = 30;
             this.Search.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Search.Location = new System.Drawing.Point(0, 542);
+            this.Search.Location = new System.Drawing.Point(0, 421);
             this.Search.Name = "Search";
             this.Search.Size = new System.Drawing.Size(221, 41);
             this.Search.TabIndex = 23;
             this.Search.Text = "  Tra cứu";
             this.Search.UseVisualStyleBackColor = false;
-            // 
-            // panelReport
-            // 
-            this.panelReport.Controls.Add(this.Baocaocongno);
-            this.panelReport.Controls.Add(this.Baocaodoanhthu);
-            this.panelReport.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelReport.Location = new System.Drawing.Point(0, 460);
-            this.panelReport.Name = "panelReport";
-            this.panelReport.Size = new System.Drawing.Size(221, 82);
-            this.panelReport.TabIndex = 19;
-            this.panelReport.Paint += new System.Windows.Forms.PaintEventHandler(this.panelReport_Paint_1);
+            this.Search.Click += new System.EventHandler(this.Search_Click);
             // 
             // Baocaocongno
             // 
@@ -282,40 +348,13 @@ namespace Interface_UI
             this.Report.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.Report.IconSize = 30;
             this.Report.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Report.Location = new System.Drawing.Point(0, 417);
+            this.Report.Location = new System.Drawing.Point(0, 296);
             this.Report.Name = "Report";
             this.Report.Size = new System.Drawing.Size(221, 43);
             this.Report.TabIndex = 18;
             this.Report.Text = "  Báo cáo";
             this.Report.UseVisualStyleBackColor = false;
             this.Report.Click += new System.EventHandler(this.Report_Click);
-            // 
-            // panelManage
-            // 
-            this.panelManage.Controls.Add(this.iconPictureBox1);
-            this.panelManage.Controls.Add(this.Phieuxuathang);
-            this.panelManage.Controls.Add(this.Phieuthutien);
-            this.panelManage.Controls.Add(this.panelDetail);
-            this.panelManage.Controls.Add(this.File);
-            this.panelManage.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelManage.Location = new System.Drawing.Point(0, 202);
-            this.panelManage.Name = "panelManage";
-            this.panelManage.Size = new System.Drawing.Size(221, 215);
-            this.panelManage.TabIndex = 17;
-            // 
-            // iconPictureBox1
-            // 
-            this.iconPictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(24)))), ((int)(((byte)(67)))));
-            this.iconPictureBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(173)))), ((int)(((byte)(210)))));
-            this.iconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.ChevronDown;
-            this.iconPictureBox1.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(173)))), ((int)(((byte)(210)))));
-            this.iconPictureBox1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconPictureBox1.IconSize = 20;
-            this.iconPictureBox1.Location = new System.Drawing.Point(184, 102);
-            this.iconPictureBox1.Name = "iconPictureBox1";
-            this.iconPictureBox1.Size = new System.Drawing.Size(21, 20);
-            this.iconPictureBox1.TabIndex = 0;
-            this.iconPictureBox1.TabStop = false;
             // 
             // Phieuxuathang
             // 
@@ -367,64 +406,6 @@ namespace Interface_UI
             this.Phieuthutien.UseVisualStyleBackColor = false;
             this.Phieuthutien.Click += new System.EventHandler(this.Phieuthutien_Click);
             // 
-            // panelDetail
-            // 
-            this.panelDetail.Controls.Add(this.DetailProduct);
-            this.panelDetail.Controls.Add(this.DetailExport);
-            this.panelDetail.Location = new System.Drawing.Point(0, 131);
-            this.panelDetail.Name = "panelDetail";
-            this.panelDetail.Size = new System.Drawing.Size(244, 87);
-            this.panelDetail.TabIndex = 0;
-            this.panelDetail.Paint += new System.Windows.Forms.PaintEventHandler(this.panelDetail_Paint);
-            // 
-            // DetailProduct
-            // 
-            this.DetailProduct.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(15)))), ((int)(((byte)(64)))));
-            this.DetailProduct.Dock = System.Windows.Forms.DockStyle.Top;
-            this.DetailProduct.FlatAppearance.BorderSize = 0;
-            this.DetailProduct.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.DetailProduct.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DetailProduct.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.DetailProduct.IconChar = FontAwesome.Sharp.IconChar.FileImage;
-            this.DetailProduct.IconColor = System.Drawing.Color.Turquoise;
-            this.DetailProduct.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.DetailProduct.IconSize = 30;
-            this.DetailProduct.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.DetailProduct.Location = new System.Drawing.Point(0, 40);
-            this.DetailProduct.Margin = new System.Windows.Forms.Padding(10, 3, 10, 3);
-            this.DetailProduct.Name = "DetailProduct";
-            this.DetailProduct.Padding = new System.Windows.Forms.Padding(50, 0, 0, 0);
-            this.DetailProduct.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.DetailProduct.Size = new System.Drawing.Size(244, 43);
-            this.DetailProduct.TabIndex = 16;
-            this.DetailProduct.Text = "       Chi tiết mặt hàng";
-            this.DetailProduct.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.DetailProduct.UseVisualStyleBackColor = false;
-            // 
-            // DetailExport
-            // 
-            this.DetailExport.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(15)))), ((int)(((byte)(64)))));
-            this.DetailExport.Dock = System.Windows.Forms.DockStyle.Top;
-            this.DetailExport.FlatAppearance.BorderSize = 0;
-            this.DetailExport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.DetailExport.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DetailExport.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.DetailExport.IconChar = FontAwesome.Sharp.IconChar.FileExport;
-            this.DetailExport.IconColor = System.Drawing.Color.Turquoise;
-            this.DetailExport.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.DetailExport.IconSize = 30;
-            this.DetailExport.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.DetailExport.Location = new System.Drawing.Point(0, 0);
-            this.DetailExport.Margin = new System.Windows.Forms.Padding(10, 3, 10, 3);
-            this.DetailExport.Name = "DetailExport";
-            this.DetailExport.Padding = new System.Windows.Forms.Padding(53, 0, 0, 0);
-            this.DetailExport.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.DetailExport.Size = new System.Drawing.Size(244, 40);
-            this.DetailExport.TabIndex = 15;
-            this.DetailExport.Text = " Chi tiết xuất hàng";
-            this.DetailExport.UseVisualStyleBackColor = false;
-            this.DetailExport.Click += new System.EventHandler(this.DetailExport_Click);
-            // 
             // File
             // 
             this.File.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(24)))), ((int)(((byte)(64)))));
@@ -463,24 +444,13 @@ namespace Interface_UI
             this.Manage.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.Manage.IconSize = 30;
             this.Manage.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Manage.Location = new System.Drawing.Point(0, 161);
+            this.Manage.Location = new System.Drawing.Point(0, 122);
             this.Manage.Name = "Manage";
             this.Manage.Size = new System.Drawing.Size(221, 41);
             this.Manage.TabIndex = 12;
             this.Manage.Text = "  Quản lý";
             this.Manage.UseVisualStyleBackColor = false;
             this.Manage.Click += new System.EventHandler(this.Manage_Click_1);
-            // 
-            // panelSubmenu
-            // 
-            this.panelSubmenu.Controls.Add(this.Loggout);
-            this.panelSubmenu.Controls.Add(this.Changepass);
-            this.panelSubmenu.Controls.Add(this.Loggin);
-            this.panelSubmenu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelSubmenu.Location = new System.Drawing.Point(0, 43);
-            this.panelSubmenu.Name = "panelSubmenu";
-            this.panelSubmenu.Size = new System.Drawing.Size(221, 118);
-            this.panelSubmenu.TabIndex = 11;
             // 
             // Loggout
             // 
@@ -495,7 +465,7 @@ namespace Interface_UI
             this.Loggout.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.Loggout.IconSize = 30;
             this.Loggout.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Loggout.Location = new System.Drawing.Point(0, 76);
+            this.Loggout.Location = new System.Drawing.Point(0, 38);
             this.Loggout.Margin = new System.Windows.Forms.Padding(10, 3, 10, 3);
             this.Loggout.Name = "Loggout";
             this.Loggout.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
@@ -520,42 +490,17 @@ namespace Interface_UI
             this.Changepass.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.Changepass.IconSize = 30;
             this.Changepass.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Changepass.Location = new System.Drawing.Point(0, 38);
+            this.Changepass.Location = new System.Drawing.Point(0, 0);
             this.Changepass.Margin = new System.Windows.Forms.Padding(10, 3, 10, 3);
             this.Changepass.Name = "Changepass";
             this.Changepass.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
             this.Changepass.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.Changepass.Size = new System.Drawing.Size(221, 38);
             this.Changepass.TabIndex = 10;
-            this.Changepass.Text = "         Đổi mật khẩu";
+            this.Changepass.Text = "         Đổi mật khẩu mới";
             this.Changepass.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.Changepass.UseVisualStyleBackColor = false;
             this.Changepass.Click += new System.EventHandler(this.Changepass_Click);
-            // 
-            // Loggin
-            // 
-            this.Loggin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(24)))), ((int)(((byte)(64)))));
-            this.Loggin.Dock = System.Windows.Forms.DockStyle.Top;
-            this.Loggin.FlatAppearance.BorderSize = 0;
-            this.Loggin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Loggin.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Loggin.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.Loggin.IconChar = FontAwesome.Sharp.IconChar.UserAlt;
-            this.Loggin.IconColor = System.Drawing.Color.Turquoise;
-            this.Loggin.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.Loggin.IconSize = 30;
-            this.Loggin.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Loggin.Location = new System.Drawing.Point(0, 0);
-            this.Loggin.Margin = new System.Windows.Forms.Padding(10, 3, 10, 3);
-            this.Loggin.Name = "Loggin";
-            this.Loggin.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.Loggin.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.Loggin.Size = new System.Drawing.Size(221, 38);
-            this.Loggin.TabIndex = 9;
-            this.Loggin.Text = "         Tài khoản";
-            this.Loggin.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Loggin.UseVisualStyleBackColor = false;
-            this.Loggin.Click += new System.EventHandler(this.Loggin_Click);
             // 
             // Homepage
             // 
@@ -578,23 +523,44 @@ namespace Interface_UI
             this.Homepage.UseVisualStyleBackColor = false;
             this.Homepage.Click += new System.EventHandler(this.Homepage_Click);
             // 
-            // flowLayoutPanel1
+            // Minimizar
             // 
-            this.flowLayoutPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(231)))), ((int)(((byte)(231)))));
-            this.flowLayoutPanel1.BackgroundImage = global::Interface_UI.Properties.Resources.background1;
-            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(238, 47);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(671, 575);
-            this.flowLayoutPanel1.TabIndex = 3;
-            this.flowLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanel1_Paint);
+            this.Minimizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Minimizar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(24)))), ((int)(((byte)(64)))));
+            this.Minimizar.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.Minimizar.IconChar = FontAwesome.Sharp.IconChar.Minus;
+            this.Minimizar.IconColor = System.Drawing.SystemColors.ButtonFace;
+            this.Minimizar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.Minimizar.IconSize = 30;
+            this.Minimizar.Location = new System.Drawing.Point(834, 9);
+            this.Minimizar.Name = "Minimizar";
+            this.Minimizar.Size = new System.Drawing.Size(30, 31);
+            this.Minimizar.TabIndex = 11;
+            this.Minimizar.TabStop = false;
+            this.Minimizar.Click += new System.EventHandler(this.Minimizar_Click_1);
+            // 
+            // Exit
+            // 
+            this.Exit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Exit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(24)))), ((int)(((byte)(64)))));
+            this.Exit.ForeColor = System.Drawing.Color.Red;
+            this.Exit.IconChar = FontAwesome.Sharp.IconChar.PowerOff;
+            this.Exit.IconColor = System.Drawing.Color.Red;
+            this.Exit.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.Exit.IconSize = 30;
+            this.Exit.Location = new System.Drawing.Point(864, 9);
+            this.Exit.Name = "Exit";
+            this.Exit.Size = new System.Drawing.Size(30, 31);
+            this.Exit.TabIndex = 5;
+            this.Exit.TabStop = false;
+            this.Exit.Click += new System.EventHandler(this.Exit_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(909, 622);
-            this.Controls.Add(this.flowLayoutPanel1);
+            this.Controls.Add(this.panelChildForm);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.Menubar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -603,16 +569,14 @@ namespace Interface_UI
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.Menubar.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.MenuSlidebar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Minimizar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Exit)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
+            this.panelQuydinh.ResumeLayout(false);
             this.panelReport.ResumeLayout(false);
             this.panelManage.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).EndInit();
-            this.panelDetail.ResumeLayout(false);
             this.panelSubmenu.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.Minimizar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Exit)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -621,14 +585,12 @@ namespace Interface_UI
         private System.Windows.Forms.Panel Menubar;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private FontAwesome.Sharp.IconPictureBox Exit;
         private FontAwesome.Sharp.IconPictureBox Minimizar;
         private System.Windows.Forms.Panel panel2;
         private FontAwesome.Sharp.IconButton Homepage;
         private System.Windows.Forms.Panel panelSubmenu;
         private FontAwesome.Sharp.IconButton Changepass;
-        private FontAwesome.Sharp.IconButton Loggin;
         private FontAwesome.Sharp.IconButton Manage;
         private FontAwesome.Sharp.IconButton Loggout;
         private FontAwesome.Sharp.IconButton Report;
@@ -637,15 +599,15 @@ namespace Interface_UI
         private FontAwesome.Sharp.IconButton Baocaocongno;
         private FontAwesome.Sharp.IconButton Search;
         private FontAwesome.Sharp.IconButton Regulate;
-        private FontAwesome.Sharp.IconPictureBox MenuSlidebar;
         private System.Windows.Forms.Panel panelManage;
-        private System.Windows.Forms.Panel panelDetail;
         private FontAwesome.Sharp.IconButton File;
-        private FontAwesome.Sharp.IconPictureBox iconPictureBox1;
-        private FontAwesome.Sharp.IconButton DetailProduct;
-        private FontAwesome.Sharp.IconButton DetailExport;
         private FontAwesome.Sharp.IconButton Phieuxuathang;
         private FontAwesome.Sharp.IconButton Phieuthutien;
+        private System.Windows.Forms.Panel panelQuydinh;
+        private FontAwesome.Sharp.IconButton Hanghoa;
+        private FontAwesome.Sharp.IconButton Sodailytrongquan;
+        private FontAwesome.Sharp.IconButton Loaidaily;
+        private System.Windows.Forms.Panel panelChildForm;
     }
 }
 

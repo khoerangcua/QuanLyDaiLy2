@@ -27,13 +27,11 @@ D:\Quản lý đại lý\QuanLyDaiLy2\Interface_UI\Interface_UI\obj\Debug\Interf
 D:\Quản lý đại lý\QuanLyDaiLy2\Interface_UI\Interface_UI\obj\Debug\Interface_UI.FormChangepass.resources
 D:\Quản lý đại lý\QuanLyDaiLy2\Interface_UI\Interface_UI\obj\Debug\Interface_UI.FormBaocaocongno.resources
 D:\Quản lý đại lý\QuanLyDaiLy2\Interface_UI\Interface_UI\obj\Debug\Interface_UI.FormBaocaodoanhso.resources
-D:\Quản lý đại lý\QuanLyDaiLy2\Interface_UI\Interface_UI\obj\Debug\Interface_UI.FormChitietxuathang.resources
 D:\Quản lý đại lý\QuanLyDaiLy2\Interface_UI\Interface_UI\obj\Debug\Interface_UI.FormPhieuthutien.resources
 D:\Quản lý đại lý\QuanLyDaiLy2\Interface_UI\Interface_UI\obj\Debug\Interface_UI.FormPhieuxuathang_sua_.resources
 D:\Quản lý đại lý\QuanLyDaiLy2\Interface_UI\Interface_UI\obj\Debug\Interface_UI.FormPhieuxuathang_Them_.resources
 D:\Quản lý đại lý\QuanLyDaiLy2\Interface_UI\Interface_UI\obj\Debug\Interface_UI.FormPhieuxuathang_Xoa_.resources
 D:\Quản lý đại lý\QuanLyDaiLy2\Interface_UI\Interface_UI\obj\Debug\Interface_UI.FormSearch.resources
-D:\Quản lý đại lý\QuanLyDaiLy2\Interface_UI\Interface_UI\obj\Debug\Interface_UI.FormChitietmathang.resources
 E:\HocTap\2021-HKC\SE\project\New folder\test\Interface_UI\Interface_UI\bin\Debug\Interface_UI.exe.config
 E:\HocTap\2021-HKC\SE\project\New folder\test\Interface_UI\Interface_UI\bin\Debug\Interface_UI.exe
 E:\HocTap\2021-HKC\SE\project\New folder\test\Interface_UI\Interface_UI\bin\Debug\Interface_UI.pdb
@@ -128,3 +126,71 @@ E:\HocTap\2021-HKC\SE\project\New folder\test\Interface_UI\Interface_UI\obj\Debu
 E:\HocTap\2021-HKC\SE\project\New folder\test\Interface_UI\Interface_UI\obj\Debug\Interface_UI.Reports.BaoCaoDoanhSoReportViewerForm.resources
 E:\HocTap\2021-HKC\SE\project\New folder\test\Interface_UI\Interface_UI\obj\Debug\RdlCompile.cache
 E:\HocTap\2021-HKC\SE\project\New folder\test\Interface_UI\Interface_UI\obj\Debug\RdlCompile.compiled
+D:\Quản lý đại lý\QuanLyDaiLy2\Interface_UI\Interface_UI\bin\Debug\SqlServerTypes\x64\msvcr120.dll
+D:\Quản lý đại lý\QuanLyDaiLy2\Interface_UI\Interface_UI\bin\Debug\SqlServerTypes\x64\SqlServerSpatial140.dll
+D:\Quản lý đại lý\QuanLyDaiLy2\Interface_UI\Interface_UI\bin\Debug\SqlServerTypes\x86\msvcr120.dll
+D:\Quản lý đại lý\QuanLyDaiLy2\Interface_UI\Interface_UI\bin\Debug\SqlServerTypes\x86\SqlServerSpatial140.dll
+D:\Quản lý đại lý\QuanLyDaiLy2\Interface_UI\Interface_UI\bin\Debug\EntityFramework.dll
+D:\Quản lý đại lý\QuanLyDaiLy2\Interface_UI\Interface_UI\bin\Debug\EntityFramework.SqlServer.dll
+D:\Quản lý đại lý\QuanLyDaiLy2\Interface_UI\Interface_UI\bin\Debug\Microsoft.ReportViewer.Common.dll
+D:\Quản lý đại lý\QuanLyDaiLy2\Interface_UI\Interface_UI\bin\Debug\Microsoft.ReportViewer.DataVisualization.dll
+D:\Quản lý đại lý\QuanLyDaiLy2\Interface_UI\Interface_UI\bin\Debug\Microsoft.ReportViewer.Design.dll
+D:\Quản lý đại lý\QuanLyDaiLy2\Interface_UI\Interface_UI\bin\Debug\Microsoft.ReportViewer.ProcessingObjectModel.dll
+D:\Quản lý đại lý\QuanLyDaiLy2\Interface_UI\Interface_UI\bin\Debug\Microsoft.ReportViewer.WinForms.dll
+D:\Quản lý đại lý\QuanLyDaiLy2\Interface_UI\Interface_UI\bin\Debug\Microsoft.SqlServer.Types.dll
+D:\Quản lý đại lý\QuanLyDaiLy2\Interface_UI\Interface_UI\bin\Debug\EnvDTE.dll
+D:\Quản lý đại lý\QuanLyDaiLy2\Interface_UI\Interface_UI\bin\Debug\Microsoft.VisualStudio.Shell.Interop.dll
+D:\Quản lý đại lý\QuanLyDaiLy2\Interface_UI\Interface_UI\bin\Debug\Microsoft.VisualStudio.Shell.Interop.8.0.dll
+D:\Quản lý đại lý\QuanLyDaiLy2\Interface_UI\Interface_UI\bin\Debug\stdole.dll
+D:\Quản lý đại lý\QuanLyDaiLy2\Interface_UI\Interface_UI\bin\Debug\Microsoft.VisualStudio.OLE.Interop.dll
+D:\Quản lý đại lý\QuanLyDaiLy2\Interface_UI\Interface_UI\bin\Debug\Microsoft.VisualStudio.TextManager.Interop.dll
+D:\Quản lý đại lý\QuanLyDaiLy2\Interface_UI\Interface_UI\bin\Debug\Microsoft.VisualStudio.TextManager.Interop.8.0.dll
+D:\Quản lý đại lý\QuanLyDaiLy2\Interface_UI\Interface_UI\bin\Debug\Microsoft.MSXML.dll
+D:\Quản lý đại lý\QuanLyDaiLy2\Interface_UI\Interface_UI\bin\Debug\EntityFramework.xml
+D:\Quản lý đại lý\QuanLyDaiLy2\Interface_UI\Interface_UI\bin\Debug\EntityFramework.SqlServer.xml
+D:\Quản lý đại lý\QuanLyDaiLy2\Interface_UI\Interface_UI\bin\Debug\de\Microsoft.ReportViewer.Common.resources.dll
+D:\Quản lý đại lý\QuanLyDaiLy2\Interface_UI\Interface_UI\bin\Debug\es\Microsoft.ReportViewer.Common.resources.dll
+D:\Quản lý đại lý\QuanLyDaiLy2\Interface_UI\Interface_UI\bin\Debug\fr\Microsoft.ReportViewer.Common.resources.dll
+D:\Quản lý đại lý\QuanLyDaiLy2\Interface_UI\Interface_UI\bin\Debug\it\Microsoft.ReportViewer.Common.resources.dll
+D:\Quản lý đại lý\QuanLyDaiLy2\Interface_UI\Interface_UI\bin\Debug\ja\Microsoft.ReportViewer.Common.resources.dll
+D:\Quản lý đại lý\QuanLyDaiLy2\Interface_UI\Interface_UI\bin\Debug\ko\Microsoft.ReportViewer.Common.resources.dll
+D:\Quản lý đại lý\QuanLyDaiLy2\Interface_UI\Interface_UI\bin\Debug\pt\Microsoft.ReportViewer.Common.resources.dll
+D:\Quản lý đại lý\QuanLyDaiLy2\Interface_UI\Interface_UI\bin\Debug\ru\Microsoft.ReportViewer.Common.resources.dll
+D:\Quản lý đại lý\QuanLyDaiLy2\Interface_UI\Interface_UI\bin\Debug\zh-CHS\Microsoft.ReportViewer.Common.resources.dll
+D:\Quản lý đại lý\QuanLyDaiLy2\Interface_UI\Interface_UI\bin\Debug\zh-CHT\Microsoft.ReportViewer.Common.resources.dll
+D:\Quản lý đại lý\QuanLyDaiLy2\Interface_UI\Interface_UI\bin\Debug\de\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Quản lý đại lý\QuanLyDaiLy2\Interface_UI\Interface_UI\bin\Debug\es\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Quản lý đại lý\QuanLyDaiLy2\Interface_UI\Interface_UI\bin\Debug\fr\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Quản lý đại lý\QuanLyDaiLy2\Interface_UI\Interface_UI\bin\Debug\it\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Quản lý đại lý\QuanLyDaiLy2\Interface_UI\Interface_UI\bin\Debug\ja\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Quản lý đại lý\QuanLyDaiLy2\Interface_UI\Interface_UI\bin\Debug\ko\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Quản lý đại lý\QuanLyDaiLy2\Interface_UI\Interface_UI\bin\Debug\pt\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Quản lý đại lý\QuanLyDaiLy2\Interface_UI\Interface_UI\bin\Debug\ru\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Quản lý đại lý\QuanLyDaiLy2\Interface_UI\Interface_UI\bin\Debug\zh-CHS\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Quản lý đại lý\QuanLyDaiLy2\Interface_UI\Interface_UI\bin\Debug\zh-CHT\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Quản lý đại lý\QuanLyDaiLy2\Interface_UI\Interface_UI\bin\Debug\de\Microsoft.ReportViewer.Design.resources.dll
+D:\Quản lý đại lý\QuanLyDaiLy2\Interface_UI\Interface_UI\bin\Debug\es\Microsoft.ReportViewer.Design.resources.dll
+D:\Quản lý đại lý\QuanLyDaiLy2\Interface_UI\Interface_UI\bin\Debug\fr\Microsoft.ReportViewer.Design.resources.dll
+D:\Quản lý đại lý\QuanLyDaiLy2\Interface_UI\Interface_UI\bin\Debug\it\Microsoft.ReportViewer.Design.resources.dll
+D:\Quản lý đại lý\QuanLyDaiLy2\Interface_UI\Interface_UI\bin\Debug\ja\Microsoft.ReportViewer.Design.resources.dll
+D:\Quản lý đại lý\QuanLyDaiLy2\Interface_UI\Interface_UI\bin\Debug\ko\Microsoft.ReportViewer.Design.resources.dll
+D:\Quản lý đại lý\QuanLyDaiLy2\Interface_UI\Interface_UI\bin\Debug\pt\Microsoft.ReportViewer.Design.resources.dll
+D:\Quản lý đại lý\QuanLyDaiLy2\Interface_UI\Interface_UI\bin\Debug\ru\Microsoft.ReportViewer.Design.resources.dll
+D:\Quản lý đại lý\QuanLyDaiLy2\Interface_UI\Interface_UI\bin\Debug\zh-CHS\Microsoft.ReportViewer.Design.resources.dll
+D:\Quản lý đại lý\QuanLyDaiLy2\Interface_UI\Interface_UI\bin\Debug\zh-CHT\Microsoft.ReportViewer.Design.resources.dll
+D:\Quản lý đại lý\QuanLyDaiLy2\Interface_UI\Interface_UI\bin\Debug\de\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Quản lý đại lý\QuanLyDaiLy2\Interface_UI\Interface_UI\bin\Debug\es\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Quản lý đại lý\QuanLyDaiLy2\Interface_UI\Interface_UI\bin\Debug\fr\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Quản lý đại lý\QuanLyDaiLy2\Interface_UI\Interface_UI\bin\Debug\it\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Quản lý đại lý\QuanLyDaiLy2\Interface_UI\Interface_UI\bin\Debug\ja\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Quản lý đại lý\QuanLyDaiLy2\Interface_UI\Interface_UI\bin\Debug\ko\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Quản lý đại lý\QuanLyDaiLy2\Interface_UI\Interface_UI\bin\Debug\pt\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Quản lý đại lý\QuanLyDaiLy2\Interface_UI\Interface_UI\bin\Debug\ru\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Quản lý đại lý\QuanLyDaiLy2\Interface_UI\Interface_UI\bin\Debug\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Quản lý đại lý\QuanLyDaiLy2\Interface_UI\Interface_UI\bin\Debug\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Quản lý đại lý\QuanLyDaiLy2\Interface_UI\Interface_UI\obj\Debug\Interface_UI.FormThaydoiquydinh_1_.resources
+D:\Quản lý đại lý\QuanLyDaiLy2\Interface_UI\Interface_UI\obj\Debug\Interface_UI.FormThaydoiquydinh_2_.resources
+D:\Quản lý đại lý\QuanLyDaiLy2\Interface_UI\Interface_UI\obj\Debug\Interface_UI.FormThaydoiquydinh_3_.resources
+D:\Quản lý đại lý\QuanLyDaiLy2\Interface_UI\Interface_UI\obj\Debug\Interface_UI.Reports.BaoCaoCongNoReportViewerForm.resources
+D:\Quản lý đại lý\QuanLyDaiLy2\Interface_UI\Interface_UI\obj\Debug\Interface_UI.Reports.BaoCaoDoanhSoReportViewerForm.resources
+D:\Quản lý đại lý\QuanLyDaiLy2\Interface_UI\Interface_UI\obj\Debug\Interface_UI.FormChangepass_Homepage.resources

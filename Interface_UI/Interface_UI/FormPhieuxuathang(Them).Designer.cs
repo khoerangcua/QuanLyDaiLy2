@@ -61,14 +61,13 @@ namespace Interface_UI
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(24)))), ((int)(((byte)(64)))));
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(45)))), ((int)(((byte)(87)))));
             this.panel1.Controls.Add(this.TieudePhieuxuat);
             this.panel1.Controls.Add(this.dashboardPhieuxuat);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(873, 50);
+            this.panel1.Size = new System.Drawing.Size(671, 41);
             this.panel1.TabIndex = 2;
             // 
             // TieudePhieuxuat
@@ -76,25 +75,23 @@ namespace Interface_UI
             this.TieudePhieuxuat.AutoSize = true;
             this.TieudePhieuxuat.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TieudePhieuxuat.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.TieudePhieuxuat.Location = new System.Drawing.Point(56, 17);
-            this.TieudePhieuxuat.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.TieudePhieuxuat.Location = new System.Drawing.Point(42, 14);
             this.TieudePhieuxuat.Name = "TieudePhieuxuat";
-            this.TieudePhieuxuat.Size = new System.Drawing.Size(203, 22);
+            this.TieudePhieuxuat.Size = new System.Drawing.Size(162, 17);
             this.TieudePhieuxuat.TabIndex = 2;
             this.TieudePhieuxuat.Text = "Phiếu xuất hàng / Thêm";
             // 
             // dashboardPhieuxuat
             // 
-            this.dashboardPhieuxuat.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(24)))), ((int)(((byte)(64)))));
+            this.dashboardPhieuxuat.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(45)))), ((int)(((byte)(87)))));
             this.dashboardPhieuxuat.ForeColor = System.Drawing.Color.Turquoise;
             this.dashboardPhieuxuat.IconChar = FontAwesome.Sharp.IconChar.FileInvoice;
             this.dashboardPhieuxuat.IconColor = System.Drawing.Color.Turquoise;
             this.dashboardPhieuxuat.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.dashboardPhieuxuat.IconSize = 36;
-            this.dashboardPhieuxuat.Location = new System.Drawing.Point(13, 11);
-            this.dashboardPhieuxuat.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dashboardPhieuxuat.IconSize = 29;
+            this.dashboardPhieuxuat.Location = new System.Drawing.Point(10, 9);
             this.dashboardPhieuxuat.Name = "dashboardPhieuxuat";
-            this.dashboardPhieuxuat.Size = new System.Drawing.Size(39, 36);
+            this.dashboardPhieuxuat.Size = new System.Drawing.Size(29, 29);
             this.dashboardPhieuxuat.TabIndex = 1;
             this.dashboardPhieuxuat.TabStop = false;
             // 
@@ -102,11 +99,9 @@ namespace Interface_UI
             // 
             this.groupBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(233)))), ((int)(((byte)(232)))));
             this.groupBox3.Controls.Add(this.phieuxuathangs_datagridview);
-            this.groupBox3.Location = new System.Drawing.Point(16, 335);
-            this.groupBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox3.Location = new System.Drawing.Point(12, 272);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.groupBox3.Size = new System.Drawing.Size(837, 319);
+            this.groupBox3.Size = new System.Drawing.Size(647, 291);
             this.groupBox3.TabIndex = 35;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Kết quả";
@@ -115,11 +110,10 @@ namespace Interface_UI
             // 
             this.phieuxuathangs_datagridview.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.phieuxuathangs_datagridview.GridColor = System.Drawing.SystemColors.AppWorkspace;
-            this.phieuxuathangs_datagridview.Location = new System.Drawing.Point(8, 20);
-            this.phieuxuathangs_datagridview.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.phieuxuathangs_datagridview.Location = new System.Drawing.Point(6, 16);
             this.phieuxuathangs_datagridview.Name = "phieuxuathangs_datagridview";
             this.phieuxuathangs_datagridview.RowHeadersWidth = 51;
-            this.phieuxuathangs_datagridview.Size = new System.Drawing.Size(821, 274);
+            this.phieuxuathangs_datagridview.Size = new System.Drawing.Size(635, 269);
             this.phieuxuathangs_datagridview.TabIndex = 0;
             // 
             // IbMadaily
@@ -127,10 +121,9 @@ namespace Interface_UI
             this.IbMadaily.AutoSize = true;
             this.IbMadaily.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.IbMadaily.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.IbMadaily.Location = new System.Drawing.Point(67, 64);
-            this.IbMadaily.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.IbMadaily.Location = new System.Drawing.Point(50, 52);
             this.IbMadaily.Name = "IbMadaily";
-            this.IbMadaily.Size = new System.Drawing.Size(91, 22);
+            this.IbMadaily.Size = new System.Drawing.Size(68, 19);
             this.IbMadaily.TabIndex = 2;
             this.IbMadaily.Text = "Tên đại lý";
             // 
@@ -139,10 +132,9 @@ namespace Interface_UI
             this.IbDiachi.AutoSize = true;
             this.IbDiachi.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.IbDiachi.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.IbDiachi.Location = new System.Drawing.Point(452, 81);
-            this.IbDiachi.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.IbDiachi.Location = new System.Drawing.Point(339, 66);
             this.IbDiachi.Name = "IbDiachi";
-            this.IbDiachi.Size = new System.Drawing.Size(129, 22);
+            this.IbDiachi.Size = new System.Drawing.Size(100, 19);
             this.IbDiachi.TabIndex = 8;
             this.IbDiachi.Text = "Ngày lập phiếu";
             // 
@@ -151,10 +143,9 @@ namespace Interface_UI
             this.IbLoaidaily.AutoSize = true;
             this.IbLoaidaily.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.IbLoaidaily.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.IbLoaidaily.Location = new System.Drawing.Point(451, 38);
-            this.IbLoaidaily.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.IbLoaidaily.Location = new System.Drawing.Point(338, 31);
             this.IbLoaidaily.Name = "IbLoaidaily";
-            this.IbLoaidaily.Size = new System.Drawing.Size(82, 22);
+            this.IbLoaidaily.Size = new System.Drawing.Size(64, 19);
             this.IbLoaidaily.TabIndex = 11;
             this.IbLoaidaily.Text = "Số lượng";
             // 
@@ -163,10 +154,9 @@ namespace Interface_UI
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label4.Location = new System.Drawing.Point(68, 113);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Location = new System.Drawing.Point(51, 92);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(84, 22);
+            this.label4.Size = new System.Drawing.Size(67, 19);
             this.label4.TabIndex = 5;
             this.label4.Text = "Hàng hoá";
             // 
@@ -175,20 +165,18 @@ namespace Interface_UI
             this.ngaylapphieu_textbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(233)))), ((int)(((byte)(232)))));
             this.ngaylapphieu_textbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.ngaylapphieu_textbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ngaylapphieu_textbox.Location = new System.Drawing.Point(596, 79);
-            this.ngaylapphieu_textbox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ngaylapphieu_textbox.Location = new System.Drawing.Point(447, 64);
             this.ngaylapphieu_textbox.Multiline = true;
             this.ngaylapphieu_textbox.Name = "ngaylapphieu_textbox";
-            this.ngaylapphieu_textbox.Size = new System.Drawing.Size(171, 25);
+            this.ngaylapphieu_textbox.Size = new System.Drawing.Size(128, 20);
             this.ngaylapphieu_textbox.TabIndex = 22;
             // 
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.Gray;
-            this.panel4.Location = new System.Drawing.Point(596, 103);
-            this.panel4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel4.Location = new System.Drawing.Point(447, 84);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(171, 2);
+            this.panel4.Size = new System.Drawing.Size(128, 2);
             this.panel4.TabIndex = 23;
             // 
             // soluong_textbox
@@ -196,20 +184,18 @@ namespace Interface_UI
             this.soluong_textbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(233)))), ((int)(((byte)(232)))));
             this.soluong_textbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.soluong_textbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.soluong_textbox.Location = new System.Drawing.Point(596, 28);
-            this.soluong_textbox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.soluong_textbox.Location = new System.Drawing.Point(447, 23);
             this.soluong_textbox.Multiline = true;
             this.soluong_textbox.Name = "soluong_textbox";
-            this.soluong_textbox.Size = new System.Drawing.Size(171, 25);
+            this.soluong_textbox.Size = new System.Drawing.Size(128, 20);
             this.soluong_textbox.TabIndex = 22;
             // 
             // panel9
             // 
             this.panel9.BackColor = System.Drawing.Color.Gray;
-            this.panel9.Location = new System.Drawing.Point(596, 55);
-            this.panel9.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel9.Location = new System.Drawing.Point(447, 45);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(171, 2);
+            this.panel9.Size = new System.Drawing.Size(128, 2);
             this.panel9.TabIndex = 23;
             // 
             // daily_combobox
@@ -221,10 +207,9 @@ namespace Interface_UI
             this.daily_combobox.Items.AddRange(new object[] {
             "Loại 1",
             "Loại 2"});
-            this.daily_combobox.Location = new System.Drawing.Point(211, 53);
-            this.daily_combobox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.daily_combobox.Location = new System.Drawing.Point(158, 43);
             this.daily_combobox.Name = "daily_combobox";
-            this.daily_combobox.Size = new System.Drawing.Size(172, 33);
+            this.daily_combobox.Size = new System.Drawing.Size(130, 28);
             this.daily_combobox.TabIndex = 24;
             // 
             // label1
@@ -232,10 +217,9 @@ namespace Interface_UI
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label1.Location = new System.Drawing.Point(452, 132);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(339, 107);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(133, 22);
+            this.label1.Size = new System.Drawing.Size(99, 19);
             this.label1.TabIndex = 27;
             this.label1.Text = "Tiền nợ hiện tại";
             // 
@@ -248,10 +232,9 @@ namespace Interface_UI
             this.hanghoa_combobox.Items.AddRange(new object[] {
             "Loại 1",
             "Loại 2"});
-            this.hanghoa_combobox.Location = new System.Drawing.Point(211, 110);
-            this.hanghoa_combobox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.hanghoa_combobox.Location = new System.Drawing.Point(158, 89);
             this.hanghoa_combobox.Name = "hanghoa_combobox";
-            this.hanghoa_combobox.Size = new System.Drawing.Size(172, 33);
+            this.hanghoa_combobox.Size = new System.Drawing.Size(130, 28);
             this.hanghoa_combobox.TabIndex = 28;
             // 
             // tiennohientai_textbox
@@ -259,20 +242,18 @@ namespace Interface_UI
             this.tiennohientai_textbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(233)))), ((int)(((byte)(232)))));
             this.tiennohientai_textbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tiennohientai_textbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tiennohientai_textbox.Location = new System.Drawing.Point(593, 128);
-            this.tiennohientai_textbox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tiennohientai_textbox.Location = new System.Drawing.Point(445, 104);
             this.tiennohientai_textbox.Multiline = true;
             this.tiennohientai_textbox.Name = "tiennohientai_textbox";
-            this.tiennohientai_textbox.Size = new System.Drawing.Size(171, 25);
+            this.tiennohientai_textbox.Size = new System.Drawing.Size(128, 20);
             this.tiennohientai_textbox.TabIndex = 24;
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Gray;
-            this.panel2.Location = new System.Drawing.Point(593, 153);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel2.Location = new System.Drawing.Point(445, 124);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(171, 2);
+            this.panel2.Size = new System.Drawing.Size(128, 2);
             this.panel2.TabIndex = 25;
             // 
             // groupBox1
@@ -293,11 +274,9 @@ namespace Interface_UI
             this.groupBox1.Controls.Add(this.IbMadaily);
             this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.groupBox1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.groupBox1.Location = new System.Drawing.Point(16, 80);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Location = new System.Drawing.Point(20, 65);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.groupBox1.Size = new System.Drawing.Size(837, 196);
+            this.groupBox1.Size = new System.Drawing.Size(628, 159);
             this.groupBox1.TabIndex = 30;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin chung";
@@ -311,11 +290,10 @@ namespace Interface_UI
             this.luu_button.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.luu_button.IconSize = 32;
             this.luu_button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.luu_button.Location = new System.Drawing.Point(453, 283);
-            this.luu_button.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.luu_button.Location = new System.Drawing.Point(348, 230);
             this.luu_button.Name = "luu_button";
-            this.luu_button.Padding = new System.Windows.Forms.Padding(4, 1, 0, 0);
-            this.luu_button.Size = new System.Drawing.Size(149, 44);
+            this.luu_button.Padding = new System.Windows.Forms.Padding(3, 1, 0, 0);
+            this.luu_button.Size = new System.Drawing.Size(112, 36);
             this.luu_button.TabIndex = 42;
             this.luu_button.Text = "Lưu";
             this.luu_button.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -329,11 +307,10 @@ namespace Interface_UI
             this.huy_button.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(24)))), ((int)(((byte)(64)))));
             this.huy_button.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.huy_button.IconSize = 32;
-            this.huy_button.Location = new System.Drawing.Point(633, 283);
-            this.huy_button.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.huy_button.Location = new System.Drawing.Point(483, 230);
             this.huy_button.Name = "huy_button";
-            this.huy_button.Padding = new System.Windows.Forms.Padding(0, 1, 47, 0);
-            this.huy_button.Size = new System.Drawing.Size(149, 44);
+            this.huy_button.Padding = new System.Windows.Forms.Padding(0, 1, 35, 0);
+            this.huy_button.Size = new System.Drawing.Size(112, 36);
             this.huy_button.TabIndex = 40;
             this.huy_button.Text = "Huỷ";
             this.huy_button.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -348,11 +325,10 @@ namespace Interface_UI
             this.xoa_button.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.xoa_button.IconSize = 32;
             this.xoa_button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.xoa_button.Location = new System.Drawing.Point(271, 283);
-            this.xoa_button.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.xoa_button.Location = new System.Drawing.Point(211, 230);
             this.xoa_button.Name = "xoa_button";
-            this.xoa_button.Padding = new System.Windows.Forms.Padding(4, 1, 0, 0);
-            this.xoa_button.Size = new System.Drawing.Size(149, 44);
+            this.xoa_button.Padding = new System.Windows.Forms.Padding(3, 1, 0, 0);
+            this.xoa_button.Size = new System.Drawing.Size(112, 36);
             this.xoa_button.TabIndex = 41;
             this.xoa_button.Text = "Xoá";
             this.xoa_button.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -366,11 +342,10 @@ namespace Interface_UI
             this.them_button.IconColor = System.Drawing.Color.Green;
             this.them_button.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.them_button.IconSize = 32;
-            this.them_button.Location = new System.Drawing.Point(93, 283);
-            this.them_button.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.them_button.Location = new System.Drawing.Point(78, 230);
             this.them_button.Name = "them_button";
-            this.them_button.Padding = new System.Windows.Forms.Padding(0, 1, 33, 0);
-            this.them_button.Size = new System.Drawing.Size(149, 44);
+            this.them_button.Padding = new System.Windows.Forms.Padding(0, 1, 25, 0);
+            this.them_button.Size = new System.Drawing.Size(112, 36);
             this.them_button.TabIndex = 39;
             this.them_button.Text = "Thêm";
             this.them_button.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -379,10 +354,10 @@ namespace Interface_UI
             // 
             // FormPhieuxuathang_Them_
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(233)))), ((int)(((byte)(232)))));
-            this.ClientSize = new System.Drawing.Size(873, 660);
+            this.ClientSize = new System.Drawing.Size(671, 575);
             this.Controls.Add(this.luu_button);
             this.Controls.Add(this.huy_button);
             this.Controls.Add(this.xoa_button);
@@ -391,7 +366,6 @@ namespace Interface_UI
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "FormPhieuxuathang_Them_";
             this.Text = "FormPhieuxuathang_Them_";
             this.Load += new System.EventHandler(this.FormPhieuxuathang_Them__Load);

@@ -23,7 +23,7 @@ namespace Interface_UI.Reports
         {
 
             this.BaoCaoDoanhSoReportView.LocalReport.ReportPath = "BaoCaoDoanhSoReport.rdlc";
-            var reportDataSource = new ReportDataSource("BaoCaoCongNoDataSet", baoCaoDoanhSoObjects);
+            var reportDataSource = new ReportDataSource("BaoCaoDoanhSoDataSet", baoCaoDoanhSoObjects);
             this.BaoCaoDoanhSoReportView.LocalReport.DataSources.Clear();
             this.BaoCaoDoanhSoReportView.LocalReport.DataSources.Add(reportDataSource);
 

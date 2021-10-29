@@ -31,20 +31,20 @@ namespace Interface_UI
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.TieudePhieuxuat = new System.Windows.Forms.Label();
+            this.dashboardPhieuxuat = new FontAwesome.Sharp.IconPictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.dashboardPhieuxuat = new FontAwesome.Sharp.IconPictureBox();
             this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.iconButton3 = new FontAwesome.Sharp.IconButton();
             this.iconButton2 = new FontAwesome.Sharp.IconButton();
             this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dashboardPhieuxuat)).BeginInit();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(24)))), ((int)(((byte)(64)))));
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(45)))), ((int)(((byte)(87)))));
             this.panel1.Controls.Add(this.TieudePhieuxuat);
             this.panel1.Controls.Add(this.dashboardPhieuxuat);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
@@ -63,6 +63,20 @@ namespace Interface_UI
             this.TieudePhieuxuat.Size = new System.Drawing.Size(112, 17);
             this.TieudePhieuxuat.TabIndex = 2;
             this.TieudePhieuxuat.Text = "Phiếu xuất hàng";
+            // 
+            // dashboardPhieuxuat
+            // 
+            this.dashboardPhieuxuat.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(45)))), ((int)(((byte)(87)))));
+            this.dashboardPhieuxuat.ForeColor = System.Drawing.Color.Turquoise;
+            this.dashboardPhieuxuat.IconChar = FontAwesome.Sharp.IconChar.FileInvoice;
+            this.dashboardPhieuxuat.IconColor = System.Drawing.Color.Turquoise;
+            this.dashboardPhieuxuat.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.dashboardPhieuxuat.IconSize = 29;
+            this.dashboardPhieuxuat.Location = new System.Drawing.Point(10, 9);
+            this.dashboardPhieuxuat.Name = "dashboardPhieuxuat";
+            this.dashboardPhieuxuat.Size = new System.Drawing.Size(29, 29);
+            this.dashboardPhieuxuat.TabIndex = 1;
+            this.dashboardPhieuxuat.TabStop = false;
             // 
             // panel2
             // 
@@ -83,20 +97,6 @@ namespace Interface_UI
             this.label1.Size = new System.Drawing.Size(198, 29);
             this.label1.TabIndex = 0;
             this.label1.Text = "Phiếu xuất hàng";
-            // 
-            // dashboardPhieuxuat
-            // 
-            this.dashboardPhieuxuat.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(24)))), ((int)(((byte)(64)))));
-            this.dashboardPhieuxuat.ForeColor = System.Drawing.Color.Turquoise;
-            this.dashboardPhieuxuat.IconChar = FontAwesome.Sharp.IconChar.FileInvoice;
-            this.dashboardPhieuxuat.IconColor = System.Drawing.Color.Turquoise;
-            this.dashboardPhieuxuat.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.dashboardPhieuxuat.IconSize = 29;
-            this.dashboardPhieuxuat.Location = new System.Drawing.Point(10, 9);
-            this.dashboardPhieuxuat.Name = "dashboardPhieuxuat";
-            this.dashboardPhieuxuat.Size = new System.Drawing.Size(29, 29);
-            this.dashboardPhieuxuat.TabIndex = 1;
-            this.dashboardPhieuxuat.TabStop = false;
             // 
             // iconButton1
             // 
@@ -167,9 +167,9 @@ namespace Interface_UI
             this.Text = "FormPhieuxuathang";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dashboardPhieuxuat)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dashboardPhieuxuat)).EndInit();
             this.ResumeLayout(false);
 
         }

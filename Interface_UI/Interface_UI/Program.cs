@@ -17,7 +17,7 @@ namespace Interface_UI
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormBaocaodoanhso());
+            Application.Run(new Form1());
         }
     }
 }

@@ -24,7 +24,12 @@ namespace Interface_UI
 
         private void Exit_Click(object sender, EventArgs e)
         {
+            Application.Exit();
+        }
 
+        private void Minimizar_Click(object sender, EventArgs e)
+        {
+            WindowState = FormWindowState.Minimized;
         }
     }
 }

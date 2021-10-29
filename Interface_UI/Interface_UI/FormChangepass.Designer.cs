@@ -151,6 +151,7 @@ namespace Interface_UI
             this.Minimizar.Size = new System.Drawing.Size(30, 31);
             this.Minimizar.TabIndex = 15;
             this.Minimizar.TabStop = false;
+            this.Minimizar.Click += new System.EventHandler(this.Minimizar_Click);
             // 
             // Exit
             // 
@@ -166,6 +167,7 @@ namespace Interface_UI
             this.Exit.Size = new System.Drawing.Size(30, 31);
             this.Exit.TabIndex = 14;
             this.Exit.TabStop = false;
+            this.Exit.Click += new System.EventHandler(this.Exit_Click);
             // 
             // iconPictureBox1
             // 

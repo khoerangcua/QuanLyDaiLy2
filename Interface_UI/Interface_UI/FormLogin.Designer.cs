@@ -197,6 +197,7 @@ namespace Interface_UI
             this.Minimizar.Size = new System.Drawing.Size(30, 31);
             this.Minimizar.TabIndex = 13;
             this.Minimizar.TabStop = false;
+            this.Minimizar.Click += new System.EventHandler(this.Minimizar_Click);
             // 
             // label1
             // 

@@ -30,6 +30,7 @@ namespace Interface_UI
             panelSubmenu.Visible = false;
             panelManage.Visible = false;
             panelReport.Visible = false;
+            panelQuydinh.Visible = false;
             
         }
         private void hideSubmenu()
@@ -40,6 +41,8 @@ namespace Interface_UI
                 panelManage.Visible = false;
             if (panelReport.Visible == true)
                 panelReport.Visible = false;
+            if (panelQuydinh.Visible == true)
+                panelQuydinh.Visible = false;
         }
        
         private void showSubmenu(Panel subMenu)
@@ -54,11 +57,24 @@ namespace Interface_UI
                 subMenu.Visible = false;
             }
         }
-       
+        private Form activeForm = null;
+        private void openChildForm(Form childForm)
+        {
+            if (activeForm != null)
+                activeForm.Close();
+            activeForm = childForm;
+            childForm.TopLevel = false;
+            childForm.FormBorderStyle = FormBorderStyle.None;
+            childForm.Dock = DockStyle.Fill;
+            panelChildForm.Controls.Add(childForm);
+            panelChildForm.Tag = childForm;
+            childForm.BringToFront();
+            childForm.Show();
+        }
 
 
 
-
+            
         private void Form1_Load(object sender, EventArgs e)
         {
 
@@ -84,11 +100,7 @@ namespace Interface_UI
 
         }       
 
-        private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
+        
         private void Homepage_Click(object sender, EventArgs e)
         {
             showSubmenu(panelSubmenu);
@@ -127,6 +139,7 @@ namespace Interface_UI
 
         private void File_Click_3(object sender, EventArgs e)
         {
+            openChildForm(new FormHoso());
             hideSubmenu();
             
         }
@@ -138,12 +151,14 @@ namespace Interface_UI
 
         private void Changepass_Click(object sender, EventArgs e)
         {
+            openChildForm(new FormChangepass_Homepage());
             hideSubmenu();
         }
 
         private void Loggout_Click_1(object sender, EventArgs e)
         {
             hideSubmenu();
+            Application.Exit();
         }
 
         private void Manage_Click_1(object sender, EventArgs e)
@@ -158,11 +173,13 @@ namespace Interface_UI
 
         private void Baocaodoanhthu_Click_1(object sender, EventArgs e)
         {
+            openChildForm(new FormBaocaodoanhso());
             hideSubmenu();
         }
 
         private void Baocaocongno_Click_1(object sender, EventArgs e)
         {
+            openChildForm(new FormBaocaocongno());
             hideSubmenu();
         }
 
@@ -181,7 +198,7 @@ namespace Interface_UI
 
         private void Regulate_Click(object sender, EventArgs e)
         {
-            
+            showSubmenu(panelQuydinh);
         }
 
         private void DetailExport_Click(object sender, EventArgs e)
@@ -198,14 +215,14 @@ namespace Interface_UI
 
         private void Phieuthutien_Click(object sender, EventArgs e)
         {
+            openChildForm(new FormPhieuthutien());
             hideSubmenu();
         }
 
         private void Phieuxuathang_Click_3(object sender, EventArgs e)
         {
-            hideSubmenu();
-           
-            
+            openChildForm(new FormPhieuxuathang());
+            hideSubmenu();  
         }
 
         private void panelDetail_Paint(object sender, PaintEventArgs e)
@@ -213,8 +230,32 @@ namespace Interface_UI
             
         }
 
-       
+        private void Loaidaily_Click(object sender, EventArgs e)
+        {
+            openChildForm(new FormThaydoiquydinh_1_());
+            hideSubmenu();
+        }
 
-        
+        private void Sodailytrongquan_Click(object sender, EventArgs e)
+        {
+            openChildForm(new FormThaydoiquydinh_2_());
+            hideSubmenu();
+        }
+
+        private void Hanghoa_Click(object sender, EventArgs e)
+        {
+            openChildForm(new FormThaydoiquydinh_3_());
+            hideSubmenu();
+        }
+
+        private void Search_Click(object sender, EventArgs e)
+        {
+            openChildForm(new FormSearch());
+        }
+
+        private void panelChildForm_Paint(object sender, PaintEventArgs e)
+        {
+           
+        }
     }
 }

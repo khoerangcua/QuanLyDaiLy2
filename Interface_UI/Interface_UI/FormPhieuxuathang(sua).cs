@@ -41,5 +41,10 @@ namespace Interface_UI
         }
 
         
+
+        private void chitietphieuxuathang_datagridview_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

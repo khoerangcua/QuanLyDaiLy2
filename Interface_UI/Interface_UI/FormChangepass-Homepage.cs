@@ -10,11 +10,18 @@ using System.Windows.Forms;
 
 namespace Interface_UI
 {
-    public partial class FormChitietxuathang : Form
+    public partial class FormChangepass_Homepage : Form
     {
-        public FormChitietxuathang()
+        public FormChangepass_Homepage()
         {
             InitializeComponent();
+        }
+
+       
+
+        private void groupBox1_Enter_1(object sender, EventArgs e)
+        {
+                
         }
     }
 }
