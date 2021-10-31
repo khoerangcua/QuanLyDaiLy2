@@ -61,6 +61,8 @@ namespace Interface_UI
             this.xoa_button = new FontAwesome.Sharp.IconButton();
             this.them_button = new FontAwesome.Sharp.IconButton();
             this.capnhat_button = new FontAwesome.Sharp.IconButton();
+            this.iconPictureBox2 = new FontAwesome.Sharp.IconPictureBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -68,6 +70,7 @@ namespace Interface_UI
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.phieuthutiens_datagridview)).BeginInit();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -135,7 +138,7 @@ namespace Interface_UI
             this.groupBox2.Controls.Add(this.timkiem_button);
             this.groupBox2.Controls.Add(this.tendailytimkiem_textbox);
             this.groupBox2.Controls.Add(this.thang_combobox);
-            this.groupBox2.Location = new System.Drawing.Point(19, 275);
+            this.groupBox2.Location = new System.Drawing.Point(19, 270);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(639, 66);
             this.groupBox2.TabIndex = 27;
@@ -234,9 +237,9 @@ namespace Interface_UI
             // 
             this.groupBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(233)))), ((int)(((byte)(232)))));
             this.groupBox3.Controls.Add(this.phieuthutiens_datagridview);
-            this.groupBox3.Location = new System.Drawing.Point(14, 347);
+            this.groupBox3.Location = new System.Drawing.Point(14, 338);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(645, 216);
+            this.groupBox3.Size = new System.Drawing.Size(645, 198);
             this.groupBox3.TabIndex = 28;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Kết quả";
@@ -248,7 +251,7 @@ namespace Interface_UI
             this.phieuthutiens_datagridview.Location = new System.Drawing.Point(5, 19);
             this.phieuthutiens_datagridview.Name = "phieuthutiens_datagridview";
             this.phieuthutiens_datagridview.RowHeadersWidth = 51;
-            this.phieuthutiens_datagridview.Size = new System.Drawing.Size(635, 191);
+            this.phieuthutiens_datagridview.Size = new System.Drawing.Size(635, 171);
             this.phieuthutiens_datagridview.TabIndex = 0;
             // 
             // groupBox1
@@ -481,12 +484,38 @@ namespace Interface_UI
             this.capnhat_button.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.capnhat_button.UseVisualStyleBackColor = false;
             // 
+            // iconPictureBox2
+            // 
+            this.iconPictureBox2.BackColor = System.Drawing.Color.White;
+            this.iconPictureBox2.ForeColor = System.Drawing.Color.Yellow;
+            this.iconPictureBox2.IconChar = FontAwesome.Sharp.IconChar.ExclamationTriangle;
+            this.iconPictureBox2.IconColor = System.Drawing.Color.Yellow;
+            this.iconPictureBox2.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconPictureBox2.IconSize = 20;
+            this.iconPictureBox2.Location = new System.Drawing.Point(19, 554);
+            this.iconPictureBox2.Name = "iconPictureBox2";
+            this.iconPictureBox2.Size = new System.Drawing.Size(27, 20);
+            this.iconPictureBox2.TabIndex = 45;
+            this.iconPictureBox2.TabStop = false;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.textBox1.Location = new System.Drawing.Point(0, 553);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(671, 22);
+            this.textBox1.TabIndex = 44;
+            this.textBox1.Text = "                   Thong bao";
+            // 
             // FormPhieuthutien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(233)))), ((int)(((byte)(232)))));
             this.ClientSize = new System.Drawing.Size(671, 575);
+            this.Controls.Add(this.iconPictureBox2);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
@@ -511,7 +540,9 @@ namespace Interface_UI
             ((System.ComponentModel.ISupportInitialize)(this.phieuthutiens_datagridview)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox2)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -549,5 +580,7 @@ namespace Interface_UI
         private System.Windows.Forms.ComboBox nam_combobox;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label3;
+        private FontAwesome.Sharp.IconPictureBox iconPictureBox2;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }

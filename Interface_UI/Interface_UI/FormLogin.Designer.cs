@@ -44,6 +44,8 @@ namespace Interface_UI
             this.Minimizar = new FontAwesome.Sharp.IconPictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.Exit = new FontAwesome.Sharp.IconPictureBox();
+            this.iconPictureBox3 = new FontAwesome.Sharp.IconPictureBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
             this.panel4.SuspendLayout();
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox2)).BeginInit();
@@ -51,12 +53,13 @@ namespace Interface_UI
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Minimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Exit)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.panel2.Location = new System.Drawing.Point(53, 236);
+            this.panel2.Location = new System.Drawing.Point(53, 220);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(230, 1);
             this.panel2.TabIndex = 1;
@@ -64,7 +67,7 @@ namespace Interface_UI
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.panel3.Location = new System.Drawing.Point(53, 298);
+            this.panel3.Location = new System.Drawing.Point(53, 282);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(230, 1);
             this.panel3.TabIndex = 3;
@@ -75,7 +78,7 @@ namespace Interface_UI
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox1.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.textBox1.Location = new System.Drawing.Point(89, 269);
+            this.textBox1.Location = new System.Drawing.Point(89, 253);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(193, 29);
@@ -88,7 +91,7 @@ namespace Interface_UI
             this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox2.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.textBox2.Location = new System.Drawing.Point(88, 207);
+            this.textBox2.Location = new System.Drawing.Point(88, 191);
             this.textBox2.Multiline = true;
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(199, 29);
@@ -99,7 +102,7 @@ namespace Interface_UI
             // 
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(173)))), ((int)(((byte)(210)))));
             this.button1.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(57, 342);
+            this.button1.Location = new System.Drawing.Point(57, 326);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(224, 53);
             this.button1.TabIndex = 7;
@@ -121,7 +124,7 @@ namespace Interface_UI
             // panel4
             // 
             this.panel4.Controls.Add(this.linkLabel1);
-            this.panel4.Location = new System.Drawing.Point(181, 311);
+            this.panel4.Location = new System.Drawing.Point(181, 295);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(100, 20);
             this.panel4.TabIndex = 9;
@@ -129,7 +132,7 @@ namespace Interface_UI
             // panel5
             // 
             this.panel5.Controls.Add(this.label2);
-            this.panel5.Location = new System.Drawing.Point(117, 401);
+            this.panel5.Location = new System.Drawing.Point(117, 385);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(104, 26);
             this.panel5.TabIndex = 10;
@@ -152,7 +155,7 @@ namespace Interface_UI
             this.iconPictureBox2.IconChar = FontAwesome.Sharp.IconChar.Lock;
             this.iconPictureBox2.IconColor = System.Drawing.Color.CadetBlue;
             this.iconPictureBox2.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconPictureBox2.Location = new System.Drawing.Point(56, 264);
+            this.iconPictureBox2.Location = new System.Drawing.Point(56, 248);
             this.iconPictureBox2.Name = "iconPictureBox2";
             this.iconPictureBox2.Size = new System.Drawing.Size(32, 32);
             this.iconPictureBox2.TabIndex = 2;
@@ -165,7 +168,7 @@ namespace Interface_UI
             this.iconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.UserCircle;
             this.iconPictureBox1.IconColor = System.Drawing.Color.CadetBlue;
             this.iconPictureBox1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconPictureBox1.Location = new System.Drawing.Point(55, 205);
+            this.iconPictureBox1.Location = new System.Drawing.Point(55, 189);
             this.iconPictureBox1.Name = "iconPictureBox1";
             this.iconPictureBox1.Size = new System.Drawing.Size(32, 32);
             this.iconPictureBox1.TabIndex = 0;
@@ -225,12 +228,38 @@ namespace Interface_UI
             this.Exit.TabStop = false;
             this.Exit.Click += new System.EventHandler(this.Exit_Click);
             // 
+            // iconPictureBox3
+            // 
+            this.iconPictureBox3.BackColor = System.Drawing.Color.White;
+            this.iconPictureBox3.ForeColor = System.Drawing.Color.Yellow;
+            this.iconPictureBox3.IconChar = FontAwesome.Sharp.IconChar.ExclamationTriangle;
+            this.iconPictureBox3.IconColor = System.Drawing.Color.Yellow;
+            this.iconPictureBox3.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconPictureBox3.IconSize = 20;
+            this.iconPictureBox3.Location = new System.Drawing.Point(21, 429);
+            this.iconPictureBox3.Name = "iconPictureBox3";
+            this.iconPictureBox3.Size = new System.Drawing.Size(27, 20);
+            this.iconPictureBox3.TabIndex = 45;
+            this.iconPictureBox3.TabStop = false;
+            // 
+            // textBox3
+            // 
+            this.textBox3.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.textBox3.Location = new System.Drawing.Point(0, 428);
+            this.textBox3.Multiline = true;
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(334, 22);
+            this.textBox3.TabIndex = 44;
+            this.textBox3.Text = "                   Thong bao";
+            // 
             // FormLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.ClientSize = new System.Drawing.Size(334, 450);
+            this.Controls.Add(this.iconPictureBox3);
+            this.Controls.Add(this.textBox3);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.button1);
@@ -255,6 +284,7 @@ namespace Interface_UI
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Minimizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Exit)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -277,5 +307,7 @@ namespace Interface_UI
         private System.Windows.Forms.Label label2;
         private FontAwesome.Sharp.IconPictureBox Minimizar;
         private FontAwesome.Sharp.IconPictureBox Exit;
+        private FontAwesome.Sharp.IconPictureBox iconPictureBox3;
+        private System.Windows.Forms.TextBox textBox3;
     }
 }

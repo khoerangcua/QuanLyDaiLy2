@@ -52,12 +52,15 @@ namespace Interface_UI
             this.panel1 = new System.Windows.Forms.Panel();
             this.TieudePhieuxuat = new System.Windows.Forms.Label();
             this.dashboardPhieuxuat = new FontAwesome.Sharp.IconPictureBox();
+            this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.hanghoas_datagridview)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dashboardPhieuxuat)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox3
@@ -151,7 +154,7 @@ namespace Interface_UI
             this.groupBox1.Controls.Add(this.IbMadaily);
             this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.groupBox1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.groupBox1.Location = new System.Drawing.Point(20, 142);
+            this.groupBox1.Location = new System.Drawing.Point(20, 139);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(631, 99);
             this.groupBox1.TabIndex = 37;
@@ -324,7 +327,7 @@ namespace Interface_UI
             // 
             this.dashboardPhieuxuat.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(45)))), ((int)(((byte)(87)))));
             this.dashboardPhieuxuat.ForeColor = System.Drawing.Color.Turquoise;
-            this.dashboardPhieuxuat.IconChar = FontAwesome.Sharp.IconChar.CalendarAlt;
+            this.dashboardPhieuxuat.IconChar = FontAwesome.Sharp.IconChar.BoxOpen;
             this.dashboardPhieuxuat.IconColor = System.Drawing.Color.Turquoise;
             this.dashboardPhieuxuat.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.dashboardPhieuxuat.IconSize = 29;
@@ -334,12 +337,38 @@ namespace Interface_UI
             this.dashboardPhieuxuat.TabIndex = 1;
             this.dashboardPhieuxuat.TabStop = false;
             // 
+            // iconPictureBox1
+            // 
+            this.iconPictureBox1.BackColor = System.Drawing.Color.White;
+            this.iconPictureBox1.ForeColor = System.Drawing.Color.Yellow;
+            this.iconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.ExclamationTriangle;
+            this.iconPictureBox1.IconColor = System.Drawing.Color.Yellow;
+            this.iconPictureBox1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconPictureBox1.IconSize = 20;
+            this.iconPictureBox1.Location = new System.Drawing.Point(27, 554);
+            this.iconPictureBox1.Name = "iconPictureBox1";
+            this.iconPictureBox1.Size = new System.Drawing.Size(27, 20);
+            this.iconPictureBox1.TabIndex = 45;
+            this.iconPictureBox1.TabStop = false;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.textBox1.Location = new System.Drawing.Point(0, 553);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(671, 22);
+            this.textBox1.TabIndex = 44;
+            this.textBox1.Text = "                   Thong bao";
+            // 
             // FormThaydoiquydinh_3_
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(233)))), ((int)(((byte)(232)))));
             this.ClientSize = new System.Drawing.Size(671, 575);
+            this.Controls.Add(this.iconPictureBox1);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.xoa_button);
             this.Controls.Add(this.them_button);
@@ -360,7 +389,9 @@ namespace Interface_UI
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dashboardPhieuxuat)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -389,5 +420,7 @@ namespace Interface_UI
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.TextBox mahanghoa_textbox;
         private System.Windows.Forms.Label label4;
+        private FontAwesome.Sharp.IconPictureBox iconPictureBox1;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }

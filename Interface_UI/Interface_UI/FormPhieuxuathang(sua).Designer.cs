@@ -57,6 +57,8 @@ namespace Interface_UI
             this.tendaily_combobox = new System.Windows.Forms.ComboBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.chitietphieuxuathang_datagridview = new System.Windows.Forms.DataGridView();
+            this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dashboardPhieuxuat)).BeginInit();
             this.groupBox3.SuspendLayout();
@@ -65,6 +67,7 @@ namespace Interface_UI
             this.groupBox2.SuspendLayout();
             this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chitietphieuxuathang_datagridview)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -107,7 +110,7 @@ namespace Interface_UI
             // 
             this.groupBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(233)))), ((int)(((byte)(232)))));
             this.groupBox3.Controls.Add(this.phieuxuathangs_datagridview);
-            this.groupBox3.Location = new System.Drawing.Point(17, 297);
+            this.groupBox3.Location = new System.Drawing.Point(17, 276);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(633, 127);
             this.groupBox3.TabIndex = 30;
@@ -137,7 +140,7 @@ namespace Interface_UI
             this.groupBox1.Controls.Add(this.IbDiachi);
             this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.groupBox1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.groupBox1.Location = new System.Drawing.Point(19, 142);
+            this.groupBox1.Location = new System.Drawing.Point(19, 137);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(631, 91);
             this.groupBox1.TabIndex = 30;
@@ -238,7 +241,7 @@ namespace Interface_UI
             this.luu_button.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.luu_button.IconSize = 32;
             this.luu_button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.luu_button.Location = new System.Drawing.Point(348, 239);
+            this.luu_button.Location = new System.Drawing.Point(347, 233);
             this.luu_button.Name = "luu_button";
             this.luu_button.Padding = new System.Windows.Forms.Padding(3, 1, 0, 0);
             this.luu_button.Size = new System.Drawing.Size(112, 36);
@@ -256,7 +259,7 @@ namespace Interface_UI
             this.xoa_button.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.xoa_button.IconSize = 32;
             this.xoa_button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.xoa_button.Location = new System.Drawing.Point(211, 239);
+            this.xoa_button.Location = new System.Drawing.Point(210, 233);
             this.xoa_button.Name = "xoa_button";
             this.xoa_button.Padding = new System.Windows.Forms.Padding(3, 1, 0, 0);
             this.xoa_button.Size = new System.Drawing.Size(112, 36);
@@ -273,7 +276,7 @@ namespace Interface_UI
             this.them_button.IconColor = System.Drawing.Color.Green;
             this.them_button.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.them_button.IconSize = 32;
-            this.them_button.Location = new System.Drawing.Point(78, 239);
+            this.them_button.Location = new System.Drawing.Point(77, 233);
             this.them_button.Name = "them_button";
             this.them_button.Padding = new System.Windows.Forms.Padding(0, 1, 25, 0);
             this.them_button.Size = new System.Drawing.Size(112, 36);
@@ -291,7 +294,7 @@ namespace Interface_UI
             this.huy_button.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(24)))), ((int)(((byte)(64)))));
             this.huy_button.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.huy_button.IconSize = 32;
-            this.huy_button.Location = new System.Drawing.Point(483, 239);
+            this.huy_button.Location = new System.Drawing.Point(482, 233);
             this.huy_button.Name = "huy_button";
             this.huy_button.Padding = new System.Windows.Forms.Padding(0, 1, 35, 0);
             this.huy_button.Size = new System.Drawing.Size(112, 36);
@@ -425,7 +428,7 @@ namespace Interface_UI
             // 
             this.groupBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(233)))), ((int)(((byte)(232)))));
             this.groupBox4.Controls.Add(this.chitietphieuxuathang_datagridview);
-            this.groupBox4.Location = new System.Drawing.Point(17, 431);
+            this.groupBox4.Location = new System.Drawing.Point(17, 410);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(633, 138);
             this.groupBox4.TabIndex = 31;
@@ -443,12 +446,38 @@ namespace Interface_UI
             this.chitietphieuxuathang_datagridview.TabIndex = 1;
             this.chitietphieuxuathang_datagridview.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.chitietphieuxuathang_datagridview_CellContentClick);
             // 
+            // iconPictureBox1
+            // 
+            this.iconPictureBox1.BackColor = System.Drawing.Color.White;
+            this.iconPictureBox1.ForeColor = System.Drawing.Color.Yellow;
+            this.iconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.ExclamationTriangle;
+            this.iconPictureBox1.IconColor = System.Drawing.Color.Yellow;
+            this.iconPictureBox1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconPictureBox1.IconSize = 20;
+            this.iconPictureBox1.Location = new System.Drawing.Point(23, 554);
+            this.iconPictureBox1.Name = "iconPictureBox1";
+            this.iconPictureBox1.Size = new System.Drawing.Size(27, 20);
+            this.iconPictureBox1.TabIndex = 45;
+            this.iconPictureBox1.TabStop = false;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.textBox1.Location = new System.Drawing.Point(0, 553);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(671, 22);
+            this.textBox1.TabIndex = 44;
+            this.textBox1.Text = "                   Thong bao";
+            // 
             // FormPhieuxuathang_sua_
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(233)))), ((int)(((byte)(232)))));
             this.ClientSize = new System.Drawing.Size(671, 575);
+            this.Controls.Add(this.iconPictureBox1);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.luu_button);
@@ -473,7 +502,9 @@ namespace Interface_UI
             this.groupBox2.PerformLayout();
             this.groupBox4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.chitietphieuxuathang_datagridview)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -507,5 +538,7 @@ namespace Interface_UI
         private System.Windows.Forms.ComboBox tendaily_combobox;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.DataGridView chitietphieuxuathang_datagridview;
+        private FontAwesome.Sharp.IconPictureBox iconPictureBox1;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }

@@ -31,23 +31,26 @@ namespace Interface_UI
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.TieudePhieuxuat = new System.Windows.Forms.Label();
+            this.dashboardPhieuxuat = new FontAwesome.Sharp.IconPictureBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.nam_combobox = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.thang_combobox = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.tim_button = new FontAwesome.Sharp.IconButton();
             this.tendaily_combobox = new System.Windows.Forms.ComboBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.phieuxuathangs_datagridview = new System.Windows.Forms.DataGridView();
             this.xoa_button = new FontAwesome.Sharp.IconButton();
-            this.tim_button = new FontAwesome.Sharp.IconButton();
-            this.dashboardPhieuxuat = new FontAwesome.Sharp.IconPictureBox();
+            this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dashboardPhieuxuat)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.phieuxuathangs_datagridview)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dashboardPhieuxuat)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -72,6 +75,20 @@ namespace Interface_UI
             this.TieudePhieuxuat.TabIndex = 2;
             this.TieudePhieuxuat.Text = "Phiếu xuất hàng / Xoá";
             // 
+            // dashboardPhieuxuat
+            // 
+            this.dashboardPhieuxuat.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(45)))), ((int)(((byte)(87)))));
+            this.dashboardPhieuxuat.ForeColor = System.Drawing.Color.Turquoise;
+            this.dashboardPhieuxuat.IconChar = FontAwesome.Sharp.IconChar.FileInvoice;
+            this.dashboardPhieuxuat.IconColor = System.Drawing.Color.Turquoise;
+            this.dashboardPhieuxuat.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.dashboardPhieuxuat.IconSize = 29;
+            this.dashboardPhieuxuat.Location = new System.Drawing.Point(10, 9);
+            this.dashboardPhieuxuat.Name = "dashboardPhieuxuat";
+            this.dashboardPhieuxuat.Size = new System.Drawing.Size(29, 29);
+            this.dashboardPhieuxuat.TabIndex = 1;
+            this.dashboardPhieuxuat.TabStop = false;
+            // 
             // groupBox2
             // 
             this.groupBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(233)))), ((int)(((byte)(232)))));
@@ -82,7 +99,7 @@ namespace Interface_UI
             this.groupBox2.Controls.Add(this.label1);
             this.groupBox2.Controls.Add(this.tim_button);
             this.groupBox2.Controls.Add(this.tendaily_combobox);
-            this.groupBox2.Location = new System.Drawing.Point(20, 109);
+            this.groupBox2.Location = new System.Drawing.Point(20, 102);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(631, 100);
             this.groupBox2.TabIndex = 28;
@@ -157,6 +174,24 @@ namespace Interface_UI
             this.label1.TabIndex = 25;
             this.label1.Text = "Tên đại lý";
             // 
+            // tim_button
+            // 
+            this.tim_button.BackColor = System.Drawing.Color.MediumTurquoise;
+            this.tim_button.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tim_button.IconChar = FontAwesome.Sharp.IconChar.Search;
+            this.tim_button.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.tim_button.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.tim_button.IconSize = 32;
+            this.tim_button.Location = new System.Drawing.Point(486, 14);
+            this.tim_button.Name = "tim_button";
+            this.tim_button.Padding = new System.Windows.Forms.Padding(0, 0, 25, 0);
+            this.tim_button.Size = new System.Drawing.Size(112, 33);
+            this.tim_button.TabIndex = 24;
+            this.tim_button.Text = "Tìm";
+            this.tim_button.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.tim_button.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.tim_button.UseVisualStyleBackColor = false;
+            // 
             // tendaily_combobox
             // 
             this.tendaily_combobox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
@@ -179,7 +214,7 @@ namespace Interface_UI
             // 
             this.groupBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(233)))), ((int)(((byte)(232)))));
             this.groupBox3.Controls.Add(this.phieuxuathangs_datagridview);
-            this.groupBox3.Location = new System.Drawing.Point(10, 258);
+            this.groupBox3.Location = new System.Drawing.Point(10, 246);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(645, 252);
             this.groupBox3.TabIndex = 29;
@@ -214,37 +249,29 @@ namespace Interface_UI
             this.xoa_button.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.xoa_button.UseVisualStyleBackColor = false;
             // 
-            // tim_button
+            // iconPictureBox1
             // 
-            this.tim_button.BackColor = System.Drawing.Color.MediumTurquoise;
-            this.tim_button.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tim_button.IconChar = FontAwesome.Sharp.IconChar.Search;
-            this.tim_button.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.tim_button.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.tim_button.IconSize = 32;
-            this.tim_button.Location = new System.Drawing.Point(486, 14);
-            this.tim_button.Name = "tim_button";
-            this.tim_button.Padding = new System.Windows.Forms.Padding(0, 0, 25, 0);
-            this.tim_button.Size = new System.Drawing.Size(112, 33);
-            this.tim_button.TabIndex = 24;
-            this.tim_button.Text = "Tìm";
-            this.tim_button.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.tim_button.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.tim_button.UseVisualStyleBackColor = false;
+            this.iconPictureBox1.BackColor = System.Drawing.Color.White;
+            this.iconPictureBox1.ForeColor = System.Drawing.Color.Yellow;
+            this.iconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.ExclamationTriangle;
+            this.iconPictureBox1.IconColor = System.Drawing.Color.Yellow;
+            this.iconPictureBox1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconPictureBox1.IconSize = 20;
+            this.iconPictureBox1.Location = new System.Drawing.Point(15, 554);
+            this.iconPictureBox1.Name = "iconPictureBox1";
+            this.iconPictureBox1.Size = new System.Drawing.Size(27, 20);
+            this.iconPictureBox1.TabIndex = 45;
+            this.iconPictureBox1.TabStop = false;
             // 
-            // dashboardPhieuxuat
+            // textBox1
             // 
-            this.dashboardPhieuxuat.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(45)))), ((int)(((byte)(87)))));
-            this.dashboardPhieuxuat.ForeColor = System.Drawing.Color.Turquoise;
-            this.dashboardPhieuxuat.IconChar = FontAwesome.Sharp.IconChar.FileInvoice;
-            this.dashboardPhieuxuat.IconColor = System.Drawing.Color.Turquoise;
-            this.dashboardPhieuxuat.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.dashboardPhieuxuat.IconSize = 29;
-            this.dashboardPhieuxuat.Location = new System.Drawing.Point(10, 9);
-            this.dashboardPhieuxuat.Name = "dashboardPhieuxuat";
-            this.dashboardPhieuxuat.Size = new System.Drawing.Size(29, 29);
-            this.dashboardPhieuxuat.TabIndex = 1;
-            this.dashboardPhieuxuat.TabStop = false;
+            this.textBox1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.textBox1.Location = new System.Drawing.Point(0, 553);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(671, 22);
+            this.textBox1.TabIndex = 44;
+            this.textBox1.Text = "                   Thong bao";
             // 
             // FormPhieuxuathang_Xoa_
             // 
@@ -252,6 +279,8 @@ namespace Interface_UI
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(233)))), ((int)(((byte)(232)))));
             this.ClientSize = new System.Drawing.Size(671, 575);
+            this.Controls.Add(this.iconPictureBox1);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.xoa_button);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
@@ -262,12 +291,14 @@ namespace Interface_UI
             this.Load += new System.EventHandler(this.FormPhieuxuathang_Xoa__Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dashboardPhieuxuat)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.phieuxuathangs_datagridview)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dashboardPhieuxuat)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -287,5 +318,7 @@ namespace Interface_UI
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox thang_combobox;
+        private FontAwesome.Sharp.IconPictureBox iconPictureBox1;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }

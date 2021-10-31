@@ -43,11 +43,14 @@ namespace Interface_UI
             this.IbMadaily = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.dalys_datagridview = new System.Windows.Forms.DataGridView();
+            this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dashboardPhieuxuat)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dalys_datagridview)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -165,7 +168,7 @@ namespace Interface_UI
             "Tên đại lý",
             "Email",
             "Điện thoại"});
-            this.quan_combobox.Location = new System.Drawing.Point(112, 66);
+            this.quan_combobox.Location = new System.Drawing.Point(113, 71);
             this.quan_combobox.Name = "quan_combobox";
             this.quan_combobox.Size = new System.Drawing.Size(140, 28);
             this.quan_combobox.TabIndex = 9;
@@ -214,7 +217,7 @@ namespace Interface_UI
             // 
             this.groupBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(233)))), ((int)(((byte)(232)))));
             this.groupBox3.Controls.Add(this.dalys_datagridview);
-            this.groupBox3.Location = new System.Drawing.Point(19, 309);
+            this.groupBox3.Location = new System.Drawing.Point(19, 291);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(633, 215);
             this.groupBox3.TabIndex = 40;
@@ -231,12 +234,38 @@ namespace Interface_UI
             this.dalys_datagridview.Size = new System.Drawing.Size(622, 190);
             this.dalys_datagridview.TabIndex = 0;
             // 
+            // iconPictureBox1
+            // 
+            this.iconPictureBox1.BackColor = System.Drawing.Color.White;
+            this.iconPictureBox1.ForeColor = System.Drawing.Color.Yellow;
+            this.iconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.ExclamationTriangle;
+            this.iconPictureBox1.IconColor = System.Drawing.Color.Yellow;
+            this.iconPictureBox1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconPictureBox1.IconSize = 20;
+            this.iconPictureBox1.Location = new System.Drawing.Point(24, 554);
+            this.iconPictureBox1.Name = "iconPictureBox1";
+            this.iconPictureBox1.Size = new System.Drawing.Size(27, 20);
+            this.iconPictureBox1.TabIndex = 45;
+            this.iconPictureBox1.TabStop = false;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.textBox1.Location = new System.Drawing.Point(0, 553);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(671, 22);
+            this.textBox1.TabIndex = 44;
+            this.textBox1.Text = "                   Thong bao";
+            // 
             // FormSearch
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(233)))), ((int)(((byte)(232)))));
             this.ClientSize = new System.Drawing.Size(671, 575);
+            this.Controls.Add(this.iconPictureBox1);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.panel1);
@@ -251,7 +280,9 @@ namespace Interface_UI
             this.groupBox2.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dalys_datagridview)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -271,5 +302,7 @@ namespace Interface_UI
         private System.Windows.Forms.DataGridView dalys_datagridview;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.TextBox tendaily_textbox;
+        private FontAwesome.Sharp.IconPictureBox iconPictureBox1;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }

@@ -6,13 +6,13 @@
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>2.03264in</Width>
+              <Width>1.4321in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.03264in</Width>
+              <Width>1.2121in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.03264in</Width>
+              <Width>1.2112in</Width>
             </TablixColumn>
             <TablixColumn>
               <Width>1.05208in</Width>
@@ -299,9 +299,9 @@
         </TablixRowHierarchy>
         <DataSetName>BaoCaoDoanhSoDataSet</DataSetName>
         <Top>1.325in</Top>
-        <Left>0.305in</Left>
+        <Left>1.055in</Left>
         <Height>0.85in</Height>
-        <Width>7.15in</Width>
+        <Width>4.90748in</Width>
         <Style>
           <Border>
             <Style>None</Style>
@@ -327,7 +327,7 @@
         </Paragraphs>
         <rd:DefaultName>Textbox9</rd:DefaultName>
         <Top>0.205in</Top>
-        <Left>2.33764in</Left>
+        <Left>1.71264in</Left>
         <Height>0.425in</Height>
         <Width>3.53125in</Width>
         <ZIndex>1</ZIndex>
@@ -357,7 +357,7 @@
         </Paragraphs>
         <rd:DefaultName>Textbox10</rd:DefaultName>
         <Top>0.79722in</Top>
-        <Left>2.33764in</Left>
+        <Left>1.71264in</Left>
         <Height>0.25in</Height>
         <Width>0.575in</Width>
         <ZIndex>2</ZIndex>
@@ -386,7 +386,7 @@
           </Paragraph>
         </Paragraphs>
         <Top>0.79722in</Top>
-        <Left>3.33833in</Left>
+        <Left>2.71333in</Left>
         <Height>0.25in</Height>
         <Width>2.53056in</Width>
         <ZIndex>3</ZIndex>
@@ -401,10 +401,10 @@
         </Style>
       </Textbox>
     </ReportItems>
-    <Height>2.175in</Height>
+    <Height>2.71667in</Height>
     <Style />
   </Body>
-  <Width>7.58833in</Width>
+  <Width>7.04666in</Width>
   <Page>
     <LeftMargin>1in</LeftMargin>
     <RightMargin>1in</RightMargin>

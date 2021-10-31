@@ -52,11 +52,14 @@ namespace Interface_UI
             this.huy_button = new FontAwesome.Sharp.IconButton();
             this.xoa_button = new FontAwesome.Sharp.IconButton();
             this.them_button = new FontAwesome.Sharp.IconButton();
+            this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dashboardPhieuxuat)).BeginInit();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.phieuxuathangs_datagridview)).BeginInit();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -99,7 +102,7 @@ namespace Interface_UI
             // 
             this.groupBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(233)))), ((int)(((byte)(232)))));
             this.groupBox3.Controls.Add(this.phieuxuathangs_datagridview);
-            this.groupBox3.Location = new System.Drawing.Point(12, 272);
+            this.groupBox3.Location = new System.Drawing.Point(12, 254);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(647, 291);
             this.groupBox3.TabIndex = 35;
@@ -200,13 +203,11 @@ namespace Interface_UI
             // 
             // daily_combobox
             // 
+            this.daily_combobox.BackColor = System.Drawing.SystemColors.InactiveBorder;
             this.daily_combobox.Cursor = System.Windows.Forms.Cursors.Default;
             this.daily_combobox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.daily_combobox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.daily_combobox.FormattingEnabled = true;
-            this.daily_combobox.Items.AddRange(new object[] {
-            "Loại 1",
-            "Loại 2"});
             this.daily_combobox.Location = new System.Drawing.Point(158, 43);
             this.daily_combobox.Name = "daily_combobox";
             this.daily_combobox.Size = new System.Drawing.Size(130, 28);
@@ -225,6 +226,7 @@ namespace Interface_UI
             // 
             // hanghoa_combobox
             // 
+            this.hanghoa_combobox.BackColor = System.Drawing.SystemColors.MenuBar;
             this.hanghoa_combobox.Cursor = System.Windows.Forms.Cursors.Default;
             this.hanghoa_combobox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.hanghoa_combobox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -276,7 +278,7 @@ namespace Interface_UI
             this.groupBox1.ForeColor = System.Drawing.SystemColors.ControlText;
             this.groupBox1.Location = new System.Drawing.Point(20, 65);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(628, 159);
+            this.groupBox1.Size = new System.Drawing.Size(628, 144);
             this.groupBox1.TabIndex = 30;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin chung";
@@ -290,7 +292,7 @@ namespace Interface_UI
             this.luu_button.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.luu_button.IconSize = 32;
             this.luu_button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.luu_button.Location = new System.Drawing.Point(348, 230);
+            this.luu_button.Location = new System.Drawing.Point(348, 216);
             this.luu_button.Name = "luu_button";
             this.luu_button.Padding = new System.Windows.Forms.Padding(3, 1, 0, 0);
             this.luu_button.Size = new System.Drawing.Size(112, 36);
@@ -307,7 +309,7 @@ namespace Interface_UI
             this.huy_button.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(24)))), ((int)(((byte)(64)))));
             this.huy_button.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.huy_button.IconSize = 32;
-            this.huy_button.Location = new System.Drawing.Point(483, 230);
+            this.huy_button.Location = new System.Drawing.Point(483, 216);
             this.huy_button.Name = "huy_button";
             this.huy_button.Padding = new System.Windows.Forms.Padding(0, 1, 35, 0);
             this.huy_button.Size = new System.Drawing.Size(112, 36);
@@ -325,7 +327,7 @@ namespace Interface_UI
             this.xoa_button.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.xoa_button.IconSize = 32;
             this.xoa_button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.xoa_button.Location = new System.Drawing.Point(211, 230);
+            this.xoa_button.Location = new System.Drawing.Point(211, 216);
             this.xoa_button.Name = "xoa_button";
             this.xoa_button.Padding = new System.Windows.Forms.Padding(3, 1, 0, 0);
             this.xoa_button.Size = new System.Drawing.Size(112, 36);
@@ -342,7 +344,7 @@ namespace Interface_UI
             this.them_button.IconColor = System.Drawing.Color.Green;
             this.them_button.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.them_button.IconSize = 32;
-            this.them_button.Location = new System.Drawing.Point(78, 230);
+            this.them_button.Location = new System.Drawing.Point(78, 216);
             this.them_button.Name = "them_button";
             this.them_button.Padding = new System.Windows.Forms.Padding(0, 1, 25, 0);
             this.them_button.Size = new System.Drawing.Size(112, 36);
@@ -352,12 +354,38 @@ namespace Interface_UI
             this.them_button.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.them_button.UseVisualStyleBackColor = false;
             // 
+            // iconPictureBox1
+            // 
+            this.iconPictureBox1.BackColor = System.Drawing.Color.White;
+            this.iconPictureBox1.ForeColor = System.Drawing.Color.Yellow;
+            this.iconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.ExclamationTriangle;
+            this.iconPictureBox1.IconColor = System.Drawing.Color.Yellow;
+            this.iconPictureBox1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconPictureBox1.IconSize = 20;
+            this.iconPictureBox1.Location = new System.Drawing.Point(18, 554);
+            this.iconPictureBox1.Name = "iconPictureBox1";
+            this.iconPictureBox1.Size = new System.Drawing.Size(27, 20);
+            this.iconPictureBox1.TabIndex = 45;
+            this.iconPictureBox1.TabStop = false;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.textBox1.Location = new System.Drawing.Point(0, 553);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(671, 22);
+            this.textBox1.TabIndex = 44;
+            this.textBox1.Text = "                   Thong bao";
+            // 
             // FormPhieuxuathang_Them_
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(233)))), ((int)(((byte)(232)))));
             this.ClientSize = new System.Drawing.Size(671, 575);
+            this.Controls.Add(this.iconPictureBox1);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.luu_button);
             this.Controls.Add(this.huy_button);
             this.Controls.Add(this.xoa_button);
@@ -376,7 +404,9 @@ namespace Interface_UI
             ((System.ComponentModel.ISupportInitialize)(this.phieuxuathangs_datagridview)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -405,5 +435,7 @@ namespace Interface_UI
         private FontAwesome.Sharp.IconButton huy_button;
         private FontAwesome.Sharp.IconButton xoa_button;
         private FontAwesome.Sharp.IconButton them_button;
+        private FontAwesome.Sharp.IconPictureBox iconPictureBox1;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }

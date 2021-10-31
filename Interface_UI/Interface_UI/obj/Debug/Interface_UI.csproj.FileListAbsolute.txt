@@ -24,7 +24,6 @@ D:\Quản lý đại lý\QuanLyDaiLy2\Interface_UI\Interface_UI\bin\Debug\FontAw
 D:\Quản lý đại lý\QuanLyDaiLy2\Interface_UI\Interface_UI\obj\Debug\Interface_UI.FormHoso.resources
 D:\Quản lý đại lý\QuanLyDaiLy2\Interface_UI\Interface_UI\obj\Debug\Interface_UI.FormPhieuxuathang.resources
 D:\Quản lý đại lý\QuanLyDaiLy2\Interface_UI\Interface_UI\obj\Debug\Interface_UI.FormLogin.resources
-D:\Quản lý đại lý\QuanLyDaiLy2\Interface_UI\Interface_UI\obj\Debug\Interface_UI.FormChangepass.resources
 D:\Quản lý đại lý\QuanLyDaiLy2\Interface_UI\Interface_UI\obj\Debug\Interface_UI.FormBaocaocongno.resources
 D:\Quản lý đại lý\QuanLyDaiLy2\Interface_UI\Interface_UI\obj\Debug\Interface_UI.FormBaocaodoanhso.resources
 D:\Quản lý đại lý\QuanLyDaiLy2\Interface_UI\Interface_UI\obj\Debug\Interface_UI.FormPhieuthutien.resources
@@ -194,3 +193,5 @@ D:\Quản lý đại lý\QuanLyDaiLy2\Interface_UI\Interface_UI\obj\Debug\Interf
 D:\Quản lý đại lý\QuanLyDaiLy2\Interface_UI\Interface_UI\obj\Debug\Interface_UI.Reports.BaoCaoCongNoReportViewerForm.resources
 D:\Quản lý đại lý\QuanLyDaiLy2\Interface_UI\Interface_UI\obj\Debug\Interface_UI.Reports.BaoCaoDoanhSoReportViewerForm.resources
 D:\Quản lý đại lý\QuanLyDaiLy2\Interface_UI\Interface_UI\obj\Debug\Interface_UI.FormChangepass_Homepage.resources
+D:\Quản lý đại lý\QuanLyDaiLy2\Interface_UI\Interface_UI\obj\Debug\RdlCompile.cache
+D:\Quản lý đại lý\QuanLyDaiLy2\Interface_UI\Interface_UI\obj\Debug\RdlCompile.compiled

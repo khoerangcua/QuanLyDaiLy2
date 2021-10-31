@@ -35,21 +35,24 @@ namespace Interface_UI
             this.TieudePhieuxuat = new System.Windows.Forms.Label();
             this.dashboardPhieuxuat = new FontAwesome.Sharp.IconPictureBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.maphieuthutien_textbox = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.panel5 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
+            this.maphieuthutien_textbox = new System.Windows.Forms.TextBox();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dashboardPhieuxuat)).BeginInit();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel2
@@ -130,63 +133,28 @@ namespace Interface_UI
             this.groupBox1.Text = "Thông tin";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter_1);
             // 
-            // label2
+            // checkBox1
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label2.Location = new System.Drawing.Point(29, 39);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(138, 20);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Nhập mật khẩu cũ";
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBox1.Location = new System.Drawing.Point(33, 228);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(185, 19);
+            this.checkBox1.TabIndex = 30;
+            this.checkBox1.Text = "Tối đồng ý với mọi sự thay đổi";
+            this.checkBox1.UseVisualStyleBackColor = true;
             // 
-            // panel3
+            // button1
             // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.panel3.Location = new System.Drawing.Point(236, 57);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(164, 2);
-            this.panel3.TabIndex = 3;
-            // 
-            // maphieuthutien_textbox
-            // 
-            this.maphieuthutien_textbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(233)))), ((int)(((byte)(232)))));
-            this.maphieuthutien_textbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.maphieuthutien_textbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.maphieuthutien_textbox.Location = new System.Drawing.Point(236, 32);
-            this.maphieuthutien_textbox.Multiline = true;
-            this.maphieuthutien_textbox.Name = "maphieuthutien_textbox";
-            this.maphieuthutien_textbox.Size = new System.Drawing.Size(164, 24);
-            this.maphieuthutien_textbox.TabIndex = 21;
-            // 
-            // textBox1
-            // 
-            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(233)))), ((int)(((byte)(232)))));
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(237, 99);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(164, 24);
-            this.textBox1.TabIndex = 24;
-            // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.panel4.Location = new System.Drawing.Point(237, 124);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(164, 2);
-            this.panel4.TabIndex = 23;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label3.Location = new System.Drawing.Point(30, 106);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(146, 20);
-            this.label3.TabIndex = 22;
-            this.label3.Text = "Nhập mật khẩu mới";
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(24)))), ((int)(((byte)(64)))));
+            this.button1.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.SystemColors.Control;
+            this.button1.Location = new System.Drawing.Point(101, 273);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(235, 53);
+            this.button1.TabIndex = 29;
+            this.button1.Text = "Xác nhận";
+            this.button1.UseVisualStyleBackColor = false;
             // 
             // textBox2
             // 
@@ -217,28 +185,87 @@ namespace Interface_UI
             this.label4.TabIndex = 25;
             this.label4.Text = "Xác nhận mật khẩu mới";
             // 
-            // button1
+            // textBox1
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(24)))), ((int)(((byte)(64)))));
-            this.button1.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.SystemColors.Control;
-            this.button1.Location = new System.Drawing.Point(101, 273);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(235, 53);
-            this.button1.TabIndex = 29;
-            this.button1.Text = "Xác nhận";
-            this.button1.UseVisualStyleBackColor = false;
+            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(233)))), ((int)(((byte)(232)))));
+            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(237, 99);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(164, 24);
+            this.textBox1.TabIndex = 24;
             // 
-            // checkBox1
+            // panel4
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox1.Location = new System.Drawing.Point(33, 228);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(185, 19);
-            this.checkBox1.TabIndex = 30;
-            this.checkBox1.Text = "Tối đồng ý với mọi sự thay đổi";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.panel4.Location = new System.Drawing.Point(237, 124);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(164, 2);
+            this.panel4.TabIndex = 23;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.label3.Location = new System.Drawing.Point(30, 106);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(146, 20);
+            this.label3.TabIndex = 22;
+            this.label3.Text = "Nhập mật khẩu mới";
+            // 
+            // maphieuthutien_textbox
+            // 
+            this.maphieuthutien_textbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(233)))), ((int)(((byte)(232)))));
+            this.maphieuthutien_textbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.maphieuthutien_textbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.maphieuthutien_textbox.Location = new System.Drawing.Point(236, 32);
+            this.maphieuthutien_textbox.Multiline = true;
+            this.maphieuthutien_textbox.Name = "maphieuthutien_textbox";
+            this.maphieuthutien_textbox.Size = new System.Drawing.Size(164, 24);
+            this.maphieuthutien_textbox.TabIndex = 21;
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.panel3.Location = new System.Drawing.Point(236, 57);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(164, 2);
+            this.panel3.TabIndex = 3;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.label2.Location = new System.Drawing.Point(29, 39);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(138, 20);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "Nhập mật khẩu cũ";
+            // 
+            // iconPictureBox1
+            // 
+            this.iconPictureBox1.BackColor = System.Drawing.Color.White;
+            this.iconPictureBox1.ForeColor = System.Drawing.Color.Yellow;
+            this.iconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.ExclamationTriangle;
+            this.iconPictureBox1.IconColor = System.Drawing.Color.Yellow;
+            this.iconPictureBox1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconPictureBox1.IconSize = 20;
+            this.iconPictureBox1.Location = new System.Drawing.Point(23, 554);
+            this.iconPictureBox1.Name = "iconPictureBox1";
+            this.iconPictureBox1.Size = new System.Drawing.Size(27, 20);
+            this.iconPictureBox1.TabIndex = 45;
+            this.iconPictureBox1.TabStop = false;
+            // 
+            // textBox3
+            // 
+            this.textBox3.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.textBox3.Location = new System.Drawing.Point(0, 553);
+            this.textBox3.Multiline = true;
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(671, 22);
+            this.textBox3.TabIndex = 44;
+            this.textBox3.Text = "                   Thong bao";
             // 
             // FormChangepass_Homepage
             // 
@@ -246,6 +273,8 @@ namespace Interface_UI
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(233)))), ((int)(((byte)(232)))));
             this.ClientSize = new System.Drawing.Size(671, 575);
+            this.Controls.Add(this.iconPictureBox1);
+            this.Controls.Add(this.textBox3);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
@@ -259,7 +288,9 @@ namespace Interface_UI
             ((System.ComponentModel.ISupportInitialize)(this.dashboardPhieuxuat)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -282,5 +313,7 @@ namespace Interface_UI
         private System.Windows.Forms.TextBox maphieuthutien_textbox;
         private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.Button button1;
+        private FontAwesome.Sharp.IconPictureBox iconPictureBox1;
+        private System.Windows.Forms.TextBox textBox3;
     }
 }

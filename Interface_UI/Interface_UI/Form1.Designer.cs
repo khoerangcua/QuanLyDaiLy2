@@ -30,40 +30,40 @@ namespace Interface_UI
         private void InitializeComponent()
         {
             this.Menubar = new System.Windows.Forms.Panel();
+            this.Minimizar = new FontAwesome.Sharp.IconPictureBox();
+            this.Exit = new FontAwesome.Sharp.IconPictureBox();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panelQuydinh = new System.Windows.Forms.Panel();
-            this.panelReport = new System.Windows.Forms.Panel();
-            this.panelManage = new System.Windows.Forms.Panel();
-            this.panelSubmenu = new System.Windows.Forms.Panel();
-            this.panelChildForm = new System.Windows.Forms.Panel();
             this.Hanghoa = new FontAwesome.Sharp.IconButton();
             this.Sodailytrongquan = new FontAwesome.Sharp.IconButton();
             this.Loaidaily = new FontAwesome.Sharp.IconButton();
             this.Regulate = new FontAwesome.Sharp.IconButton();
             this.Search = new FontAwesome.Sharp.IconButton();
+            this.panelReport = new System.Windows.Forms.Panel();
             this.Baocaocongno = new FontAwesome.Sharp.IconButton();
             this.Baocaodoanhthu = new FontAwesome.Sharp.IconButton();
             this.Report = new FontAwesome.Sharp.IconButton();
+            this.panelManage = new System.Windows.Forms.Panel();
             this.Phieuxuathang = new FontAwesome.Sharp.IconButton();
             this.Phieuthutien = new FontAwesome.Sharp.IconButton();
             this.File = new FontAwesome.Sharp.IconButton();
             this.Manage = new FontAwesome.Sharp.IconButton();
+            this.panelSubmenu = new System.Windows.Forms.Panel();
             this.Loggout = new FontAwesome.Sharp.IconButton();
             this.Changepass = new FontAwesome.Sharp.IconButton();
             this.Homepage = new FontAwesome.Sharp.IconButton();
-            this.Minimizar = new FontAwesome.Sharp.IconPictureBox();
-            this.Exit = new FontAwesome.Sharp.IconPictureBox();
+            this.panelChildForm = new System.Windows.Forms.Panel();
             this.Menubar.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Minimizar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Exit)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panelQuydinh.SuspendLayout();
             this.panelReport.SuspendLayout();
             this.panelManage.SuspendLayout();
             this.panelSubmenu.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Minimizar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Exit)).BeginInit();
             this.SuspendLayout();
             // 
             // Menubar
@@ -77,6 +77,38 @@ namespace Interface_UI
             this.Menubar.Name = "Menubar";
             this.Menubar.Size = new System.Drawing.Size(909, 47);
             this.Menubar.TabIndex = 1;
+            // 
+            // Minimizar
+            // 
+            this.Minimizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Minimizar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(24)))), ((int)(((byte)(64)))));
+            this.Minimizar.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.Minimizar.IconChar = FontAwesome.Sharp.IconChar.Minus;
+            this.Minimizar.IconColor = System.Drawing.SystemColors.ButtonFace;
+            this.Minimizar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.Minimizar.IconSize = 30;
+            this.Minimizar.Location = new System.Drawing.Point(834, 9);
+            this.Minimizar.Name = "Minimizar";
+            this.Minimizar.Size = new System.Drawing.Size(30, 31);
+            this.Minimizar.TabIndex = 11;
+            this.Minimizar.TabStop = false;
+            this.Minimizar.Click += new System.EventHandler(this.Minimizar_Click_1);
+            // 
+            // Exit
+            // 
+            this.Exit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Exit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(24)))), ((int)(((byte)(64)))));
+            this.Exit.ForeColor = System.Drawing.Color.Red;
+            this.Exit.IconChar = FontAwesome.Sharp.IconChar.PowerOff;
+            this.Exit.IconColor = System.Drawing.Color.Red;
+            this.Exit.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.Exit.IconSize = 30;
+            this.Exit.Location = new System.Drawing.Point(864, 9);
+            this.Exit.Name = "Exit";
+            this.Exit.Size = new System.Drawing.Size(30, 31);
+            this.Exit.TabIndex = 5;
+            this.Exit.TabStop = false;
+            this.Exit.Click += new System.EventHandler(this.Exit_Click);
             // 
             // panel4
             // 
@@ -126,48 +158,6 @@ namespace Interface_UI
             this.panelQuydinh.Size = new System.Drawing.Size(221, 118);
             this.panelQuydinh.TabIndex = 25;
             // 
-            // panelReport
-            // 
-            this.panelReport.Controls.Add(this.Baocaocongno);
-            this.panelReport.Controls.Add(this.Baocaodoanhthu);
-            this.panelReport.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelReport.Location = new System.Drawing.Point(0, 339);
-            this.panelReport.Name = "panelReport";
-            this.panelReport.Size = new System.Drawing.Size(221, 82);
-            this.panelReport.TabIndex = 19;
-            this.panelReport.Paint += new System.Windows.Forms.PaintEventHandler(this.panelReport_Paint_1);
-            // 
-            // panelManage
-            // 
-            this.panelManage.Controls.Add(this.Phieuxuathang);
-            this.panelManage.Controls.Add(this.Phieuthutien);
-            this.panelManage.Controls.Add(this.File);
-            this.panelManage.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelManage.Location = new System.Drawing.Point(0, 163);
-            this.panelManage.Name = "panelManage";
-            this.panelManage.Size = new System.Drawing.Size(221, 133);
-            this.panelManage.TabIndex = 17;
-            // 
-            // panelSubmenu
-            // 
-            this.panelSubmenu.Controls.Add(this.Loggout);
-            this.panelSubmenu.Controls.Add(this.Changepass);
-            this.panelSubmenu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelSubmenu.Location = new System.Drawing.Point(0, 43);
-            this.panelSubmenu.Name = "panelSubmenu";
-            this.panelSubmenu.Size = new System.Drawing.Size(221, 79);
-            this.panelSubmenu.TabIndex = 11;
-            // 
-            // panelChildForm
-            // 
-            this.panelChildForm.BackgroundImage = global::Interface_UI.Properties.Resources.background1;
-            this.panelChildForm.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelChildForm.Location = new System.Drawing.Point(238, 47);
-            this.panelChildForm.Name = "panelChildForm";
-            this.panelChildForm.Size = new System.Drawing.Size(671, 575);
-            this.panelChildForm.TabIndex = 3;
-            this.panelChildForm.Paint += new System.Windows.Forms.PaintEventHandler(this.panelChildForm_Paint);
-            // 
             // Hanghoa
             // 
             this.Hanghoa.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(24)))), ((int)(((byte)(64)))));
@@ -176,7 +166,7 @@ namespace Interface_UI
             this.Hanghoa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Hanghoa.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Hanghoa.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.Hanghoa.IconChar = FontAwesome.Sharp.IconChar.CalendarAlt;
+            this.Hanghoa.IconChar = FontAwesome.Sharp.IconChar.BoxOpen;
             this.Hanghoa.IconColor = System.Drawing.Color.Turquoise;
             this.Hanghoa.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.Hanghoa.IconSize = 30;
@@ -201,7 +191,7 @@ namespace Interface_UI
             this.Sodailytrongquan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Sodailytrongquan.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
             this.Sodailytrongquan.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.Sodailytrongquan.IconChar = FontAwesome.Sharp.IconChar.CalendarWeek;
+            this.Sodailytrongquan.IconChar = FontAwesome.Sharp.IconChar.CalendarAlt;
             this.Sodailytrongquan.IconColor = System.Drawing.Color.Turquoise;
             this.Sodailytrongquan.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.Sodailytrongquan.IconSize = 30;
@@ -226,7 +216,7 @@ namespace Interface_UI
             this.Loaidaily.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Loaidaily.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Loaidaily.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.Loaidaily.IconChar = FontAwesome.Sharp.IconChar.CalendarCheck;
+            this.Loaidaily.IconChar = FontAwesome.Sharp.IconChar.CodeBranch;
             this.Loaidaily.IconColor = System.Drawing.Color.Turquoise;
             this.Loaidaily.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.Loaidaily.IconSize = 30;
@@ -284,6 +274,17 @@ namespace Interface_UI
             this.Search.Text = "  Tra cứu";
             this.Search.UseVisualStyleBackColor = false;
             this.Search.Click += new System.EventHandler(this.Search_Click);
+            // 
+            // panelReport
+            // 
+            this.panelReport.Controls.Add(this.Baocaocongno);
+            this.panelReport.Controls.Add(this.Baocaodoanhthu);
+            this.panelReport.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelReport.Location = new System.Drawing.Point(0, 339);
+            this.panelReport.Name = "panelReport";
+            this.panelReport.Size = new System.Drawing.Size(221, 82);
+            this.panelReport.TabIndex = 19;
+            this.panelReport.Paint += new System.Windows.Forms.PaintEventHandler(this.panelReport_Paint_1);
             // 
             // Baocaocongno
             // 
@@ -355,6 +356,17 @@ namespace Interface_UI
             this.Report.Text = "  Báo cáo";
             this.Report.UseVisualStyleBackColor = false;
             this.Report.Click += new System.EventHandler(this.Report_Click);
+            // 
+            // panelManage
+            // 
+            this.panelManage.Controls.Add(this.Phieuxuathang);
+            this.panelManage.Controls.Add(this.Phieuthutien);
+            this.panelManage.Controls.Add(this.File);
+            this.panelManage.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelManage.Location = new System.Drawing.Point(0, 163);
+            this.panelManage.Name = "panelManage";
+            this.panelManage.Size = new System.Drawing.Size(221, 133);
+            this.panelManage.TabIndex = 17;
             // 
             // Phieuxuathang
             // 
@@ -452,6 +464,16 @@ namespace Interface_UI
             this.Manage.UseVisualStyleBackColor = false;
             this.Manage.Click += new System.EventHandler(this.Manage_Click_1);
             // 
+            // panelSubmenu
+            // 
+            this.panelSubmenu.Controls.Add(this.Loggout);
+            this.panelSubmenu.Controls.Add(this.Changepass);
+            this.panelSubmenu.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelSubmenu.Location = new System.Drawing.Point(0, 43);
+            this.panelSubmenu.Name = "panelSubmenu";
+            this.panelSubmenu.Size = new System.Drawing.Size(221, 79);
+            this.panelSubmenu.TabIndex = 11;
+            // 
             // Loggout
             // 
             this.Loggout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(24)))), ((int)(((byte)(64)))));
@@ -523,37 +545,15 @@ namespace Interface_UI
             this.Homepage.UseVisualStyleBackColor = false;
             this.Homepage.Click += new System.EventHandler(this.Homepage_Click);
             // 
-            // Minimizar
+            // panelChildForm
             // 
-            this.Minimizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.Minimizar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(24)))), ((int)(((byte)(64)))));
-            this.Minimizar.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.Minimizar.IconChar = FontAwesome.Sharp.IconChar.Minus;
-            this.Minimizar.IconColor = System.Drawing.SystemColors.ButtonFace;
-            this.Minimizar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.Minimizar.IconSize = 30;
-            this.Minimizar.Location = new System.Drawing.Point(834, 9);
-            this.Minimizar.Name = "Minimizar";
-            this.Minimizar.Size = new System.Drawing.Size(30, 31);
-            this.Minimizar.TabIndex = 11;
-            this.Minimizar.TabStop = false;
-            this.Minimizar.Click += new System.EventHandler(this.Minimizar_Click_1);
-            // 
-            // Exit
-            // 
-            this.Exit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.Exit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(24)))), ((int)(((byte)(64)))));
-            this.Exit.ForeColor = System.Drawing.Color.Red;
-            this.Exit.IconChar = FontAwesome.Sharp.IconChar.PowerOff;
-            this.Exit.IconColor = System.Drawing.Color.Red;
-            this.Exit.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.Exit.IconSize = 30;
-            this.Exit.Location = new System.Drawing.Point(864, 9);
-            this.Exit.Name = "Exit";
-            this.Exit.Size = new System.Drawing.Size(30, 31);
-            this.Exit.TabIndex = 5;
-            this.Exit.TabStop = false;
-            this.Exit.Click += new System.EventHandler(this.Exit_Click);
+            this.panelChildForm.BackgroundImage = global::Interface_UI.Properties.Resources.background1;
+            this.panelChildForm.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelChildForm.Location = new System.Drawing.Point(238, 47);
+            this.panelChildForm.Name = "panelChildForm";
+            this.panelChildForm.Size = new System.Drawing.Size(671, 575);
+            this.panelChildForm.TabIndex = 3;
+            this.panelChildForm.Paint += new System.Windows.Forms.PaintEventHandler(this.panelChildForm_Paint);
             // 
             // Form1
             // 
@@ -569,14 +569,14 @@ namespace Interface_UI
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.Menubar.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.Minimizar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Exit)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panelQuydinh.ResumeLayout(false);
             this.panelReport.ResumeLayout(false);
             this.panelManage.ResumeLayout(false);
             this.panelSubmenu.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.Minimizar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Exit)).EndInit();
             this.ResumeLayout(false);
 
         }
